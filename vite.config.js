@@ -4,12 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 import path from "path"
 import { fileURLToPath } from "url"
 
-// Fix necessario per usare __dirname con "type": "module"
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// https://vite.dev/config/ 
 export default defineConfig({
+  base: "/Portfolio/", 
+  
   plugins: [
     react(),
     tailwindcss(),
