@@ -6,31 +6,31 @@ const projects = [
     title: "Esempio1 titolo",
     description: "esempio testo di descrizione che poi dovrà essere sostituito",
     image: "/Projects/nomeProgettoEsempio1.png",
-    tags: ["React", "Java"], // Mettere il nome delle tecnologie usate
+    tags: ["-", "-"], // Mettere il nome delle tecnologie usate
     link: "#", // link della demo
     github: "#", // link a GitHub
   },
   {
-    title: "Esempio2 titolo",
-    description: "esempio testo di descrizione che poi dovrà essere sostituito",
+    title: "Work in progress",
+    description: "Work in progress",
     image: "/Projects/nomeProgettoEsempio2.png",
-    tags: ["React", "Java"],
+    tags: ["-", "-"],
     link: "#",
     github: "#",
   },
   {
-    title: "Esempio3 titolo",
-    description: "esempio testo di descrizione che poi dovrà essere sostituito",
+    title: "Work in progress ",
+    description: "Work in progress",
     image: "/Projects/nomeProgettoEsempio3.png",
-    tags: ["React", "Java"],
+    tags: ["-", "-"],
     link: "#",
     github: "#",
   },
   {
-    title: "Esempio4 titolo",
-    description: "esempio testo di descrizione che poi dovrà essere sostituito",
+    title: "Work in progress",
+    description: "Work in progress",
     image: "/Projects/nomeProgettoEsempio4.png",
-    tags: ["React", "Java"],
+    tags: ["-", "-"],
     link: "#",
     github: "#",
   },

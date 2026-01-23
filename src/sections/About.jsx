@@ -15,7 +15,7 @@ const highlights = [
     },
     {
         icon: Users,
-        title: "Collzboration",
+        title: "Collaboration",
         description: "Working closely with to bring ideas to life."
     },
     {
