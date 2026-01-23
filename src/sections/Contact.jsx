@@ -89,12 +89,12 @@ export const Contact = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Get in touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Let's Build{" "}
             <span className="font-serif italic font-normal text-white">
               something great.
@@ -106,10 +106,10 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto items-start">
           
           {/* Form Column */}
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+          <div className="glass p-5 md:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -194,7 +194,7 @@ export const Contact = () => {
 
           {/* Contact Info Column */}
           <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8 border border-primary/20">
+            <div className="glass rounded-3xl p-5 md:p-8 border border-primary/20">
               <h3 className="text-xl font-semibold mb-6 text-white">
                 Contact Information
               </h3>
@@ -212,15 +212,17 @@ export const Contact = () => {
                       <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors duration-300">
                         {item.label}
                       </div>
-                      <div className="font-medium text-foreground">{item.value}</div>
+                      <div className="font-medium text-foreground break-all">
+                        {item.value}
+                      </div>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Avalability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
+            {/* Availability Card */}
+            <div className="glass rounded-3xl p-5 md:p-8 border border-primary/30">
                 <div className="flex items-center gap-3 mb-2">
                     <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/> 
                     <span className="font-medium">Currently Available</span>
