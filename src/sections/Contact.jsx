@@ -20,7 +20,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Location",
     value: "Somma Vesuviana, NA",
-    href: "#",
+    href: "https://maps.app.goo.gl/ryQGwJR6hJTZPRMJA",
   },
 ];
 
@@ -203,6 +203,8 @@ export const Contact = () => {
                   <a
                     key={i}
                     href={item.href}
+                    target="_blank"             
+                    rel="noopener noreferrer"   
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface/50 transition-all border border-transparent hover:border-primary/20 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">

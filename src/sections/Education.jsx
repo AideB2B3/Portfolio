@@ -1,27 +1,25 @@
-const experience = [
+const education = [
     {
-        period: "2025 - Present",
-        role: "The Pier - Advanced Developer", // O "Second Year Candidate"
-        company: "Apple Developer Academy",
-        description: "Engaged in the Second Year Program working on external stakeholder projects with international NGOs and Research Departments. Focused on developing time management, critical thinking, and project management skills while collaborating on research and personal projects.",
-        technologies: ["Unity", "GitHub", "Scrum", "Agile Methodology"],
+        period: "2019 - Present",
+        title: "Laurea in Ingegneria dell'Automazione",
+        institution: "Università degli Studi di Napoli Federico II",
+        description: "Academic path focused on Control Theory, Robotics, and Industrial Automation. Strong foundation in mathematics and physics applied to the design of dynamic systems and software development for process control.",
+        technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
         current: true,
     },
-    /* // ESEMPIO COMMENTATO COME RICHIESTO
     {
-        period: "2022 - 2024", 
-        role: "Junior Developer",
-        company: "Tech Company Inc.", 
-        description: "Sviluppo frontend e manutenzione di interfacce utente responsive utilizzando React e Tailwind CSS.", 
-        technologies: ["React", "JavaScript", "CSS"], 
-        current: false, 
-    }, 
-    */
-]
+        period: "2024 - 2025",
+        title: "Apple Developer Academy @ UniNa",
+        institution: "Università degli Studi di Napoli Federico II & Apple",
+        description: "A 9-month training program focused on software development, app design, startup creation, and entrepreneurial skills. Utilizes a Challenge-Based Learning approach to prepare international students for the digital innovation ecosystem.",
+        technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
+        current: false,
+    },
+];
 
-export const Experience = () => {
+export const Education = () => {
     return (
-        <section id="experience" className="py-32 relative overflow-hidden">
+        <section id="education" className="py-32 relative overflow-hidden">
             {/* BG */}
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
@@ -30,29 +28,29 @@ export const Experience = () => {
                 <div className="max-w-3xl mb-16">
                     <span
                         className="text-secondary-foreground text-sm font-medium
-                    tracking-wider uppercase animate-fade-in"
+                        tracking-wider uppercase animate-fade-in"
                     >
-                        Career Journey
+                        Academic Education
                     </span>
                     <h2
                         className="text-4xl md:text-5xl font-bold 
-                    mt-4 mb-6 animate-fade-in animation-delay-100
-                    text-secondary-foreground"
+                        mt-4 mb-6 animate-fade-in animation-delay-100
+                        text-secondary-foreground"
                     >
-                        Experience that
+                        An education that
                         <span
                             className="font-serif italic font-normal text-white"
                         >
                             {" "}
-                            speaks volumes.
+                            shaped my path.
                         </span>
                     </h2>
 
                     <p
                         className="text-muted-foreground animate-fade-in animation-delay-200"
                     >
-                        a timeline of my professional growth, from curious beginner to
-                        senior engineer leading teams and building products at scale.
+                        A timeline of my academic growth, from early studies to advanced specialization
+                        in software engineering and technology.
                     </p>
                 </div>
 
@@ -61,7 +59,7 @@ export const Experience = () => {
                     <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
                     <div className="space-y-12">
-                        {experience.map((exp, idx) => (
+                        {education.map((edu, idx) => (
                             <div
                                 key={idx}
                                 className="relative grid md:grid-cols-2 animate-fade-in"
@@ -69,30 +67,29 @@ export const Experience = () => {
                             >
                                 {/* Timeline Dot */}
                                 <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
-                                    {exp.current && (
+                                    {edu.current && (
                                         <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>
                                     )}
                                 </div>
 
-                                {/* Content - Corretto col-start in col-start-2 */}
+                                {/* Content */}
                                 <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
-                                    <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
+                                    <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
                                         <span className="text-sm text-primary font-medium">
-                                            {exp.period}
+                                            {edu.period}
                                         </span>
                                         <h3 className="text-xl font-semibold mt-2">
-                                            {exp.role}
+                                            {edu.title}
                                         </h3>
                                         <p className="text-muted-foreground">
-                                            {exp.company}
+                                            {edu.institution}
                                         </p>
                                         <p className="text-sm text-muted-foreground mt-4">
-                                            {exp.description}
+                                            {edu.description}
                                         </p>
 
                                         <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
-                                            {/* Aggiunta key univoca */}
-                                            {exp.technologies.map((tech, techIdx) => (
+                                            {edu.technologies.map((tech, techIdx) => (
                                                 <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground">
                                                     {tech}
                                                 </span>
@@ -106,5 +103,5 @@ export const Experience = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};

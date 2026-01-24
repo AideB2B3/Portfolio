@@ -6,7 +6,7 @@ const navLinks = [
     {href: "#about", label: "About" },
     {href: "#projects", label: "Projects" },
     {href: "#experience", label: "Experience" },
-    {href: "#testimonials", label: "Testimonials" },
+    {href: "#education", label: "Education" },
 ];
 
 export const Navbar = () => {
@@ -23,14 +23,11 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // --- FUNZIONE PER LO SCROLL ---
-    // Questa funzione cerca l'elemento con id="contact" e ci scorre
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
-        // Chiudiamo il menu mobile se per caso è aperto
         setIsMobileMenuOpen(false);
     };
 
@@ -56,7 +53,6 @@ export const Navbar = () => {
                 </div>
                 
                 {/* CTA Button Desktop - CORRETTO */}
-                {/* Abbiamo rimosso il tag <a> e usiamo onClick sul bottone */}
                 <div className="hidden md:block"> 
                     <Button size="sm" onClick={scrollToContact}>
                         Contact Me
@@ -83,7 +79,6 @@ export const Navbar = () => {
                         ))}
                         
                         {/* CTA Button Mobile - CORRETTO */}
-                        {/* Anche qui usiamo onClick invece di href */}
                         <Button className="w-full" onClick={scrollToContact}>
                             Contact Me
                         </Button>

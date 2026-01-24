@@ -38,38 +38,34 @@ export const About = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Building the future,
+                        Analyzing systems,
                         <span className="font-serif italic font-normal text-white">
                             {" "}
-                            one component at a time
+                            building solutions.
                         </span>
                     </h2>
 
                     <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
                         <p>
-                            I'm a passionate software engineer with over 5 years of 
-                            experience crafting digital products that make a difference. My 
-                            journey started with a curiosity for how things work on the web, 
-                            and it has evolved into a deep expertise in modern frontend technologies.
+                            I approach development with an <strong>engineer's mindset</strong>: precise, analytical, and structured. 
+                            My background in Automation Engineering at Federico II University gave me strong roots in 
+                            problem-solving and system logic.
                         </p>
                         <p>
-                            I specialize in React, Next.js, and TypeScript, building 
-                            everything from sleek landing pages to complex enterprise 
-                            applications. My approach combines technical excellence with a 
-                            keen eye for design and user experience.
+                            Currently, I am expanding my horizons at the <strong>Apple Developer Academy</strong>, 
+                            where I'm mastering not just SwiftUI and iOS Development, but also the human side of technology: 
+                            Design Thinking, CBL (Challenge-Based Learning), and User Experience.
                         </p>
                         <p>
-                            When I'm not coding, you'll find me exploring new technologies, 
-                            contributing to open-source projects, or sharing knowledge with 
-                            the developer community.
+                            I don't just write code; I look for the most efficient way to make things 
+                            work seamlessly, merging technical robustness with intuitive design.
                         </p>
                     </div>
 
                     <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
                         <p className="text-lg font-medium italic text-foreground">
-                            "My mission is to create digital experience that one just functional, but 
-                            truly delighftful - products that users love to use and developers love to
-                            maintain"
+                            "My mission is to merge the robustness of engineering with the elegance of 
+                            Apple's ecosystem, creating apps that are reliable, intuitive, and impactful."
                         </p>
                     </div>
                 </div>
