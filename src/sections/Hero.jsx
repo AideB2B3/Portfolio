@@ -1,5 +1,5 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight, ChevronDown, Github, Instagram, Linkedin, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Linkedin, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 const skills = [
@@ -12,13 +12,42 @@ const skills = [
     "HTML",
     "JavaScript",
     "SwiftUI",
-    "Object-Oriented Programming",
-    "Game Development e Design",
+    "Unity",
     "Figma",
     "Git",
 ]
 
-export const Hero = () => {
+export const Hero = ({ lang }) => {
+
+    const t = {
+        en: {
+            role: "Automation Engineer - iOS Developer",
+            headlineStart: "Engineering ",
+            headlineGlow: "Logic",
+            headlineMiddle: "meets",
+            headlineEnd: "Intuitive Design.",
+            description: "Hi, I'm Davide Bellobuono. Currently mastering Automation Engineering and iOS Development at Federico II. My focus is on crafting efficient systems and engaging digital products through code and design.",
+            contactBtn: "Contact Me",
+            downloadBtn: "Download CV",
+            follow: "Follow me: ",
+            tech: "Technologies I work with",
+        },
+        it: {
+            role: "Automation Engineer - iOS Developer",
+            headlineStart: "La ",
+            headlineGlow: "Logica",
+            headlineMiddle: "ingegneristica incontra il",
+            headlineEnd: "Design Intuitivo.",
+            description: "Ciao, sono Davide Bellobuono. Sto perfezionando i miei studi in Ingegneria dell'Automazione e sviluppo iOS alla Federico II. Il mio obiettivo è creare sistemi efficienti ed esperienze digitali coinvolgenti, unendo codice e design.",
+            contactBtn: "Contattami",
+            downloadBtn: "Scarica CV",
+            follow: "Seguimi su: ",
+            tech: "Tecnologie che utilizzo",
+        }
+    };
+
+    const content = t[lang] || t.en;
+
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/* background */}
@@ -50,28 +79,25 @@ export const Hero = () => {
                     {/* Left Column  - Text Content */}
                     <div className="space-y-8">
                         <div className="animate-fade-in">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xl text-primary">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-l text-primary">
                                 <span className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-                                Automation Engineer ● iOS Developer
+                                {content.role}
                             </span>
                         </div>
 
                         {/* Headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Engineering <span className="text-primary glow-text">Logic</span>
+                                {content.headlineStart}<span className="text-primary glow-text">{content.headlineGlow}</span>
                                 <br />
-                                meets
+                                {content.headlineMiddle}
                                 <br />
                                 <span className="font-serif italic font-normal text-white">
-                                    Intuitive Design.
+                                    {content.headlineEnd}
                                 </span>
                             </h1>
                             <p className=" text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
-                                Hi, I'm Davide Bellobuono. Currently mastering Automation Engineering and
-                                iOS Development at Federico II.
-                                My focus is on crafting efficient systems and
-                                engaging digital products through code and design.
+                                {content.description}
                             </p>
                         </div>
 
@@ -79,19 +105,20 @@ export const Hero = () => {
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                             <a href="#contact">
                                 <Button size="lg">
-                                    Contact Me <ArrowRight className="w-5 h-5" />
+                                    {content.contactBtn} <ArrowRight className="w-5 h-5" />
                                 </Button>
                             </a>
-                            <AnimatedBorderButton>
-                                <Download className="w-5 h-5" />
-                                Download CV
-                            </AnimatedBorderButton>
-
+                            <a href="Davide_Bellobuono_CV.pdf" download="Davide_Bellobuono_CV.pdf">
+                                <AnimatedBorderButton>
+                                    <Download className="w-5 h-5" />
+                                    {content.downloadBtn}
+                                </AnimatedBorderButton>
+                            </a>
                         </div>
 
                         {/* SOCIAL LINKS */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground">Follow me: </span>
+                            <span className="text-sm text-muted-foreground">{content.follow}</span>
                             {[
                                 { icon: Github, href: "https://github.com/AideB2B3" },
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/davide-bellobuono/" },
@@ -113,7 +140,7 @@ export const Hero = () => {
                                 to-primary/10 blur-2xl animate-pulse"
                             />
                             <div className="relative glass rounded-3xl p-2 glow-border">
-                                <img alt="Davide Bellobuono" class="w-full aspect-[4/5] object-cover rounded-2xl" src="profile-photo.png" />
+                                <img alt="Davide Bellobuono" className="w-full aspect-[4/5] object-cover rounded-2xl" src="profile-photo.png" />
 
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
@@ -124,12 +151,6 @@ export const Hero = () => {
                                         </span>
                                     </div>
                                 </div>
-                                
-                                {/* <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                    <div className="text-2xl font-bold text-primary">Trust the process</div>
-                                    <div className="text-xs text-muted-foreground">Years Exp.</div>
-                                </div> */}
-                                
                             </div>
                         </div>
                     </div>
@@ -137,7 +158,7 @@ export const Hero = () => {
                 {/* Skill Section*/}
                 <div className="mt-20 animate-fade-in animation-delay-600">
                     <p className="text-sm text-muted-foreground mb-6 text-center">
-                        Technologies I work with
+                        {content.tech}
                     </p>
                     <div className="relative overflow-hidden">
                         <div className="flex animate-marquee">
@@ -151,15 +172,6 @@ export const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
-                <a href="#about"
-                    className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary"
-                >
-                    <span>Scroll</span>
-                    <ChevronDown className="w-6 h-6 animate-bounce" />
-                </a>
             </div>
         </section>
     );

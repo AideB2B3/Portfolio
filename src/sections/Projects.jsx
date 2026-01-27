@@ -1,63 +1,71 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
-const projects = [
-  {
-    title: "Esempio1 titolo",
-    description: "esempio testo di descrizione che poi dovrà essere sostituito",
-    image: "/Projects/nomeProgettoEsempio1.png",
-    tags: ["-", "-"], // Mettere il nome delle tecnologie usate
-    link: "#", // link della demo
-    github: "#", // link a GitHub
-  },
-  {
-    title: "Work in progress",
-    description: "Work in progress",
-    image: "/Projects/nomeProgettoEsempio2.png",
-    tags: ["-", "-"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Work in progress ",
-    description: "Work in progress",
-    image: "/Projects/nomeProgettoEsempio3.png",
-    tags: ["-", "-"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Work in progress",
-    description: "Work in progress",
-    image: "/Projects/nomeProgettoEsempio4.png",
-    tags: ["-", "-"],
-    link: "#",
-    github: "#",
-  },
-];
+export const Projects = ({ lang }) => {
 
-export const Projects = () => {
+  // Testi statici dell'intestazione
+  const content = {
+    en: {
+      badge: "Featured Work",
+      titleStart: "Projects that ",
+      titleItalic: "make an impact.",
+      description: "A selection of my recent work, from complex web applications to innovative tools that solve real-world problems."
+    },
+    it: {
+      badge: "Progetti in Evidenza",
+      titleStart: "Progetti che ",
+      titleItalic: "lasciano il segno.",
+      description: "Una selezione dei miei lavori recenti, da applicazioni web complesse a strumenti innovativi che risolvono problemi reali."
+    }
+  };
+
+  // Seleziono i testi in base alla lingua
+  const t = content[lang] || content.en;
+
+  // Array dei progetti con descrizioni localizzate
+  const projects = [
+    {
+      title: "Bug Busters",
+      // Qui gestiamo la doppia lingua per la descrizione del singolo progetto
+      description: lang === "en"
+        ? "Example description text that will be replaced later."
+        : "Esempio testo di descrizione che poi dovrà essere sostituito.",
+      image: "Projects/nomeProgettoEsempio1.png",
+      tags: ["SwiftUI", "SpriteKit"],
+      link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
+      // github: "#", 
+    },
+    // {
+    //   title: "Work in progress",
+    //   description: lang === "en" ? "Work in progress" : "Lavori in corso",
+    //   image: "/Projects/nomeProgettoEsempio2.png",
+    //   tags: ["-", "-"],
+    //   link: "#",
+    //   github: "#",
+    // },
+    // ... altri progetti commentati
+  ];
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* BG Glows */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"/>
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl"/>
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            {t.badge}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in animation-delay-100">
-            Projects that{" "}
+            {t.titleStart}
             <span className="font-serif italic font-normal text-white">
-              make an impact.
+              {t.titleItalic}
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            {t.description}
           </p>
         </div>
 
@@ -85,50 +93,53 @@ export const Projects = () => {
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="p-3 rounded-full glass hover:text-primary-foreground transition-all"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
               </div>
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div className="flex items-start justify-between">
-                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                        {project.title}
-                    </h3>
-                    <ArrowUpRight 
-                        className="w-5 h-5 text-muted-foreground group-hover:text-primary
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight
+                    className="w-5 h-5 text-muted-foreground group-hover:text-primary
                         group-hover:translate-x-1
                         group-hover:-translate-y-1 transition-all"
-                    />
+                  />
                 </div>
                 <p className="text-muted-foreground text-sm">
-                    {project.description}
+                  {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIdx) => (
-                        <span 
-                            key={tagIdx}
-                            className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">
-                            {tag}
-                        </span>
-                    ))}
+                  {project.tags.map((tag, tagIdx) => (
+                    <span
+                      key={tagIdx}
+                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View ALL Call To Action */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        {/* View ALL Call To Action - (Commentato come nell'originale) */}
+
+        {/* <div className="text-center mt-12 animate-fade-in animation-delay-500">
             <AnimatedBorderButton>
                 View all Projects
                 <ArrowUpRight className="w-5 h-5"/>
             </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

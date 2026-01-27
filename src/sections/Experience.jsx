@@ -1,25 +1,48 @@
-const experience = [
-    {
-        period: "2025 - Present",
-        role: "The Pier - Advanced Developer", // O "Second Year Candidate"
-        company: "Apple Developer Academy",
-        description: "Engaged in the Second Year Program working on external stakeholder projects with international NGOs and Research Departments. Focused on developing time management, critical thinking, and project management skills while collaborating on research and personal projects.",
-        technologies: ["Unity", "GitHub", "Scrum", "Agile Methodology"],
-        current: true,
-    },
-    /* // ESEMPIO COMMENTATO COME RICHIESTO
-    {
-        period: "2022 - 2024", 
-        role: "Junior Developer",
-        company: "Tech Company Inc.", 
-        description: "Sviluppo frontend e manutenzione di interfacce utente responsive utilizzando React e Tailwind CSS.", 
-        technologies: ["React", "JavaScript", "CSS"], 
-        current: false, 
-    }, 
-    */
-]
+export const Experience = ({ lang }) => {
 
-export const Experience = () => {
+    // Oggetto per i testi dell'intestazione
+    const content = {
+        en: {
+            badge: "Career Journey",
+            titleStart: "Experience that",
+            titleItalic: " speaks volumes.",
+            description: "A timeline of my professional growth."
+        },
+        it: {
+            badge: "Percorso Professionale",
+            titleStart: "Esperienze che",
+            titleItalic: " lasciano il segno.",
+            description: "La cronologia della mia crescita professionale."
+        }
+    };
+
+    const t = content[lang] || content.en;
+
+    const experience = [
+        {
+            period: "2025 - Present",
+            role: "The Pier - Advanced Developer",
+            company: "Apple Developer Academy",
+            description: lang === "en"
+                ? "Engaged in the Second Year Program working on external stakeholder projects with international NGOs and Research Departments. Focused on developing time management, critical thinking, and project management skills while collaborating on research and personal projects."
+                : "Partecipo al programma del secondo anno (The Pier) lavorando su progetti per stakeholder esterni, incluse ONG internazionali e Dipartimenti di Ricerca. Focus su gestione del tempo, pensiero critico e project management, collaborando parallelamente a progetti di ricerca e personali.",
+            technologies: ["Unity", "GitHub", "Scrum", "Agile Methodology"],
+            current: true,
+        },
+        /* 
+        {
+            period: "2022 - 2024", 
+            role: "Junior Developer",
+            company: "Tech Company Inc.", 
+            description: lang === "en" 
+                ? "Frontend development and maintenance of responsive user interfaces using React and Tailwind CSS."
+                : "Sviluppo frontend e manutenzione di interfacce utente responsive utilizzando React e Tailwind CSS.", 
+            technologies: ["React", "JavaScript", "CSS"], 
+            current: false, 
+        }, 
+        */
+    ];
+
     return (
         <section id="experience" className="py-32 relative overflow-hidden">
             {/* BG */}
@@ -32,27 +55,26 @@ export const Experience = () => {
                         className="text-secondary-foreground text-sm font-medium
                     tracking-wider uppercase animate-fade-in"
                     >
-                        Career Journey
+                        {t.badge}
                     </span>
                     <h2
                         className="text-4xl md:text-5xl font-bold 
                     mt-4 mb-6 animate-fade-in animation-delay-100
                     text-secondary-foreground"
                     >
-                        Experience that
+                        {t.titleStart}
                         <span
                             className="font-serif italic font-normal text-white"
                         >
                             {" "}
-                            speaks volumes.
+                            {t.titleItalic}
                         </span>
                     </h2>
 
                     <p
                         className="text-muted-foreground animate-fade-in animation-delay-200"
                     >
-                        a timeline of my professional growth, from curious beginner to
-                        senior engineer leading teams and building products at scale.
+                        {t.description}
                     </p>
                 </div>
 
@@ -74,7 +96,7 @@ export const Experience = () => {
                                     )}
                                 </div>
 
-                                {/* Content - Corretto col-start in col-start-2 */}
+                                {/* Content */}
                                 <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
                                     <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
                                         <span className="text-sm text-primary font-medium">
@@ -91,7 +113,6 @@ export const Experience = () => {
                                         </p>
 
                                         <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
-                                            {/* Aggiunta key univoca */}
                                             {exp.technologies.map((tech, techIdx) => (
                                                 <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground">
                                                     {tech}

@@ -1,22 +1,22 @@
 import { Download } from "lucide-react";
 
-export const AnimatedBorderButton = ({children}) =>{
+export const AnimatedBorderButton = ({ children }) => {
     return (
         <button className="relative bg-transparent border border-border
-                   text-foreground hover:border-primary/50 transition-all
-                   duration-1000 focus:outline-none focus-visible:ring-2
-                   focus-visible:ring-primary focus-visible:ring-offset-2
-                   disabled:opacity-50 disabled:cursor-not-allowed group
-                   px-8 py-4 text-lg font-medium rounded-full overflow-visible
-                   animated-border"
+                       text-foreground hover:border-primary/50 transition-all
+                       duration-1000 focus:outline-none focus-visible:ring-2
+                       focus-visible:ring-primary focus-visible:ring-offset-2
+                       disabled:opacity-50 disabled:cursor-not-allowed group
+                       px-8 py-4 text-lg font-medium rounded-full overflow-visible
+                       animated-border cursor-pointer"
         >
             {/* Animated SVG Border */}
-            <svg className=" absolute left-0 top-0 w-full h-full pointer-events-none"
-                    viewBox="0 0 200 60"
-                    preserveAspectRatio="none"
-                    style={{ overflow: "visible"}}   
+            <svg className="absolute left-0 top-0 w-full h-full pointer-events-none"
+                viewBox="0 0 200 60"
+                preserveAspectRatio="none"
+                style={{ overflow: "visible" }}
             >
-                <path 
+                <path
                     d="M 30,1 L 170,1 A 29,29 0 0 1 170,59 L 30,59 A 29,29 0 0 1 30,1 Z"
                     fill="none"
                     stroke="var(--color-primary)"

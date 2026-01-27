@@ -1,15 +1,15 @@
 import { Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
-    { icon: Github, href: "#", label: "Github" },
-    { icon: Linkedin, href: "#", label: "Linkedin" },
+    { icon: Github, href: "https://github.com/AideB2B3" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/davide-bellobuono/" },
 ];
 
 const footLinks = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
-    {href: "#education", label: "Education" },
+    { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
 ];
 
@@ -20,7 +20,7 @@ export const Footer = () => {
         <footer className="py-12 border-t border-border bg-background">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                    
+
                     {/* SINISTRA: Logo & Copyright */}
                     <div className="flex flex-col items-center md:items-start gap-2">
                         {/* Logo con il tuo colore Primary */}
@@ -36,9 +36,9 @@ export const Footer = () => {
                     {/* CENTRO: Navigation Links */}
                     <nav className="flex gap-8">
                         {footLinks.map((link) => (
-                            <a 
-                                key={link.label} 
-                                href={link.href} 
+                            <a
+                                key={link.label}
+                                href={link.href}
                                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
                             >
                                 {link.label}

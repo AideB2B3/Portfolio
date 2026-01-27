@@ -1,23 +1,51 @@
-const education = [
-    {
-        period: "2019 - Present",
-        title: "Laurea in Ingegneria dell'Automazione",
-        institution: "Università degli Studi di Napoli Federico II",
-        description: "Academic path focused on Control Theory, Robotics, and Industrial Automation. Strong foundation in mathematics and physics applied to the design of dynamic systems and software development for process control.",
-        technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
-        current: true,
-    },
-    {
-        period: "2024 - 2025",
-        title: "Apple Developer Academy @ UniNa",
-        institution: "Università degli Studi di Napoli Federico II & Apple",
-        description: "A 9-month training program focused on software development, app design, startup creation, and entrepreneurial skills. Utilizes a Challenge-Based Learning approach to prepare international students for the digital innovation ecosystem.",
-        technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
-        current: false,
-    },
-];
+export const Education = ({ lang }) => {
+    
+    // Testi statici dell'intestazione
+    const content = {
+        en: {
+            badge: "Academic Education",
+            titleStart: "An education that",
+            titleItalic: " shaped my path.",
+            description: "A timeline of my academic growth."
+        },
+        it: {
+            badge: "Formazione Accademica",
+            titleStart: "Un percorso che",
+            titleItalic: " ha plasmato il mio percorso.",
+            description: "La cronologia della mia crescita accademica."
+        }
+    };
 
-export const Education = () => {
+    const t = content[lang] || content.en;
+
+    // Dati educativi con traduzioni
+    const education = [
+        {
+            period: lang === "en" ? "Present" : "Oggi",
+            title: lang === "en" ? "Bachelor's in Automation Engineering" : "Laurea in Ingegneria dell'Automazione",
+            institution: lang == "en"
+             ? "University of Naples Federico II"
+             : "Università degli Studi di Napoli Federico II",
+            description: lang === "en" 
+                ? "Academic path focused on Control Theory, Robotics, and Industrial Automation. Strong foundation in mathematics and physics applied to the design of dynamic systems and software development for process control."
+                : "Percorso accademico focalizzato su Teoria del Controllo, Robotica e Automazione Industriale. Solide basi di matematica e fisica applicate alla progettazione di sistemi dinamici e allo sviluppo software per il controllo di processo.",
+            technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
+            current: true,
+        },
+        {
+            period: "2024 - 2025",
+            title: "Apple Developer Academy @ UniNa",
+            institution: lang == "en"
+             ? "University of Naples Federico II & Apple Academy"
+             : "Università degli Studi di Napoli Federico II & Apple Academy",
+            description: lang === "en" 
+                ? "A 9-month training program focused on software development, app design, startup creation, and entrepreneurial skills. Utilizes a Challenge-Based Learning approach to prepare international students for the digital innovation ecosystem."
+                : "Un programma formativo di 9 mesi incentrato su sviluppo software, app design, creazione di startup e competenze imprenditoriali. Utilizza l'approccio Challenge-Based Learning per preparare studenti internazionali all'ecosistema dell'innovazione digitale.",
+            technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
+            current: false,
+        },
+    ];
+
     return (
         <section id="education" className="py-32 relative overflow-hidden">
             {/* BG */}
@@ -30,27 +58,26 @@ export const Education = () => {
                         className="text-secondary-foreground text-sm font-medium
                         tracking-wider uppercase animate-fade-in"
                     >
-                        Academic Education
+                        {t.badge}
                     </span>
                     <h2
                         className="text-4xl md:text-5xl font-bold 
                         mt-4 mb-6 animate-fade-in animation-delay-100
                         text-secondary-foreground"
                     >
-                        An education that
+                        {t.titleStart}
                         <span
                             className="font-serif italic font-normal text-white"
                         >
                             {" "}
-                            shaped my path.
+                            {t.titleItalic}
                         </span>
                     </h2>
 
                     <p
                         className="text-muted-foreground animate-fade-in animation-delay-200"
                     >
-                        A timeline of my academic growth, from early studies to advanced specialization
-                        in software engineering and technology.
+                        {t.description}
                     </p>
                 </div>
 
