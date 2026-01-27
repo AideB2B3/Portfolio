@@ -39,14 +39,16 @@ export const Navbar = ({ lang, setLang }) => {
     return (
         <header className={`fixed top-0 left-0 right-0 
         ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50 transition-all duration-300`}>
-            <nav className="container mx-auto px-6 flex justify-between items-center">
+            {/* Aggiunto 'relative' qui per permettere il posizionamento assoluto dei figli */}
+            <nav className="container mx-auto px-6 flex justify-between items-center relative">
 
-                <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
+                {/* Logo */}
+                <a href="#" className="text-xl font-bold tracking-tight hover:text-primary z-20">
                     DB<span className="text-primary">.</span>
                 </a>
 
-                {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-1">
+                {/* Desktop Navigation - CENTRATA ASSOLUTAMENTE */}
+                <div className="hidden md:flex items-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                         {navLinks.map((link, index) => (
                             <a href={link.href} key={index}
@@ -58,7 +60,7 @@ export const Navbar = ({ lang, setLang }) => {
                 </div>
 
                 {/* CTA Button & Language Desktop */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4 z-20">
 
                     {/* Tasto Cambio Lingua */}
                     <button
@@ -75,7 +77,7 @@ export const Navbar = ({ lang, setLang }) => {
                 </div>
 
                 {/* Mobile Menu Button & Language Mobile */}
-                <div className="flex md:hidden items-center gap-4">
+                <div className="flex md:hidden items-center gap-4 z-20">
                     <button onClick={toggleLanguage} className="text-muted-foreground hover:text-primary">
                         <span className="font-bold uppercase text-sm">{lang}</span>
                     </button>
