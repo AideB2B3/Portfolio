@@ -3,7 +3,6 @@ import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 export const Projects = ({ lang }) => {
 
-  // Testi statici dell'intestazione
   const content = {
     en: {
       badge: "Featured Work",
@@ -19,31 +18,28 @@ export const Projects = ({ lang }) => {
     }
   };
 
-  // Seleziono i testi in base alla lingua
   const t = content[lang] || content.en;
 
-  // Array dei progetti con descrizioni localizzate
+
   const projects = [
     {
       title: "Bug Busters",
-      // Qui gestiamo la doppia lingua per la descrizione del singolo progetto
       description: lang === "en"
-        ? "Example description text that will be replaced later."
-        : "Esempio testo di descrizione che poi dovrà essere sostituito.",
-      image: "Projects/nomeProgettoEsempio1.png",
-      tags: ["SwiftUI", "SpriteKit"],
+        ? "Bug Busters is my debut project in game development, driven by the challenge of moving from player to creator. It’s a cartoon-style arcade shooter where players face relentless waves of bugs. Developing this title allowed me to master the real-world complexities of game logic, from managing object lifecycles to fine-tuning gameplay balance."
+        : "Bug Busters rappresenta il mio debutto nel game development, un progetto nato dalla curiosità di passare da giocatore a creatore. È un arcade shooter in stile cartoon dove il giocatore deve affrontare ondate di bug. Sviluppare questo titolo mi ha permesso di scontrarmi con le complessità reali della logica di gioco: dalla gestione del ciclo di vita degli oggetti a schermo fino al bilanciamento della difficoltà.",
+      image: "Projects/Bug_busters.png",
+      tags: ["SwiftUI", "SpriteKit", "AVFoundation"],
       link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
       // github: "#", 
     },
-    // {
-    //   title: "Work in progress",
-    //   description: lang === "en" ? "Work in progress" : "Lavori in corso",
-    //   image: "/Projects/nomeProgettoEsempio2.png",
-    //   tags: ["-", "-"],
-    //   link: "#",
-    //   github: "#",
-    // },
-    // ... altri progetti commentati
+    {
+      title: "Work in progress",
+      description: lang === "en" ? "Work in progress" : "Lavori in corso",
+      image: "Projects/nomeProgettoEsempio2.png",
+      tags: ["-", "-"],
+      link: "#",
+      github: "#",
+    },
   ];
 
   return (

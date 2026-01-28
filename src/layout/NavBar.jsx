@@ -39,7 +39,6 @@ export const Navbar = ({ lang, setLang }) => {
     return (
         <header className={`fixed top-0 left-0 right-0 
         ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50 transition-all duration-300`}>
-            {/* Aggiunto 'relative' qui per permettere il posizionamento assoluto dei figli */}
             <nav className="container mx-auto px-6 flex justify-between items-center relative">
 
                 {/* Logo */}
@@ -47,7 +46,7 @@ export const Navbar = ({ lang, setLang }) => {
                     DB<span className="text-primary">.</span>
                 </a>
 
-                {/* Desktop Navigation - CENTRATA ASSOLUTAMENTE */}
+                {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                         {navLinks.map((link, index) => (

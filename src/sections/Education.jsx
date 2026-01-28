@@ -1,6 +1,5 @@
 export const Education = ({ lang }) => {
     
-    // Testi statici dell'intestazione
     const content = {
         en: {
             badge: "Academic Education",
@@ -10,7 +9,7 @@ export const Education = ({ lang }) => {
         },
         it: {
             badge: "Formazione Accademica",
-            titleStart: "Un percorso che",
+            titleStart: "Un'istruzione che",
             titleItalic: " ha plasmato il mio percorso.",
             description: "La cronologia della mia crescita accademica."
         }
@@ -18,7 +17,6 @@ export const Education = ({ lang }) => {
 
     const t = content[lang] || content.en;
 
-    // Dati educativi con traduzioni
     const education = [
         {
             period: lang === "en" ? "Present" : "Oggi",

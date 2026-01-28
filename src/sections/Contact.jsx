@@ -33,8 +33,6 @@ export const Contact = ({ lang }) => {
       btnSending: "Sending...",
       successMsg: "Message sent successfully! I'll get back to you soon.",
       errorMsg: "Failed to send message. Please try again later.",
-      
-      // Questi sono i testi che prima non si traducevano
       contactInfoTitle: "Contact Information",
       labelLocation: "Location",
       labelEmail: "Email",
@@ -56,8 +54,6 @@ export const Contact = ({ lang }) => {
       btnSending: "Invio in corso...",
       successMsg: "Messaggio inviato con successo! Ti risponderò presto.",
       errorMsg: "Impossibile inviare il messaggio. Riprova più tardi.",
-      
-      // Traduzioni Italiane Corrette
       contactInfoTitle: "Informazioni di Contatto",
       labelLocation: "Posizione",
       labelEmail: "Email",
@@ -77,7 +73,7 @@ export const Contact = ({ lang }) => {
     },
     {
       icon: MapPin,
-      label: t.labelLocation, // Ora prende "Posizione"
+      label: t.labelLocation,
       value: "Somma Vesuviana, NA",
       href: "https://maps.app.goo.gl/ryQGwJR6hJTZPRMJA",
     },
@@ -190,7 +186,7 @@ export const Contact = ({ lang }) => {
             {/* Box Informazioni */}
             <div className="glass rounded-3xl p-5 md:p-8 border border-primary/20">
               <h3 className="text-xl font-semibold mb-6 text-white">
-                {t.contactInfoTitle} {/* <--- Questo ora cambierà in "Informazioni di Contatto" */}
+                {t.contactInfoTitle}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
@@ -215,7 +211,6 @@ export const Contact = ({ lang }) => {
             <div className="glass rounded-3xl p-5 md:p-8 border border-primary/30">
                 <div className="flex items-center gap-3 mb-2">
                     <span className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"/> 
-                    {/* Qui c'era il testo fisso in inglese, ora usa la variabile */}
                     <span className="font-medium">{t.availabilityTitle}</span> 
                 </div>
                 <p className="text-muted-foreground text-sm">
