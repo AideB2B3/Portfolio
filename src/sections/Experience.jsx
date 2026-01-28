@@ -1,6 +1,5 @@
 export const Experience = ({ lang }) => {
 
-    // Oggetto per i testi dell'intestazione
     const content = {
         en: {
             badge: "Career Journey",
@@ -44,7 +43,7 @@ export const Experience = ({ lang }) => {
     ];
 
     return (
-        <section id="experience" className="py-32 relative overflow-hidden">
+        <section id="experience" className="py-10 md:py-32 relative overflow-hidden">
             {/* BG */}
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
@@ -71,11 +70,11 @@ export const Experience = ({ lang }) => {
                         </span>
                     </h2>
 
-                    <p
+                    {/* <p
                         className="text-muted-foreground animate-fade-in animation-delay-200"
                     >
                         {t.description}
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Timeline Container */}

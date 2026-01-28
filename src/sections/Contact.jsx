@@ -36,7 +36,7 @@ export const Contact = ({ lang }) => {
       contactInfoTitle: "Contact Information",
       labelLocation: "Location",
       labelEmail: "Email",
-      availabilityTitle: "Currently Involved Pier-Program Apple Developer Academy",
+      availabilityTitle: "Currently Involved Pier-Program",
       availabilityDesc: "I'm involved in the Pier Program at the Apple Developer Academy but open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!"
     },
     it: {
@@ -47,7 +47,7 @@ export const Contact = ({ lang }) => {
       formName: "Nome",
       placeholderName: "Il tuo nome...",
       formEmail: "Email",
-      placeholderEmail: "tua@email.com",
+      placeholderEmail: "latua@email.com",
       formMessage: "Messaggio",
       placeholderMessage: "Il tuo messaggio...",
       btnSend: "Invia Messaggio",
@@ -57,7 +57,7 @@ export const Contact = ({ lang }) => {
       contactInfoTitle: "Informazioni di Contatto",
       labelLocation: "Posizione",
       labelEmail: "Email",
-      availabilityTitle: "Attualmente nel Pier-Program Apple Developer Academy",
+      availabilityTitle: "Attualmente nel Pier-Program",
       availabilityDesc: "Sono coinvolto nel Pier Program della Apple Developer Academy ma resto aperto a nuove opportunità e progetti stimolanti. Che tu cerchi un ingegnere full-time o un consulente freelance, parliamone!"
     }
   };
@@ -110,7 +110,7 @@ export const Contact = ({ lang }) => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-32 relative overflow-hidden">
+    <section id="contact" className="py-10 md:py-32 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />

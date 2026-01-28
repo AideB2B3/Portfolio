@@ -2,7 +2,6 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react"
 
 export const About = ({ lang }) => {
 
-    // Oggetto con le traduzioni complete
     const translations = {
         en: {
             badge: "About Me",
@@ -43,7 +42,7 @@ export const About = ({ lang }) => {
     const t = translations[lang] || translations.en;
 
     return (
-        <section id="about" className="py-32 relative overflow-hidden">
+        <section id="about" className="pt-1 pb-10 md:pt-32 md:pb-32 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Column */}

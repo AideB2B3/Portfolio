@@ -1,5 +1,5 @@
 export const Education = ({ lang }) => {
-    
+
     const content = {
         en: {
             badge: "Academic Education",
@@ -22,9 +22,9 @@ export const Education = ({ lang }) => {
             period: lang === "en" ? "Present" : "Oggi",
             title: lang === "en" ? "Bachelor's in Automation Engineering" : "Laurea in Ingegneria dell'Automazione",
             institution: lang == "en"
-             ? "University of Naples Federico II"
-             : "Università degli Studi di Napoli Federico II",
-            description: lang === "en" 
+                ? "University of Naples Federico II"
+                : "Università degli Studi di Napoli Federico II",
+            description: lang === "en"
                 ? "Academic path focused on Control Theory, Robotics, and Industrial Automation. Strong foundation in mathematics and physics applied to the design of dynamic systems and software development for process control."
                 : "Percorso accademico focalizzato su Teoria del Controllo, Robotica e Automazione Industriale. Solide basi di matematica e fisica applicate alla progettazione di sistemi dinamici e allo sviluppo software per il controllo di processo.",
             technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
@@ -34,9 +34,9 @@ export const Education = ({ lang }) => {
             period: "2024 - 2025",
             title: "Apple Developer Academy @ UniNa",
             institution: lang == "en"
-             ? "University of Naples Federico II & Apple Academy"
-             : "Università degli Studi di Napoli Federico II & Apple Academy",
-            description: lang === "en" 
+                ? "University of Naples Federico II & Apple Academy"
+                : "Università degli Studi di Napoli Federico II & Apple Academy",
+            description: lang === "en"
                 ? "A 9-month training program focused on software development, app design, startup creation, and entrepreneurial skills. Utilizes a Challenge-Based Learning approach to prepare international students for the digital innovation ecosystem."
                 : "Un programma formativo di 9 mesi incentrato su sviluppo software, app design, creazione di startup e competenze imprenditoriali. Utilizza l'approccio Challenge-Based Learning per preparare studenti internazionali all'ecosistema dell'innovazione digitale.",
             technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
@@ -45,55 +45,44 @@ export const Education = ({ lang }) => {
     ];
 
     return (
-        <section id="education" className="py-32 relative overflow-hidden">
+        <section id="education" className="py-10 md:py-32 relative overflow-hidden">
             {/* BG */}
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
                 <div className="max-w-3xl mb-16">
-                    <span
-                        className="text-secondary-foreground text-sm font-medium
-                        tracking-wider uppercase animate-fade-in"
-                    >
+                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
                         {t.badge}
                     </span>
-                    <h2
-                        className="text-4xl md:text-5xl font-bold 
-                        mt-4 mb-6 animate-fade-in animation-delay-100
-                        text-secondary-foreground"
-                    >
+                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                         {t.titleStart}
-                        <span
-                            className="font-serif italic font-normal text-white"
-                        >
-                            {" "}
-                            {t.titleItalic}
+                        <span className="font-serif italic font-normal text-white">
+                            {" "} {t.titleItalic}
                         </span>
                     </h2>
-
-                    <p
-                        className="text-muted-foreground animate-fade-in animation-delay-200"
-                    >
+                    <p className="text-muted-foreground animate-fade-in animation-delay-200">
                         {t.description}
                     </p>
                 </div>
 
                 {/* Timeline Container */}
                 <div className="relative">
-                    <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+                    {/* Vertical Line */}
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
                     <div className="space-y-12">
                         {education.map((edu, idx) => (
                             <div
                                 key={idx}
-                                className="relative grid md:grid-cols-2 animate-fade-in"
+                                className="relative grid md:grid-cols-2 items-start animate-fade-in"
                                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
                             >
+
                                 {/* Timeline Dot */}
                                 <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
                                     {edu.current && (
-                                        <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>
+                                        <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75 -translate-x-0"></span>
                                     )}
                                 </div>
 
