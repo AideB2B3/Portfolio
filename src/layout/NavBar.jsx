@@ -9,7 +9,7 @@ export const Navbar = ({ lang, setLang }) => {
 
     // Definisco i link con entrambe le lingue
     const navLinks = [
-        { href: "#about", label: lang === "en" ? "About" : "Chi Sono" },
+        { href: "#about", label: lang === "en" ? "About Me" : "Chi Sono" },
         { href: "#projects", label: lang === "en" ? "Projects" : "Progetti" },
         { href: "#experience", label: lang === "en" ? "Experience" : "Esperienza" },
         { href: "#education", label: lang === "en" ? "Education" : "Formazione" },
@@ -47,7 +47,7 @@ export const Navbar = ({ lang, setLang }) => {
                 </a>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="hidden md:flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                         {navLinks.map((link, index) => (
                             <a href={link.href} key={index}
@@ -75,7 +75,7 @@ export const Navbar = ({ lang, setLang }) => {
                     </Button>
                 </div>
 
-                {/* Mobile Menu Button & Language Mobile */}
+                {/* Mobile Menu Button e Language Mobile */}
                 <div className="flex md:hidden items-center gap-4 z-20">
                     <button onClick={toggleLanguage} className="text-muted-foreground hover:text-primary">
                         <span className="font-bold uppercase text-sm">{lang}</span>

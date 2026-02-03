@@ -13,7 +13,6 @@ const skills = [
     "JavaScript",
     "SwiftUI",
     "Unity",
-    "Figma",
     "Git",
 ]
 
@@ -30,19 +29,19 @@ export const Hero = ({ lang }) => {
             contactBtn: "Contact Me",
             downloadBtn: "Download CV",
             follow: "Follow me: ",
-            tech: "Technologies I work with",
+            tech: "Technologies I work with:",
         },
         it: {
-            role: "Automation Engineer - iOS Developer",
-            headlineStart: "La ",
-            headlineGlow: "Logica",
-            headlineMiddle: "ingegneristica incontra il",
+            role: "Ingegnere dell'Automazione - Sviluppatore iOS",
+            headlineStart: "Logica ",
+            headlineGlow: "Ingegneristica",
+            headlineMiddle: "incontra il",
             headlineEnd: "Design Intuitivo.",
             description: "Ciao, sono Davide Bellobuono. Sto perfezionando i miei studi in Ingegneria dell'Automazione e sviluppo iOS alla Federico II. Il mio obiettivo è creare sistemi efficienti ed esperienze digitali coinvolgenti, unendo codice e design.",
             contactBtn: "Contattami",
             downloadBtn: "Scarica CV",
             follow: "Seguimi su: ",
-            tech: "Tecnologie che utilizzo",
+            tech: "Tecnologie che utilizzo:",
         }
     };
 
@@ -88,7 +87,22 @@ export const Hero = ({ lang }) => {
                         {/* Headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                {content.headlineStart}<span className="text-primary glow-text">{content.headlineGlow}</span>
+                                <span className="text-primary glow-text">Engineering Logic</span>
+                                <br />
+                                meets
+                                <br />
+                                <span className="font-serif italic font-normal text-white">
+                                    Intuitive Design.
+                                </span>
+                            </h1>
+                            <p className=" text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
+                                {content.description}
+                            </p>
+                        </div>
+
+                        {/* <div className="space-y-4">
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                                <span className="text-primary glow-text">{content.headlineStart}{content.headlineGlow}</span>
                                 <br />
                                 {content.headlineMiddle}
                                 <br />
@@ -99,7 +113,7 @@ export const Hero = ({ lang }) => {
                             <p className=" text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
                                 {content.description}
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* Call To Action */}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
@@ -155,20 +169,28 @@ export const Hero = ({ lang }) => {
                         </div>
                     </div>
                 </div>
-                {/* Skill Section*/}
-                <div className="mt-20 animate-fade-in animation-delay-600">
-                    <p className="text-sm text-muted-foreground mb-6 text-center">
+                {/* Skill Section */}
+                <div className="mt-20 animate-fade-in animation-delay-600 w-full">
+                    <p className="text-xs md:text-sm text-muted-foreground mb-6 uppercase tracking-widest text-left">
                         {content.tech}
                     </p>
-                    <div className="relative overflow-hidden">
-                        <div className="flex animate-marquee">
-                            {[...skills, ...skills].map((skill, idx) => (
-                                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                                        {skill}
-                                    </span>
-                                </div>
-                            ))}
+
+
+                    <div className="relative group">
+
+                        <div className="hidden md:block absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
+                        <div className="hidden md:block absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
+
+                        <div className="overflow-x-auto no-scrollbar touch-pan-x">
+                            <div className="flex w-max animate-marquee group-hover:animate-none py-4">
+                                {[...skills].map((skill, idx) => (
+                                    <div key={idx} className="flex-shrink-0 px-6 md:px-12">
+                                        <span className="text-lg md:text-2xl font-semibold text-muted-foreground/30 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default inline-block select-none">
+                                            {skill}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

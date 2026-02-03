@@ -2,16 +2,16 @@ export const Education = ({ lang }) => {
 
     const content = {
         en: {
-            badge: "Academic Education",
-            titleStart: "An education that",
-            titleItalic: " shaped my path.",
-            description: "A timeline of my academic growth."
+            badge: "Academic Background",
+            titleStart: "Education that",
+            titleItalic: " defined my journey.",
+            description: "A timeline of my academic and professional growth."
         },
         it: {
-            badge: "Formazione Accademica",
+            badge: "Percorso Formativo",
             titleStart: "Un'istruzione che",
-            titleItalic: " ha plasmato il mio percorso.",
-            description: "La cronologia della mia crescita accademica."
+            titleItalic: " ha dato forma al mio percorso.",
+            description: "Le tappe fondamentali della mia crescita accademica."
         }
     };
 
@@ -19,27 +19,39 @@ export const Education = ({ lang }) => {
 
     const education = [
         {
-            period: lang === "en" ? "Present" : "Oggi",
-            title: lang === "en" ? "Bachelor's in Automation Engineering" : "Laurea in Ingegneria dell'Automazione",
-            institution: lang == "en"
+            period: lang === "en" ? "Present" : "In corso",
+            title: lang === "en" ? "B.Sc. in Automation Engineering" : "Laurea Triennale in Ingegneria dell'Automazione",
+            institution: lang === "en"
                 ? "University of Naples Federico II"
                 : "Università degli Studi di Napoli Federico II",
             description: lang === "en"
-                ? "Academic path focused on Control Theory, Robotics, and Industrial Automation. Strong foundation in mathematics and physics applied to the design of dynamic systems and software development for process control."
-                : "Percorso accademico focalizzato su Teoria del Controllo, Robotica e Automazione Industriale. Solide basi di matematica e fisica applicate alla progettazione di sistemi dinamici e allo sviluppo software per il controllo di processo.",
+                ? "Academic career centered on Control Theory, Robotics, and Industrial Automation. Strong focus on mathematical modeling, dynamic systems design, and software development for advanced process control."
+                : "Percorso accademico incentrato su Teoria del Controllo, Robotica e Automazione Industriale. Solida formazione nella modellazione matematica, progettazione di sistemi dinamici e sviluppo di software per il controllo di processi complessi.",
             technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
             current: true,
         },
         {
             period: "2024 - 2025",
             title: "Apple Developer Academy @ UniNa",
-            institution: lang == "en"
-                ? "University of Naples Federico II & Apple Academy"
-                : "Università degli Studi di Napoli Federico II & Apple Academy",
+            institution: lang === "en"
+                ? "University of Naples Federico II & Apple"
+                : "Università degli Studi di Napoli Federico II & Apple",
             description: lang === "en"
-                ? "A 9-month training program focused on software development, app design, startup creation, and entrepreneurial skills. Utilizes a Challenge-Based Learning approach to prepare international students for the digital innovation ecosystem."
-                : "Un programma formativo di 9 mesi incentrato su sviluppo software, app design, creazione di startup e competenze imprenditoriali. Utilizza l'approccio Challenge-Based Learning per preparare studenti internazionali all'ecosistema dell'innovazione digitale.",
+                ? "High-level training program focused on software engineering, UI/UX design, and startup incubation. Applied Challenge-Based Learning (CBL) to solve real-world problems within a multidisciplinary and international team environment."
+                : "Programma di alta formazione focalizzato su ingegneria del software, UI/UX design e incubazione di startup. Approccio basato sul Challenge-Based Learning (CBL) per risolvere problemi reali in team multidisciplinari e internazionali.",
             technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
+            current: false,
+        },
+        {
+            period: "2014 - 2019",
+            title: lang === "en"
+                ? "High School Diploma in Electrical Engineering"
+                : "Diploma di Perito Elettrotecnico ed Elettronico",
+            institution: "ITIS Ettore Majorana",
+            description: lang === "en"
+                ? "Technical specialization in industrial automation and power systems. Gained hands-on experience in PLC programming, data acquisition, and electrical circuit design, with a focus on efficiency and industrial safety regulations."
+                : "Specializzazione tecnica in automazione e sistemi di potenza. Esperienza pratica in programmazione PLC, acquisizione dati e progettazione di circuiti elettrici, con particolare attenzione all'efficienza e alle normative di sicurezza industriale.",
+            technologies: ["Industrial Automation", "Electrical Systems", "PLC", "Data Acquisition", "Safety Regs"],
             current: false,
         },
     ];

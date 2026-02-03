@@ -47,7 +47,7 @@ export const Contact = ({ lang }) => {
       formName: "Nome",
       placeholderName: "Il tuo nome...",
       formEmail: "Email",
-      placeholderEmail: "latua@email.com",
+      placeholderEmail: "La Tua@email.com",
       formMessage: "Messaggio",
       placeholderMessage: "Il tuo messaggio...",
       btnSend: "Invia Messaggio",
@@ -190,8 +190,8 @@ export const Contact = ({ lang }) => {
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
-                  <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface/50 transition-all border border-transparent hover:border-primary/20 group">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 rounded-xl hover:bg-surface/50 transition-all border border-transparent hover:border-primary/20 group">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                       <item.icon className="w-5 h-5" />
                     </div>
                     <div>

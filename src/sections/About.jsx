@@ -9,9 +9,9 @@ export const About = ({ lang }) => {
             titlePart2: " designing for people.",
             p1: "I like to think of development as a way to create something useful that can truly simplify people's lives. When I'm passionate about a project, I get so into the flow that I forget everything around me — that's when I feel in my element.",
             p2: "I have a background in Automation Engineering from the University Federico II, where I learned to think in a logical and structured way. I've always loved robots and automated systems, and the idea of improving daily life through technology has always fascinated me.",
-            p3: "Currently, I am continuing my journey at the Apple Developer Academy, where I'm learning not only SwiftUI and Unity development, but also the value of collaboration, creative thinking, and human-centered design. It's an environment that's helping me challenge myself, build a solid network, and discover how technology can be a deeply human and inclusive tool.",
+            p3: "Currently, I am continuing my journey at the Apple Developer Academy, where I'm learning not only SwiftUI and Unity development, but also the value of collaboration, creative thinking, and Human Centered Design. It's an environment that's helping me challenge myself, build a solid network, and discover how technology can be a deeply human and inclusive tool.",
             p4: "In my work, I always strive to collaborate by listening to others and contributing to project decisions or team problem-solving. I would define myself as a skilled mediator, capable of bringing strong empathy to the group.",
-            quote: "I strongly believe that a great project starts first and foremost with a positive and cohesive team spirit.",
+            quote: "I strongly believe that a great project starts first and foremost with a positive and cohesive team spirit",
             highlights: [
                 { title: "Clean Code", description: "Writing maintainable, scalable code that stands the test of time." },
                 { title: "Performance", description: "Optimizing for speed and delivering lightning-fast user experiences." },
@@ -25,9 +25,9 @@ export const About = ({ lang }) => {
             titlePart2: " progettare per le persone.",
             p1: "Mi piace vedere lo sviluppo come un mezzo per creare qualcosa di utile, capace di semplificare davvero la vita delle persone. Quando mi appassiono a un progetto, mi immergo così tanto nel flusso di lavoro da dimenticare tutto ciò che mi circonda: è in quel momento che mi sento davvero nel mio elemento.",
             p2: "Il mio percorso parte dall'Ingegneria dell'Automazione presso l'Università Federico II, dove ho imparato a pensare in modo logico e strutturato. Ho sempre amato la robotica e i sistemi automatizzati; l'idea di migliorare la quotidianità attraverso la tecnologia è qualcosa che mi ha sempre affascinato.",
-            p3: "Attualmente sto proseguendo il mio cammino alla Apple Developer Academy. Qui non sto solo approfondendo lo sviluppo in SwiftUI e Unity, ma sto scoprendo il valore della collaborazione, del pensiero creativo e dello Human-Centered Design. È un ambiente che mi spinge a mettermi in gioco, a costruire un network solido e a scoprire come la tecnologia possa essere uno strumento profondamente umano e inclusivo.",
+            p3: "Attualmente sto proseguendo il mio cammino alla Apple Developer Academy. Qui non sto solo approfondendo lo sviluppo in SwiftUI e Unity, ma sto scoprendo il valore della collaborazione, del pensiero creativo e dello Human Centered Design. È un ambiente che mi spinge a mettermi in gioco, a costruire un network solido e a scoprire come la tecnologia possa essere uno strumento profondamente umano e inclusivo.",
             p4: "Nel lavoro, punto sempre alla collaborazione: ascolto gli altri e contribuisco attivamente alle decisioni di progetto e al problem-solving di squadra. Mi definirei un mediatore attento, capace di portare una forte empatia all'interno del gruppo.",
-            quote: "Credo fermamente che un grande progetto nasca, prima di tutto, da uno spirito di squadra positivo e coeso.",
+            quote: "Credo fermamente che un grande progetto nasca, prima di tutto, da uno spirito di squadra positivo e coeso",
             highlights: [
                 { title: "Clean Code", description: "Scrivere codice scalabile e manutenibile, fatto per durare nel tempo." },
                 { title: "Performance", description: "Ottimizzare la velocità per offrire esperienze utente fluide e immediate." },

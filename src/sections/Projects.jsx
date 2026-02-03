@@ -32,14 +32,14 @@ export const Projects = ({ lang }) => {
       link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
       // github: "#", 
     },
-    {
-      title: "Work in progress",
-      description: lang === "en" ? "Work in progress" : "Lavori in corso",
-      image: "Projects/nomeProgettoEsempio2.png",
-      tags: ["-", "-"],
-      link: "#",
-      github: "#",
-    },
+    // {
+    //   title: "Work in progress",
+    //   description: lang === "en" ? "Work in progress" : "Lavori in corso",
+    //   image: "Projects/nomeProgettoEsempio2.png",
+    //   tags: ["-", "-"],
+    //   link: "#",
+    //   github: "#",
+    // },
   ];
 
   return (
