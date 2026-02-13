@@ -11,6 +11,7 @@ const skills = [
     "CSS",
     "HTML",
     "JavaScript",
+    "ReactJS",
     "SwiftUI",
     "Unity",
     "Git",
@@ -32,7 +33,7 @@ export const Hero = ({ lang }) => {
             tech: "Technologies I work with:",
         },
         it: {
-            role: "Ingegnere dell'Automazione - Sviluppatore iOS",
+            role: "Ing. dell'Automazione - Sviluppatore iOS",
             headlineStart: "Logica ",
             headlineGlow: "Ingegneristica",
             headlineMiddle: "incontra il",
@@ -51,7 +52,7 @@ export const Hero = ({ lang }) => {
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/* background */}
             <div className="absolute inset-0">
-                <img src="hero-bg.png" alt="Hero image" className="w-full h-full object-cover opacity-40" />
+                <img src="/Portfolio/hero-bg.png" alt="Hero image" className="w-full h-full object-cover opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
             </div>
 
@@ -154,7 +155,7 @@ export const Hero = ({ lang }) => {
                                 to-primary/10 blur-2xl animate-pulse"
                             />
                             <div className="relative glass rounded-3xl p-2 glow-border">
-                                <img alt="Davide Bellobuono" className="w-full aspect-[4/5] object-cover rounded-2xl" src="profile-photo.png" />
+                                <img alt="Davide Bellobuono" className="w-full aspect-[4/5] object-cover rounded-2xl" src="/Portfolio/profile-photo.png" />
 
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
@@ -175,15 +176,15 @@ export const Hero = ({ lang }) => {
                         {content.tech}
                     </p>
 
-
                     <div className="relative group">
-
                         <div className="hidden md:block absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
                         <div className="hidden md:block absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
-
                         <div className="overflow-x-auto no-scrollbar touch-pan-x">
-                            <div className="flex w-max animate-marquee group-hover:animate-none py-4">
-                                {[...skills].map((skill, idx) => (
+                            <div
+                                className="flex w-max animate-marquee group-hover:animate-none py-4"
+                                style={{ animationDelay: "15s" }}
+                            >
+                                {[...skills, ...skills].map((skill, idx) => (
                                     <div key={idx} className="flex-shrink-0 px-6 md:px-12">
                                         <span className="text-lg md:text-2xl font-semibold text-muted-foreground/30 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default inline-block select-none">
                                             {skill}

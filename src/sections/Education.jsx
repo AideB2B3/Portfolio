@@ -20,7 +20,7 @@ export const Education = ({ lang }) => {
     const education = [
         {
             period: lang === "en" ? "Present" : "In corso",
-            title: lang === "en" ? "B.Sc. in Automation Engineering" : "Laurea Triennale in Ingegneria dell'Automazione",
+            title: lang === "en" ? "Bachelor's Degree in Automation Engineering" : "Laurea Triennale in Ingegneria dell'Automazione",
             institution: lang === "en"
                 ? "University of Naples Federico II"
                 : "Università degli Studi di Napoli Federico II",
