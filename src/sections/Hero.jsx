@@ -101,21 +101,6 @@ export const Hero = ({ lang }) => {
                             </p>
                         </div>
 
-                        {/* <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                <span className="text-primary glow-text">{content.headlineStart}{content.headlineGlow}</span>
-                                <br />
-                                {content.headlineMiddle}
-                                <br />
-                                <span className="font-serif italic font-normal text-white">
-                                    {content.headlineEnd}
-                                </span>
-                            </h1>
-                            <p className=" text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
-                                {content.description}
-                            </p>
-                        </div> */}
-
                         {/* Call To Action */}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                             <a href="#contact">
@@ -170,29 +155,44 @@ export const Hero = ({ lang }) => {
                         </div>
                     </div>
                 </div>
-                {/* Skill Section */}
+                
+                {/* Technology Cards Section */}
                 <div className="mt-20 animate-fade-in animation-delay-600 w-full">
                     <p className="text-xs md:text-sm text-muted-foreground mb-6 uppercase tracking-widest text-left">
                         {content.tech}
                     </p>
 
-                    <div className="relative group">
-                        <div className="hidden md:block absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
-                        <div className="hidden md:block absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--color-background)] to-transparent z-10 pointer-events-none"></div>
-                        <div className="overflow-x-auto no-scrollbar touch-pan-x">
-                            <div
-                                className="flex w-max animate-marquee group-hover:animate-none py-4"
-                                style={{ animationDelay: "15s" }}
-                            >
-                                {[...skills, ...skills].map((skill, idx) => (
-                                    <div key={idx} className="flex-shrink-0 px-6 md:px-12">
-                                        <span className="text-lg md:text-2xl font-semibold text-muted-foreground/30 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default inline-block select-none">
+                    {/* Mobile: Horizontal Scroll with Snap */}
+                    <div className="md:hidden -mx-6">
+                        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory py-4 px-6 no-scrollbar">
+                            {skills.map((skill, idx) => (
+                                <div
+                                    key={idx}
+                                    className="flex-shrink-0 snap-center"
+                                >
+                                    <div className="glass rounded-xl px-5 py-3 hover:border-primary/50 transition-all duration-300 hover:scale-105 min-w-[100px] text-center">
+                                        <span className="text-sm font-semibold text-foreground">
                                             {skill}
                                         </span>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
+                    </div>
+
+                    {/* Desktop: Grid Layout */}
+                    <div className="hidden md:grid md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        {skills.map((skill, idx) => (
+                            <div
+                                key={idx}
+                                className="glass rounded-xl px-5 py-3 hover:border-primary/50 transition-all duration-300 hover:scale-105 text-center group cursor-default"
+                                style={{ animationDelay: `${idx * 50}ms` }}
+                            >
+                                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                                    {skill}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

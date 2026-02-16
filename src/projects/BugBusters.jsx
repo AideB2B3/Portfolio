@@ -202,7 +202,7 @@ const BugBusters = ({ lang }) => {
           {/* Text Content */}
           <div className="w-full lg:w-2/3 space-y-6 text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] text-white animate-fade-in">
-              BugBusters
+              Bug Busters
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0 animate-fade-in animation-delay-100">
               {t.tagline}
