@@ -287,7 +287,7 @@ const BugBusters = ({ lang }) => {
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full group-hover:bg-primary/30 transition-all duration-700"></div>
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-surface/50 glass">
                 <img 
-                  src="/Portfolio/public/Projects/BB_App_icon.png"
+                  src="/Portfolio/Projects/BB_App_icon.png"
                   alt="BugBusters App Icon" 
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => console.error('Failed to load app icon:', e.target.src)}
@@ -346,7 +346,7 @@ const BugBusters = ({ lang }) => {
                       <div className="relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0">
                         <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <img 
-                          src={`/Portfolio/public/Projects/iconTech/${tool.img}`}
+                          src={`/Portfolio/Projects/iconTech/${tool.img}`}
                           alt={tool.name}
                           className="relative w-full h-full object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-300"
                           onError={(e) => console.error('Failed to load:', e.target.src)}
