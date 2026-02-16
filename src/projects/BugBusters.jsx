@@ -13,7 +13,7 @@ const BugBusters = ({ lang }) => {
       tagline: "An arcade shooter that turns debugging into an epic battle",
       viewDemo: "View on App Store",
       viewGithub: "View Source",
-      
+
       // Metadata
       originLabel: "Origin",
       contextValue: "Apple Developer Academy",
@@ -21,19 +21,19 @@ const BugBusters = ({ lang }) => {
       roleValue: "iOS Developer",
       techLabel: "Tech Stack",
       yearLabel: "Timeline",
-      
+
       // Origin Section
-      originTitle: "Project Origin & Background",
+      originTitle: "Project Origin",
       originText: (
         <>
-          BugBusters was born during my time at the <span className="text-primary font-semibold">Apple Developer Academy</span>, where I focused on transforming an idea into a fully functional mobile game. The challenge: build a <span className="text-primary font-semibold">complete iOS game</span> in just <span className="text-primary font-semibold">4 weeks</span>.
+          BugBusters was born during my time at the <span className="text-primary font-semibold">Apple Developer Academy</span> as a <span className="text-primary font-semibold">team project</span>. The challenge was to build a complete iOS game in just <span className="text-primary font-semibold">4 weeks</span>.
           <br /><br />
-          The concept emerged from a simple question: <span className="italic text-foreground">"What if debugging was actually fun?"</span> This led to creating an arcade shooter where literal bugs become enemies. As the <span className="text-primary font-semibold">sole developer</span>, I handled all technical implementation while collaborating with team members on design, marketing, and strategy.
+          The concept emerged from a simple question: <span className="italic text-foreground">"What if debugging was actually fun?"</span> While the team focused on design and marketing, <span className="text-primary font-semibold">I was responsible for the entire development part</span>, transforming our ideas into a fully functional arcade shooter.
           <br /><br />
-          The project challenged me to master <span className="text-primary font-semibold">iOS game development</span>, from implementing physics engines to optimizing performance across devices.
+          This experience challenged me to master <span className="text-primary font-semibold">iOS game development</span>, handling everything from the physics engine to performance optimization.
         </>
       ),
-      
+
       // Merged Technical Highlights
       highlightsTitle: "Technical Implementation & Key Features",
       highlights: [
@@ -62,7 +62,7 @@ const BugBusters = ({ lang }) => {
           description: "Dynamic sound mixing using AVFoundation that responds to gameplay intensity."
         }
       ],
-      
+
       // Impact/Results
       impactTitle: "Impact & Results",
       impactStats: [
@@ -71,28 +71,28 @@ const BugBusters = ({ lang }) => {
         { label: "Performance", value: "60 FPS", highlight: true },
         { label: "Platform", value: "iOS Native", highlight: false }
       ],
-      
+
       // Tech Stack
       techTitle: "Technology Stack",
       techIntro: "Built natively for the Apple ecosystem with modern Swift frameworks.",
       tools: [
-        { 
-          name: "SwiftUI", 
-          desc: "UI Architecture & State Management", 
+        {
+          name: "SwiftUI",
+          desc: "UI Architecture & State Management",
           img: "SwiftUI.png"
         },
-        { 
-          name: "SpriteKit", 
-          desc: "2D Game Engine & Physics", 
+        {
+          name: "SpriteKit",
+          desc: "2D Game Engine & Physics",
           img: "SpriteKit.png"
         },
-        { 
-          name: "AVFoundation", 
-          desc: "Audio Engine & Effects", 
+        {
+          name: "AVFoundation",
+          desc: "Audio Engine & Effects",
           img: "AVFoundation.png"
         }
       ],
-      
+
       // Gallery
       galleryTitle: "System Preview & Screenshots",
       gallerySubtitle: "Visual proof of the finished product"
@@ -102,25 +102,26 @@ const BugBusters = ({ lang }) => {
       tagline: "Uno sparatutto arcade che trasforma il debugging in una battaglia epica",
       viewDemo: "Vedi su App Store",
       viewGithub: "Vedi Codice",
-      
+
       originLabel: "Origine",
       contextValue: "Apple Developer Academy",
       roleLabel: "Ruolo",
       roleValue: "Sviluppatore iOS",
       techLabel: "Tech Stack",
       yearLabel: "Timeline",
-      
-      originTitle: "Origine e Background del Progetto",
+
+      // Origin Section
+      originTitle: "Origine del Progetto",
       originText: (
         <>
-          BugBusters è nato durante la mia esperienza all'<span className="text-primary font-semibold">Apple Developer Academy</span>, dove mi sono concentrato sulla trasformazione di un'idea in un gioco mobile completamente funzionale. La sfida: costruire un <span className="text-primary font-semibold">gioco iOS completo</span> in sole <span className="text-primary font-semibold">4 settimane</span>.
+          BugBusters è nato durante la mia esperienza all'<span className="text-primary font-semibold">Apple Developer Academy</span> come <span className="text-primary font-semibold">progetto di gruppo</span>. La sfida era costruire un gioco iOS completo in sole <span className="text-primary font-semibold">4 settimane</span>.
           <br /><br />
-          Il concept è emerso da una domanda semplice: <span className="italic text-foreground">"E se il debugging fosse divertente?"</span> Questo ha portato alla creazione di uno sparatutto arcade dove i bug letterali diventano nemici. Come <span className="text-primary font-semibold">unico sviluppatore</span>, mi sono occupato di tutta l'implementazione tecnica collaborando con i membri del team su design, marketing e strategia.
+          Il concept è emerso da una domanda semplice: <span className="italic text-foreground">"E se il debugging fosse divertente?"</span> Mentre il team si concentrava su design e marketing, <span className="text-primary font-semibold">io mi sono occupato dell'intera parte di sviluppo</span>, trasformando le nostre idee in uno sparatutto arcade completamente funzionale.
           <br /><br />
-          Il progetto mi ha spinto a padroneggiare lo <span className="text-primary font-semibold">sviluppo di giochi iOS</span>, dall'implementazione dei motori fisici all'ottimizzazione delle performance su diversi dispositivi.
+          Questa esperienza mi ha spinto a padroneggiare lo <span className="text-primary font-semibold">sviluppo di giochi iOS</span>, gestendo tutto, dal motore fisico all'ottimizzazione delle performance.
         </>
       ),
-      
+
       highlightsTitle: "Implementazione Tecnica & Funzionalità Chiave",
       highlights: [
         {
@@ -148,7 +149,7 @@ const BugBusters = ({ lang }) => {
           description: "Mixing audio dinamico usando AVFoundation che risponde all'intensità del gameplay."
         }
       ],
-      
+
       impactTitle: "Impatto & Risultati",
       impactStats: [
         { label: "Tempo di Sviluppo", value: "4 settimane", highlight: true },
@@ -156,27 +157,27 @@ const BugBusters = ({ lang }) => {
         { label: "Performance", value: "60 FPS", highlight: true },
         { label: "Piattaforma", value: "iOS Nativo", highlight: false }
       ],
-      
+
       techTitle: "Stack Tecnologico",
       techIntro: "Costruito nativamente per l'ecosistema Apple con framework Swift moderni.",
       tools: [
-        { 
-          name: "SwiftUI", 
-          desc: "Architettura UI & Gestione Stato", 
+        {
+          name: "SwiftUI",
+          desc: "Architettura UI & Gestione Stato",
           img: "SwiftUI.png"
         },
-        { 
-          name: "SpriteKit", 
-          desc: "Motore di Gioco 2D & Fisica", 
+        {
+          name: "SpriteKit",
+          desc: "Motore di Gioco 2D & Fisica",
           img: "SpriteKit.png"
         },
-        { 
-          name: "AVFoundation", 
-          desc: "Motore Audio & Effetti", 
+        {
+          name: "AVFoundation",
+          desc: "Motore Audio & Effetti",
           img: "AVFoundation.png"
         }
       ],
-      
+
       galleryTitle: "Anteprima Sistema & Screenshot",
       gallerySubtitle: "Prova visiva del prodotto finito"
     }
@@ -186,7 +187,7 @@ const BugBusters = ({ lang }) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 pt-24 md:pt-32 pb-20">
-      
+
       {/* Navigation Back */}
       <div className="container mx-auto px-6 mb-8">
         <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
@@ -198,7 +199,7 @@ const BugBusters = ({ lang }) => {
       {/* HERO SECTION */}
       <header className="container mx-auto px-6 mb-20">
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-end justify-between gap-12">
-          
+
           {/* Text Content */}
           <div className="w-full lg:w-2/3 space-y-6 text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] text-white animate-fade-in">
@@ -207,10 +208,10 @@ const BugBusters = ({ lang }) => {
             <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0 animate-fade-in animation-delay-100">
               {t.tagline}
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4 animate-fade-in animation-delay-200">
-              <a 
+              <a
                 href="https://apps.apple.com/it/app/bug-busters/id6747584160"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -219,8 +220,8 @@ const BugBusters = ({ lang }) => {
                 <ExternalLink className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 {t.viewDemo}
               </a>
-              
-              <a 
+
+              <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -230,10 +231,10 @@ const BugBusters = ({ lang }) => {
                 {t.viewGithub}
               </a>
             </div>
-            
+
             {/* Metadata Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-border/50 animate-fade-in animation-delay-300">
-              
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-border/50 animate-fade-in animation-delay-300 text-left">
+
               {/* Origin */}
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">
@@ -286,9 +287,9 @@ const BugBusters = ({ lang }) => {
             <div className="relative w-48 h-48 md:w-64 md:h-64 group">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full group-hover:bg-primary/30 transition-all duration-700"></div>
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-surface/50 glass">
-                <img 
+                <img
                   src="/Portfolio/Projects/BB_App_icon.png"
-                  alt="BugBusters App Icon" 
+                  alt="BugBusters App Icon"
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => console.error('Failed to load app icon:', e.target.src)}
                 />
@@ -302,16 +303,16 @@ const BugBusters = ({ lang }) => {
       <section className="container mx-auto px-6 mb-20 animate-fade-in animation-delay-400">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-8">
-            
+
             {/* Left: Project Origin */}
             <div className="lg:col-span-7">
               <div className="glass p-8 md:p-10 rounded-[2rem] border-primary/10 relative overflow-hidden h-full">
                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-                
+
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                   {t.originTitle}
                 </h2>
-                
+
                 <div className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-4">
                   {t.originText}
                 </div>
@@ -330,8 +331,8 @@ const BugBusters = ({ lang }) => {
 
                 <div className="space-y-6">
                   {t.tools.map((tool, index) => (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className="flex items-center justify-between group border-b border-border/30 pb-6 last:border-b-0 last:pb-0"
                     >
                       <div className="flex flex-col items-start pr-4 flex-1">
@@ -342,10 +343,10 @@ const BugBusters = ({ lang }) => {
                           {tool.desc}
                         </span>
                       </div>
-                      
+
                       <div className="relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0">
                         <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <img 
+                        <img
                           src={`/Portfolio/Projects/iconTech/${tool.img}`}
                           alt={tool.name}
                           className="relative w-full h-full object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-300"
@@ -369,16 +370,16 @@ const BugBusters = ({ lang }) => {
               {t.highlightsTitle}
             </h2>
             <p className="text-muted-foreground text-lg">
-              {lang === "en" 
-                ? "A combination of technical challenges solved and features implemented" 
+              {lang === "en"
+                ? "A combination of technical challenges solved and features implemented"
                 : "Una combinazione di sfide tecniche risolte e funzionalità implementate"}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.highlights.map((highlight, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="glass p-6 rounded-2xl hover:border-primary/30 transition-all duration-300 group"
               >
                 <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
@@ -401,7 +402,7 @@ const BugBusters = ({ lang }) => {
               {t.impactTitle}
             </h2>
           </div>
-          
+
           <div className="glass p-8 rounded-2xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {t.impactStats.map((stat, index) => (
@@ -430,21 +431,21 @@ const BugBusters = ({ lang }) => {
               {t.gallerySubtitle}
             </p>
           </div>
-          
+
           {/* Horizontal scrollable on mobile, grid on desktop */}
           <div className="flex md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 no-scrollbar">
             <div className="glass rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
-              <img 
-                src="/Portfolio/Projects/Bug_busters.png" 
-                alt="BugBusters Gameplay Screenshot 1" 
-                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src="/Portfolio/Projects/Bug_busters.png"
+                alt="BugBusters Gameplay Screenshot 1"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="glass rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
-              <img 
-                src="/Portfolio/Projects/BugBusters1.png" 
-                alt="BugBusters Gameplay Screenshot 2" 
-                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src="/Portfolio/Projects/BugBusters1.png"
+                alt="BugBusters Gameplay Screenshot 2"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </div>
