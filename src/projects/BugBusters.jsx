@@ -231,7 +231,7 @@ const BugBusters = ({ lang }) => {
               </a>
             </div>
             
-            {/* Metadata Grid - Inline Style */}
+            {/* Metadata Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-border/50 animate-fade-in animation-delay-300">
               
               {/* Origin */}
@@ -298,12 +298,12 @@ const BugBusters = ({ lang }) => {
         </div>
       </header>
 
-      {/* PROJECT ORIGIN & TECH STACK - SIDE BY SIDE ON DESKTOP */}
+      {/* PROJECT ORIGIN & TECH STACK */}
       <section className="container mx-auto px-6 mb-20 animate-fade-in animation-delay-400">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-8">
             
-            {/* Left: Project Origin & Background */}
+            {/* Left: Project Origin */}
             <div className="lg:col-span-7">
               <div className="glass p-8 md:p-10 rounded-[2rem] border-primary/10 relative overflow-hidden h-full">
                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -361,10 +361,10 @@ const BugBusters = ({ lang }) => {
         </div>
       </section>
 
-      {/* TECHNICAL IMPLEMENTATION & KEY FEATURES (MERGED SECTION) */}
+      {/* TECHNICAL IMPLEMENTATION & KEY FEATURES */}
       <section className="container mx-auto px-6 mb-20 animate-fade-in animation-delay-500">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-left md:text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               {t.highlightsTitle}
             </h2>
@@ -396,7 +396,7 @@ const BugBusters = ({ lang }) => {
       {/* IMPACT & RESULTS */}
       <section className="container mx-auto px-6 mb-20 animate-fade-in animation-delay-600">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-left md:text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               {t.impactTitle}
             </h2>
@@ -405,7 +405,7 @@ const BugBusters = ({ lang }) => {
           <div className="glass p-8 rounded-2xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {t.impactStats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-left md:text-center">
                   <div className={`text-3xl md:text-4xl font-black mb-2 ${stat.highlight ? 'text-primary' : 'text-foreground'}`}>
                     {stat.value}
                   </div>
@@ -419,10 +419,10 @@ const BugBusters = ({ lang }) => {
         </div>
       </section>
 
-      {/* GALLERY / SCREENSHOTS - HORIZONTAL LAYOUT */}
+      {/* GALLERY / SCREENSHOTS */}
       <section className="container mx-auto px-6 animate-fade-in animation-delay-700">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-left md:text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               {t.galleryTitle}
             </h2>
@@ -435,14 +435,14 @@ const BugBusters = ({ lang }) => {
           <div className="flex md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 no-scrollbar">
             <div className="glass rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
               <img 
-                src="./public/Projects/Bug_busters.png" 
+                src="/Portfolio/Projects/Bug_busters.png" 
                 alt="BugBusters Gameplay Screenshot 1" 
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
               />
             </div>
             <div className="glass rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
               <img 
-                src="./public/Projects/BugBusters1.png" 
+                src="/Portfolio/Projects/BugBusters1.png" 
                 alt="BugBusters Gameplay Screenshot 2" 
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
               />
