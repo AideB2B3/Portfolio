@@ -96,6 +96,32 @@ export const Hero = ({ lang }) => {
                                     Intuitive Design.
                                 </span>
                             </h1>
+
+                            {/* Profile Image - Mobile Only (shown after headline) */}
+                            <div className="lg:hidden relative animate-fade-in animation-delay-200 my-8">
+                                <div className="relative max-w-sm mx-auto">
+                                    <div
+                                        className="absolute inset-0
+                                        rounded-3xl bg-gradient-to-br
+                                        from-primary/30 via-transparent
+                                        to-primary/10 blur-2xl animate-pulse"
+                                    />
+                                    <div className="relative glass rounded-3xl p-2 glow-border">
+                                        <img alt="Davide Bellobuono" className="w-full aspect-[4/5] object-cover rounded-2xl" src="/Portfolio/profile-photo.png" />
+
+                                        {/* Floating Badge */}
+                                        <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" />
+                                                <span className="text-sm font-medium">
+                                                    Pier Program Apple Developer Academy
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <p className=" text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-800">
                                 {content.description}
                             </p>
@@ -129,8 +155,9 @@ export const Hero = ({ lang }) => {
                             ))}
                         </div>
                     </div>
-                    {/* Right Column  - Profile Image */}
-                    <div className="relative animate-fade-in animation-delay-300">
+                    
+                    {/* Right Column - Profile Image (Desktop Only) */}
+                    <div className="hidden lg:block relative animate-fade-in animation-delay-300">
                         {/* Profile image */}
                         <div className="relative max-w-md mx-auto">
                             <div
