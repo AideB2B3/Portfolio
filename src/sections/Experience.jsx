@@ -19,13 +19,17 @@ export const Experience = ({ lang }) => {
 
     const experience = [
         {
-            period: "2025 - Present",
-            role: "The Pier - Advanced Developer",
-            company: "Apple Developer Academy",
+            period: lang === "en" ? "2025 - Present" : "2025 - In corso",
+            role: lang === "en"
+                ? "Pier Program — Advanced Developer"
+                : "Programma Pier — Advanced Developer",
+            company: lang === "en"
+                ? "Apple Developer Academy @ UniNa · Year 2"
+                : "Apple Developer Academy @ UniNa · Anno 2",
             description: lang === "en"
-                ? "Engaged in the Second Year Program working on external stakeholder projects with international NGOs and Research Departments. Focused on developing time management, critical thinking, and project management skills while collaborating on research and personal projects."
-                : "Partecipo al programma del secondo anno (The Pier) lavorando su progetti per stakeholder esterni, incluse ONG internazionali e Dipartimenti di Ricerca. Focus su gestione del tempo, pensiero critico e project management, collaborando parallelamente a progetti di ricerca e personali.",
-            technologies: ["Unity", "GitHub", "Scrum", "Agile Methodology"],
+                ? "Second year of the Apple Developer Academy in the Pier program, reserved for first-year graduates. I'm building iOS apps full-time for external stakeholders, NGOs, university research departments, and public-private organizations, working through the full client cycle: requirements gathering, sprint planning, delivery. The skills I'm sharpening here are the ones the first year introduced and this one demands at professional level: stakeholder communication, scoping under real constraints, accountability for what gets shipped, and managing the gap between what a client asks for and what they actually need."
+                : "Secondo anno dell'Apple Developer Academy nel programma Pier, riservato ai diplomati del primo anno. Costruisco app iOS full-time per stakeholder esterni, ONG, dipartimenti di ricerca universitari e organizzazioni pubblico-private, gestendo l'intero ciclo cliente: raccolta requisiti, sprint planning, rilascio. Le competenze che sto affinando qui sono quelle che il primo anno ha introdotto e che questo richiede a livello professionale: comunicazione con gli stakeholder, scoping con vincoli reali, responsabilità su ciò che viene rilasciato, e la capacità di gestire la differenza tra quello che un cliente chiede e quello di cui ha effettivamente bisogno.",
+            technologies: ["Swift", "SwiftUI", "Unity", "Scrum", "Stakeholder Management"],
             current: true,
         },
         /* 
@@ -47,41 +51,25 @@ export const Experience = ({ lang }) => {
             {/* BG */}
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 {/* Section Header */}
-                <div className="max-w-3xl mb-16">
-                    <span
-                        className="text-secondary-foreground text-sm font-medium
-                    tracking-wider uppercase animate-fade-in"
-                    >
+                <div className="max-w-3xl mb-10 md:mb-16">
+                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
                         {t.badge}
                     </span>
-                    <h2
-                        className="text-4xl md:text-5xl font-bold 
-                    mt-4 mb-6 animate-fade-in animation-delay-100
-                    text-secondary-foreground"
-                    >
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4 md:mb-6 animate-fade-in animation-delay-100 text-secondary-foreground leading-tight">
                         {t.titleStart}
-                        <span
-                            className="font-serif italic font-normal text-white"
-                        >
-                            {" "}
-                            {t.titleItalic}
+                        <span className="font-serif italic font-normal text-white">
+                            {" "}{t.titleItalic}
                         </span>
                     </h2>
-
-                    {/* <p
-                        className="text-muted-foreground animate-fade-in animation-delay-200"
-                    >
-                        {t.description}
-                    </p> */}
                 </div>
 
                 {/* Timeline Container */}
                 <div className="relative">
                     <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
-                    <div className="space-y-12">
+                    <div className="space-y-8 md:space-y-12">
                         {experience.map((exp, idx) => (
                             <div
                                 key={idx}
@@ -97,23 +85,23 @@ export const Experience = ({ lang }) => {
 
                                 {/* Content */}
                                 <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
-                                    <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
-                                        <span className="text-sm text-primary font-medium">
+                                    <div className="glass p-5 md:p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
+                                        <span className="block text-xs md:text-sm text-primary font-medium uppercase tracking-wider">
                                             {exp.period}
                                         </span>
-                                        <h3 className="text-xl font-semibold mt-2">
+                                        <h3 className="text-lg md:text-xl font-semibold mt-2 leading-tight">
                                             {exp.role}
                                         </h3>
-                                        <p className="text-muted-foreground">
+                                        <p className="text-sm md:text-base text-muted-foreground mt-1">
                                             {exp.company}
                                         </p>
-                                        <p className="text-sm text-muted-foreground mt-4">
+                                        <p className="text-sm text-muted-foreground/90 leading-relaxed mt-4 text-left">
                                             {exp.description}
                                         </p>
 
-                                        <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
+                                        <div className={`flex flex-wrap gap-2 mt-5 ${idx % 2 === 0 ? "md:justify-end" : "justify-start"}`}>
                                             {exp.technologies.map((tech, techIdx) => (
-                                                <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground">
+                                                <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground border border-border/40">
                                                     {tech}
                                                 </span>
                                             ))}

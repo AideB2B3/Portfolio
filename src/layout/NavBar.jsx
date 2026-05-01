@@ -12,7 +12,6 @@ export const Navbar = ({ lang, setLang }) => {
         { href: "#about", label: lang === "en" ? "About Me" : "Chi Sono" },
         { href: "#projects", label: lang === "en" ? "Projects" : "Progetti" },
         { href: "#experience", label: lang === "en" ? "Experience" : "Esperienza" },
-        { href: "#education", label: lang === "en" ? "Education" : "Formazione" },
     ];
 
     const toggleLanguage = () => {

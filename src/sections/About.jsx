@@ -5,34 +5,34 @@ export const About = ({ lang }) => {
     const translations = {
         en: {
             badge: "About Me",
-            titlePart1: "Developing with passion,",
-            titlePart2: " designing for people.",
-            p1: "I like to think of development as a way to create something useful that can truly simplify people's lives. When I'm passionate about a project, I get so into the flow that I forget everything around me — that's when I feel in my element.",
-            p2: "I have a background in Automation Engineering from the University Federico II, where I learned to think in a logical and structured way. I've always loved robots and automated systems, and the idea of improving daily life through technology has always fascinated me.",
-            p3: "Currently, I am continuing my journey at the Apple Developer Academy, where I'm learning not only SwiftUI and Unity development, but also the value of collaboration, creative thinking, and Human Centered Design. It's an environment that's helping me challenge myself, build a solid network, and discover how technology can be a deeply human and inclusive tool.",
-            p4: "In my work, I always strive to collaborate by listening to others and contributing to project decisions or team problem-solving. I would define myself as a skilled mediator, capable of bringing strong empathy to the group.",
-            quote: "I strongly believe that a great project starts first and foremost with a positive and cohesive team spirit",
+            titlePart1: "Two technical paths,",
+            titlePart2: " one craft.",
+            p1: "I'm walking two technical paths in parallel: completing my Automation Engineering degree at Federico II while developing iOS apps at the Apple Developer Academy. The combination is intentional. I want to build software that understands the hardware it runs on.",
+            p2: "On the engineering side, I work with C and C++ on embedded systems and microcontrollers, where every byte of memory and every clock cycle matters. That mindset stays with me when I write Swift.",
+            p3: "On the iOS side, I've been building apps for real human problems. I'm currently working on Lisionario, an in-progress accessibility tool for the deaf community where the interface has to do more than look good. It has to bridge a real communication gap.",
+            p4: "I bring engineering rigor to design and design empathy to engineering. The two disciplines aren't separate languages for me. They're two halves of building something that actually works for someone.",
+            quote: "Good UX starts where the firmware ends, and someone has to speak both languages.",
             highlights: [
-                { title: "Clean Code", description: "Writing maintainable, scalable code that stands the test of time." },
-                { title: "Performance", description: "Optimizing for speed and delivering lightning-fast user experiences." },
-                { title: "Collaboration", description: "Working closely with others to bring ideas to life." },
-                { title: "Innovation", description: "Staying ahead with the latest technologies and best practices." }
+                { title: "Engineering Rigor", description: "Hardware-aware thinking applied to software, where constraints sharpen design." },
+                { title: "Performance", description: "Profiling with Instruments to ship apps that stay responsive on real devices." },
+                { title: "Human-Centered", description: "Building for accessibility and real-world use cases, not just happy paths." },
+                { title: "Cross-Stack", description: "Comfortable from C on microcontrollers to SwiftUI on iPhone." }
             ]
         },
         it: {
             badge: "Chi Sono",
-            titlePart1: "Sviluppare con passione,",
-            titlePart2: " progettare per le persone.",
-            p1: "Mi piace vedere lo sviluppo come un mezzo per creare qualcosa di utile, capace di semplificare davvero la vita delle persone. Quando mi appassiono a un progetto, mi immergo così tanto nel flusso di lavoro da dimenticare tutto ciò che mi circonda: è in quel momento che mi sento davvero nel mio elemento.",
-            p2: "Il mio percorso parte dall'Ingegneria dell'Automazione presso l'Università Federico II, dove ho imparato a pensare in modo logico e strutturato. Ho sempre amato la robotica e i sistemi automatizzati; l'idea di migliorare la quotidianità attraverso la tecnologia è qualcosa che mi ha sempre affascinato.",
-            p3: "Attualmente sto proseguendo il mio cammino alla Apple Developer Academy. Qui non sto solo approfondendo lo sviluppo in SwiftUI e Unity, ma sto scoprendo il valore della collaborazione, del pensiero creativo e dello Human Centered Design. È un ambiente che mi spinge a mettermi in gioco, a costruire un network solido e a scoprire come la tecnologia possa essere uno strumento profondamente umano e inclusivo.",
-            p4: "Nel lavoro, punto sempre alla collaborazione: ascolto gli altri e contribuisco attivamente alle decisioni di progetto e al problem-solving di squadra. Mi definirei un mediatore attento, capace di portare una forte empatia all'interno del gruppo.",
-            quote: "Credo fermamente che un grande progetto nasca, prima di tutto, da uno spirito di squadra positivo e coeso",
+            titlePart1: "Due percorsi tecnici,",
+            titlePart2: " un solo mestiere.",
+            p1: "Sto portando avanti due percorsi tecnici in parallelo: concludo Ingegneria dell'Automazione alla Federico II mentre sviluppo app iOS all'Apple Developer Academy. La combinazione è voluta. Voglio costruire software che capisce l'hardware su cui gira.",
+            p2: "Sul lato ingegneria lavoro con C e C++ su sistemi embedded e microcontrollori, dove ogni byte di memoria e ogni ciclo di clock contano. Questa mentalità me la porto dietro quando scrivo Swift.",
+            p3: "Sul lato iOS sto costruendo app per problemi umani concreti. Attualmente lavoro a Lisionario, uno strumento di accessibilità in sviluppo per la comunità sorda, dove l'interfaccia deve fare più che essere bella. Deve colmare un vero divario comunicativo.",
+            p4: "Porto rigore ingegneristico al design e empatia da designer all'ingegneria. Per me non sono due linguaggi separati. Sono le due metà di qualcosa che funziona davvero per qualcuno.",
+            quote: "La buona UX inizia dove finisce il firmware, e qualcuno deve parlare entrambe le lingue.",
             highlights: [
-                { title: "Clean Code", description: "Scrivere codice scalabile e manutenibile, fatto per durare nel tempo." },
-                { title: "Performance", description: "Ottimizzare la velocità per offrire esperienze utente fluide e immediate." },
-                { title: "Collaborazione", description: "Lavorare a stretto contatto con gli altri per dare vita alle idee." },
-                { title: "Innovazione", description: "Restare sempre al passo con le ultime tecnologie e le best practices." }
+                { title: "Rigore Ingegneristico", description: "Pensiero hardware-aware applicato al software, dove i vincoli affinano il design." },
+                { title: "Performance", description: "Profiling con Instruments per pubblicare app reattive su dispositivi reali." },
+                { title: "Centrato sulle persone", description: "Costruisco per accessibilità e casi d'uso concreti, non solo per gli happy path." },
+                { title: "Cross-Stack", description: "A mio agio dal C sui microcontrollori a SwiftUI su iPhone." }
             ]
         }
     };
@@ -42,9 +42,9 @@ export const About = ({ lang }) => {
     const t = translations[lang] || translations.en;
 
     return (
-        <section id="about" className="pt-1 pb-10 md:pt-32 md:pb-32 relative overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <section id="about" className="pt-10 pb-10 md:pt-32 md:pb-32 relative overflow-hidden">
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Left Column */}
                     <div className="space-y-8">
                         <div className="animate-fade-in">

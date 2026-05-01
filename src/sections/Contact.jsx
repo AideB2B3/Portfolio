@@ -1,4 +1,4 @@
-import { CheckCircle, Mail, MapPin, Send, AlertCircle } from "lucide-react";
+import { CheckCircle, Mail, MapPin, Send, AlertCircle, Linkedin } from "lucide-react";
 import { Button } from "../Components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -69,7 +69,13 @@ export const Contact = ({ lang }) => {
       icon: Mail,
       label: t.labelEmail,
       value: "davide23bellobuono@gmail.com",
-      href: "mailto:davidebellobuono1@gmail.com",
+      href: "mailto:davidebellobuono@gmail.com",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Davide Bellobuono",
+      href: "https://www.linkedin.com/in/davide-bellobuono/",
     },
     {
       icon: MapPin,

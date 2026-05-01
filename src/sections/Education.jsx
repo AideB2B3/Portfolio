@@ -25,33 +25,35 @@ export const Education = ({ lang }) => {
                 ? "University of Naples Federico II"
                 : "Università degli Studi di Napoli Federico II",
             description: lang === "en"
-                ? "Academic career centered on Control Theory, Robotics, and Industrial Automation. Strong focus on mathematical modeling, dynamic systems design, and software development for advanced process control."
-                : "Percorso accademico incentrato su Teoria del Controllo, Robotica e Automazione Industriale. Solida formazione nella modellazione matematica, progettazione di sistemi dinamici e sviluppo di software per il controllo di processi complessi.",
-            technologies: ["C/C++", "Python", "MATLAB", "Simulink", "Industrial IoT"],
+                ? "Engineering degree focused on the design and management of systems that operate autonomously. I'm building expertise across three core disciplines: Automatic Control (feedback laws for linear dynamic systems), Robotics (modeling, kinematics, trajectory planning, control schemes), and Industrial Automation (formal languages, PLC, automation algorithms), all grounded on a solid mathematical and physics foundation. The engineering core that continues into the master's program in Automation and Robotics."
+                : "Laurea in ingegneria focalizzata sulla progettazione e gestione di sistemi capaci di operare autonomamente. Sto costruendo competenze su tre discipline core: Controlli Automatici (leggi di controllo in retroazione per sistemi dinamici lineari), Robotica (modellazione, cinematica, pianificazione delle traiettorie, schemi di controllo) e Automazione Industriale (linguaggi formali, PLC, algoritmi di automazione), il tutto su una solida base matematica e fisica. Il core ingegneristico che prosegue nella Magistrale in Ingegneria dell'Automazione e Robotica.",
+            technologies: ["Control Systems", "Robotics", "MATLAB", "Simulink", "Python", "C/C++"],
             current: true,
         },
         {
             period: "2024 - 2025",
-            title: "Apple Developer Academy @ UniNa",
+            title: lang === "en" ? "Student Year" : "Anno da Studente",
             institution: lang === "en"
-                ? "University of Naples Federico II & Apple"
-                : "Università degli Studi di Napoli Federico II & Apple",
+                ? "Apple Developer Academy @ UniNa · Year 1"
+                : "Apple Developer Academy @ UniNa · Anno 1",
             description: lang === "en"
-                ? "High-level training program focused on software engineering, UI/UX design, and startup incubation. Applied Challenge-Based Learning (CBL) to solve real-world problems within a multidisciplinary and international team environment."
-                : "Programma di alta formazione focalizzato su ingegneria del software, UI/UX design e incubazione di startup. Approccio basato sul Challenge-Based Learning (CBL) per risolvere problemi reali in team multidisciplinari e internazionali.",
-            technologies: ["Swift", "Design Thinking", "Business Modeling", "CBL", "Github"],
+                ? "First year of the Apple Developer Academy: a 9-month full-time program at the largest Academy outside the US. I learned to build production iOS apps end-to-end with Swift and SwiftUI, applied Human-Centered Design and Apple's Challenge Based Learning methodology working in multidisciplinary teams, and developed business modeling and pitching skills alongside the technical track. The year ended with concrete output: team-built iOS apps shipped to the App Store."
+                : "Primo anno dell'Apple Developer Academy: programma full-time di 9 mesi presso la più grande Academy al di fuori degli Stati Uniti. Ho imparato a costruire app iOS production-ready end-to-end con Swift e SwiftUI, applicando Human-Centered Design e la metodologia Challenge Based Learning di Apple lavorando in team multidisciplinari, e ho sviluppato competenze di business modeling e pitching insieme al percorso tecnico. L'anno si è chiuso con un risultato concreto: app iOS costruite in team e pubblicate sull'App Store.",
+            technologies: ["Swift", "SwiftUI", "Human-Centered Design", "Challenge Based Learning", "Business Modeling"],
             current: false,
         },
         {
             period: "2014 - 2019",
             title: lang === "en"
-                ? "High School Diploma in Electrical Engineering"
-                : "Diploma di Perito Elettrotecnico ed Elettronico",
-            institution: "ITIS Ettore Majorana",
+                ? "Technical Diploma — Electronics & Electrical Engineering"
+                : "Diploma di Perito Industriale — Elettronica ed Elettrotecnica",
+            institution: lang === "en"
+                ? "ITIS Ettore Majorana · Somma Vesuviana (NA)"
+                : "ITIS Ettore Majorana · Somma Vesuviana (NA)",
             description: lang === "en"
-                ? "Technical specialization in industrial automation and power systems. Gained hands-on experience in PLC programming, data acquisition, and electrical circuit design, with a focus on efficiency and industrial safety regulations."
-                : "Specializzazione tecnica in automazione e sistemi di potenza. Esperienza pratica in programmazione PLC, acquisizione dati e progettazione di circuiti elettrici, con particolare attenzione all'efficienza e alle normative di sicurezza industriale.",
-            technologies: ["Industrial Automation", "Electrical Systems", "PLC", "Data Acquisition", "Safety Regs"],
+                ? "Five-year technical diploma with specialization in the Electrical Engineering articulation. I learned to combine electrical engineering, electronics, and computer science skills to design power systems and intervene in industrial automation and process control, with hands-on labs in electrical circuit design, electrical systems, automatic systems, and PLC programming. The technical foundation that led directly into the engineering degree."
+                : "Diploma tecnico quinquennale con specializzazione nell'articolazione Elettrotecnica. Ho imparato a combinare competenze di elettrotecnica, elettronica e informatica per progettare sistemi di potenza e intervenire nell'automazione industriale e nel controllo dei processi, con laboratori pratici su progettazione circuitale, impianti elettrici, sistemi automatici e programmazione PLC. La base tecnica che ha portato direttamente alla laurea in ingegneria.",
+            technologies: ["Electrical Systems", "Industrial Automation", "PLC", "Circuit Design", "Electronics"],
             current: false,
         },
     ];
@@ -61,13 +63,13 @@ export const Education = ({ lang }) => {
             {/* BG */}
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 {/* Section Header */}
-                <div className="max-w-3xl mb-16">
+                <div className="max-w-3xl mb-10 md:mb-16">
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
                         {t.badge}
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4 md:mb-6 animate-fade-in animation-delay-100 text-secondary-foreground leading-tight">
                         {t.titleStart}
                         <span className="font-serif italic font-normal text-white">
                             {" "} {t.titleItalic}
@@ -83,7 +85,7 @@ export const Education = ({ lang }) => {
                     {/* Vertical Line */}
                     <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
-                    <div className="space-y-12">
+                    <div className="space-y-8 md:space-y-12">
                         {education.map((edu, idx) => (
                             <div
                                 key={idx}
@@ -100,23 +102,23 @@ export const Education = ({ lang }) => {
 
                                 {/* Content */}
                                 <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
-                                    <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
-                                        <span className="text-sm text-primary font-medium">
+                                    <div className="glass p-5 md:p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
+                                        <span className="block text-xs md:text-sm text-primary font-medium uppercase tracking-wider">
                                             {edu.period}
                                         </span>
-                                        <h3 className="text-xl font-semibold mt-2">
+                                        <h3 className="text-lg md:text-xl font-semibold mt-2 leading-tight">
                                             {edu.title}
                                         </h3>
-                                        <p className="text-muted-foreground">
+                                        <p className="text-sm md:text-base text-muted-foreground mt-1">
                                             {edu.institution}
                                         </p>
-                                        <p className="text-sm text-muted-foreground mt-4">
+                                        <p className="text-sm text-muted-foreground/90 leading-relaxed mt-4 text-left">
                                             {edu.description}
                                         </p>
 
-                                        <div className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
+                                        <div className={`flex flex-wrap gap-2 mt-5 ${idx % 2 === 0 ? "md:justify-end" : "justify-start"}`}>
                                             {edu.technologies.map((tech, techIdx) => (
-                                                <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground">
+                                                <span key={techIdx} className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground border border-border/40">
                                                     {tech}
                                                 </span>
                                             ))}

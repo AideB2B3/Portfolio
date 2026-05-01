@@ -1,52 +1,61 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight, ChevronDown, Github, Linkedin, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Linkedin, Download, Smartphone, Cpu, Gamepad2, Wrench, Globe, Palette } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
-const skills = [
-    "C++",
-    "C",
-    "C#",
-    "Java",
-    "Python",
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "ReactJS",
-    "SwiftUI",
-    "Unity",
-    "Git",
-]
+// Particelle generate UNA sola volta al caricamento del modulo (niente impurità nel render)
+const PARTICLES = Array.from({ length: 30 }, () => ({
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    duration: 15 + Math.random() * 20,
+    delay: Math.random() * 5,
+}));
+
+const techStack = {
+    en: [
+        { group: "iOS Development", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData", "TestFlight"] },
+        { group: "Systems & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
+        { group: "Game & Interactive", icon: Gamepad2, items: ["Unity", "C#"] },
+        { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
+        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
+        { group: "Tools", icon: Wrench, items: ["Git", "Xcode", "Jira"] },
+    ],
+    it: [
+        { group: "Sviluppo iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData", "TestFlight"] },
+        { group: "Sistemi & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
+        { group: "Game & Interattivo", icon: Gamepad2, items: ["Unity", "C#"] },
+        { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
+        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
+        { group: "Strumenti", icon: Wrench, items: ["Git", "Xcode", "Jira"] },
+    ],
+};
 
 export const Hero = ({ lang }) => {
 
     const t = {
         en: {
-            role: "Automation Engineer - iOS Developer",
-            headlineStart: "Engineering ",
-            headlineGlow: "Logic",
-            headlineMiddle: "meets",
-            headlineEnd: "Intuitive Design.",
-            description: "Hi, I'm Davide Bellobuono. Currently mastering Automation Engineering and iOS Development at Federico II. My focus is on crafting efficient systems and engaging digital products through code and design.",
+            role: "iOS Developer · Automation Engineering Student",
+            headlineStart: "From microcontrollers to ",
+            headlineEnd: "multitouch.",
+            description: "Hi, I'm Davide Bellobuono, an iOS Developer with an engineering background. I build apps for real human problems, from accessibility tools to embedded systems. I'm currently completing my Automation Engineering degree at Federico II while developing iOS at the Apple Developer Academy.",
             contactBtn: "Contact Me",
             downloadBtn: "Download CV",
-            follow: "Follow me: ",
+            follow: "Follow me:",
             tech: "Technologies I work with:",
         },
         it: {
-            role: "Ing. dell'Automazione - Sviluppatore iOS",
-            headlineStart: "Logica ",
-            headlineGlow: "Ingegneristica",
-            headlineMiddle: "incontra il",
-            headlineEnd: "Design Intuitivo.",
-            description: "Ciao, sono Davide Bellobuono. Sto perfezionando i miei studi in Ingegneria dell'Automazione e sviluppo iOS alla Federico II. Il mio obiettivo è creare sistemi efficienti ed esperienze digitali coinvolgenti, unendo codice e design.",
+            role: "Sviluppatore iOS · Studente di Ing. dell'Automazione",
+            headlineStart: "Dai microcontrollori al ",
+            headlineEnd: "multitouch.",
+            description: "Ciao, sono Davide Bellobuono, Sviluppatore iOS con un background da ingegnere. Costruisco app per problemi umani concreti, da strumenti di accessibilità a sistemi embedded. Sto concludendo Ingegneria dell'Automazione alla Federico II mentre sviluppo iOS all'Apple Developer Academy.",
             contactBtn: "Contattami",
             downloadBtn: "Scarica CV",
-            follow: "Seguimi su: ",
+            follow: "Seguimi su:",
             tech: "Tecnologie che utilizzo:",
         }
     };
 
     const content = t[lang] || t.en;
+    const groups = techStack[lang] || techStack.en;
 
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -58,16 +67,16 @@ export const Hero = ({ lang }) => {
 
             {/* Green Dots */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {[...Array(30)].map((_, i) => (
+                {PARTICLES.map((p, i) => (
                     <div
                         key={i}
                         className="absolute w-1.5 h-1.5 rounded-full opacity-60"
                         style={{
                             backgroundColor: "#20B2A6",
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
-                            animationDelay: `${Math.random() * 5}s`,
+                            left: `${p.left}%`,
+                            top: `${p.top}%`,
+                            animation: `slow-drift ${p.duration}s ease-in-out infinite`,
+                            animationDelay: `${p.delay}s`,
                         }}
                     />
                 ))}
@@ -87,13 +96,11 @@ export const Hero = ({ lang }) => {
 
                         {/* Headline */}
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                <span className="text-primary glow-text">Engineering Logic</span>
-                                <br />
-                                meets
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+                                <span className="text-primary glow-text">{content.headlineStart}</span>
                                 <br />
                                 <span className="font-serif italic font-normal text-white">
-                                    Intuitive Design.
+                                    {content.headlineEnd}
                                 </span>
                             </h1>
 
@@ -143,19 +150,26 @@ export const Hero = ({ lang }) => {
                         </div>
 
                         {/* SOCIAL LINKS */}
-                        <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                            <span className="text-sm text-muted-foreground">{content.follow}</span>
+                        <div className="flex flex-wrap items-center gap-3 animate-fade-in animation-delay-400">
+                            <span className="text-sm text-muted-foreground w-full sm:w-auto">{content.follow}</span>
                             {[
-                                { icon: Github, href: "https://github.com/AideB2B3" },
-                                { icon: Linkedin, href: "https://www.linkedin.com/in/davide-bellobuono/" },
+                                { icon: Github, href: "https://github.com/AideB2B3", label: "GitHub" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/davide-bellobuono/", label: "LinkedIn" },
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                                    {<social.icon className="w-5 h-5" />}
+                                <a
+                                    key={idx}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass hover:bg-primary/10 hover:text-primary hover:border-primary/50 transition-all duration-300"
+                                >
+                                    <social.icon className="w-5 h-5" />
+                                    <span className="text-sm font-medium">{social.label}</span>
                                 </a>
                             ))}
                         </div>
                     </div>
-                    
+
                     {/* Right Column - Profile Image (Desktop Only) */}
                     <div className="hidden lg:block relative animate-fade-in animation-delay-300">
                         {/* Profile image */}
@@ -182,44 +196,46 @@ export const Hero = ({ lang }) => {
                         </div>
                     </div>
                 </div>
-                
-                {/* Technology Cards Section */}
+
+                {/* Technology Stack - Grouped Cards */}
                 <div className="mt-20 animate-fade-in animation-delay-600 w-full">
-                    <p className="text-xs md:text-sm text-muted-foreground mb-6 uppercase tracking-widest text-left">
+                    <p className="text-xs md:text-sm text-muted-foreground mb-8 uppercase tracking-widest text-left">
                         {content.tech}
                     </p>
 
-                    {/* Mobile: Horizontal Scroll with Snap */}
-                    <div className="md:hidden -mx-6">
-                        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory py-4 px-6 no-scrollbar">
-                            {skills.map((skill, idx) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {groups.map((category, idx) => {
+                            const Icon = category.icon;
+                            return (
                                 <div
                                     key={idx}
-                                    className="flex-shrink-0 snap-center"
+                                    className="glass rounded-2xl p-5 border-primary/15 hover:border-primary/40 transition-all duration-300 animate-fade-in"
+                                    style={{ animationDelay: `${idx * 100}ms` }}
                                 >
-                                    <div className="glass rounded-xl px-5 py-3 hover:border-primary/50 transition-all duration-300 hover:scale-105 min-w-[100px] text-center">
-                                        <span className="text-sm font-semibold text-foreground">
-                                            {skill}
+                                    {/* Card header: icon + category title */}
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                            <Icon className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <span className="text-xs uppercase tracking-widest text-primary/90 font-semibold">
+                                            {category.group}
                                         </span>
                                     </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
 
-                    {/* Desktop: Grid Layout */}
-                    <div className="hidden md:grid md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        {skills.map((skill, idx) => (
-                            <div
-                                key={idx}
-                                className="glass rounded-xl px-5 py-3 hover:border-primary/50 transition-all duration-300 hover:scale-105 text-center group cursor-default"
-                                style={{ animationDelay: `${idx * 50}ms` }}
-                            >
-                                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                                    {skill}
-                                </span>
-                            </div>
-                        ))}
+                                    {/* Pills */}
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {category.items.map((item, i) => (
+                                            <span
+                                                key={i}
+                                                className="text-xs font-medium text-foreground/90 bg-white/[0.04] border border-white/[0.08] rounded-full px-3 py-1.5 hover:border-primary/40 hover:text-primary transition-colors duration-200 cursor-default"
+                                            >
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
