@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react"
+import { Gauge, Rocket, GitBranch, Cpu } from "lucide-react"
 
 export const About = ({ lang }) => {
 
@@ -8,15 +8,15 @@ export const About = ({ lang }) => {
             titlePart1: "Two technical paths,",
             titlePart2: " one craft.",
             p1: "I'm walking two technical paths in parallel: completing my Automation Engineering degree at Federico II while developing iOS apps at the Apple Developer Academy. The combination is intentional. I want to build software that understands the hardware it runs on.",
-            p2: "On the engineering side, I work with C and C++ on embedded systems and microcontrollers, where every byte of memory and every clock cycle matters. That mindset stays with me when I write Swift.",
-            p3: "On the iOS side, I've been building apps for real human problems. I'm currently working on Lisionario, an in-progress accessibility tool for the deaf community where the interface has to do more than look good. It has to bridge a real communication gap.",
+            p2: "On the engineering side, I work with C and C++ on embedded systems and microcontrollers, where every byte of memory and every clock cycle matters.",
+            p3: "On the iOS side, I build for real human problems. The interfaces I care about have to do more than look good. They have to actually work for the people relying on them.",
             p4: "I bring engineering rigor to design and design empathy to engineering. The two disciplines aren't separate languages for me. They're two halves of building something that actually works for someone.",
             quote: "Good UX starts where the firmware ends, and someone has to speak both languages.",
             highlights: [
-                { title: "Engineering Rigor", description: "Hardware-aware thinking applied to software, where constraints sharpen design." },
-                { title: "Performance", description: "Profiling with Instruments to ship apps that stay responsive on real devices." },
-                { title: "Human-Centered", description: "Building for accessibility and real-world use cases, not just happy paths." },
-                { title: "Cross-Stack", description: "Comfortable from C on microcontrollers to SwiftUI on iPhone." }
+                { title: "Performance-Conscious", description: "Profiling with Instruments to make sure apps stay responsive on real devices, not just simulators." },
+                { title: "Full-Stack Ownership", description: "From idea to App Store: architecture, logic, and implementation. Not just the easy parts." },
+                { title: "Engineering Mindset", description: "Control theory, feedback loops, and system thinking applied to every iOS project." },
+                { title: "Embedded + Mobile", description: "From C on microcontrollers to SwiftUI on iPhone. Embedded constraints sharpen how I write mobile." }
             ]
         },
         it: {
@@ -24,21 +24,21 @@ export const About = ({ lang }) => {
             titlePart1: "Due percorsi tecnici,",
             titlePart2: " un solo mestiere.",
             p1: "Sto portando avanti due percorsi tecnici in parallelo: concludo Ingegneria dell'Automazione alla Federico II mentre sviluppo app iOS all'Apple Developer Academy. La combinazione è voluta. Voglio costruire software che capisce l'hardware su cui gira.",
-            p2: "Sul lato ingegneria lavoro con C e C++ su sistemi embedded e microcontrollori, dove ogni byte di memoria e ogni ciclo di clock contano. Questa mentalità me la porto dietro quando scrivo Swift.",
-            p3: "Sul lato iOS sto costruendo app per problemi umani concreti. Attualmente lavoro a Lisionario, uno strumento di accessibilità in sviluppo per la comunità sorda, dove l'interfaccia deve fare più che essere bella. Deve colmare un vero divario comunicativo.",
+            p2: "Sul lato ingegneria lavoro con C e C++ su sistemi embedded e microcontrollori, dove ogni byte di memoria e ogni ciclo di clock contano.",
+            p3: "Sul lato iOS costruisco per problemi umani concreti. Le interfacce che mi interessano devono fare più che essere belle. Devono davvero funzionare per le persone che le usano.",
             p4: "Porto rigore ingegneristico al design e empatia da designer all'ingegneria. Per me non sono due linguaggi separati. Sono le due metà di qualcosa che funziona davvero per qualcuno.",
             quote: "La buona UX inizia dove finisce il firmware, e qualcuno deve parlare entrambe le lingue.",
             highlights: [
-                { title: "Rigore Ingegneristico", description: "Pensiero hardware-aware applicato al software, dove i vincoli affinano il design." },
-                { title: "Performance", description: "Profiling con Instruments per pubblicare app reattive su dispositivi reali." },
-                { title: "Centrato sulle persone", description: "Costruisco per accessibilità e casi d'uso concreti, non solo per gli happy path." },
-                { title: "Cross-Stack", description: "A mio agio dal C sui microcontrollori a SwiftUI su iPhone." }
+                { title: "Attento alle Performance", description: "Profiling con Instruments per app reattive sui dispositivi reali, non solo nei simulatori." },
+                { title: "Ownership End-to-End", description: "Dall'idea all'App Store: architettura, logica e implementazione. Non solo le parti facili." },
+                { title: "Mentalità Ingegneristica", description: "Teoria del controllo, retroazione e pensiero per sistemi applicati a ogni progetto iOS." },
+                { title: "Embedded + Mobile", description: "Dal C sui microcontrollori a SwiftUI su iPhone. I vincoli embedded affinano come scrivo mobile." }
             ]
         }
     };
 
 
-    const icons = [Code2, Rocket, Users, Lightbulb];
+    const icons = [Gauge, Rocket, GitBranch, Cpu];
     const t = translations[lang] || translations.en;
 
     return (

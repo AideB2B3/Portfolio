@@ -1,22 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ArrowLeft,
-  Rocket,
-  Calendar,
-  User,
-  Code2,
-  ExternalLink,
-  Recycle,
-  Sliders,
-  Layers,
-  Atom,
-  Music,
-  Smartphone,
-  Clock,
-  Gauge,
-  Apple,
-} from 'lucide-react';
+import { ArrowLeft, Rocket, Calendar, User, Code2, ExternalLink, Recycle, Sliders, Layers, Atom, Music, Smartphone, Clock, Gauge, Apple, } from 'lucide-react';
 
 const BugBusters = ({ lang }) => {
   useEffect(() => {

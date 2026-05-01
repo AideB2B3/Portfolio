@@ -21,8 +21,8 @@ export const Experience = ({ lang }) => {
         {
             period: lang === "en" ? "2025 - Present" : "2025 - In corso",
             role: lang === "en"
-                ? "Pier Program — Advanced Developer"
-                : "Programma Pier — Advanced Developer",
+                ? "Pier Program · Advanced Developer"
+                : "Programma Pier · Advanced Developer",
             company: lang === "en"
                 ? "Apple Developer Academy @ UniNa · Year 2"
                 : "Apple Developer Academy @ UniNa · Anno 2",

@@ -45,8 +45,8 @@ export const Education = ({ lang }) => {
         {
             period: "2014 - 2019",
             title: lang === "en"
-                ? "Technical Diploma — Electronics & Electrical Engineering"
-                : "Diploma di Perito Industriale — Elettronica ed Elettrotecnica",
+                ? "Technical Diploma · Electronics & Electrical Engineering"
+                : "Diploma di Perito Industriale · Elettronica ed Elettrotecnica",
             institution: lang === "en"
                 ? "ITIS Ettore Majorana · Somma Vesuviana (NA)"
                 : "ITIS Ettore Majorana · Somma Vesuviana (NA)",
