@@ -88,9 +88,9 @@ export const Hero = ({ lang }) => {
                     {/* Left Column  - Text Content */}
                     <div className="space-y-8">
                         <div className="animate-fade-in">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-l text-primary">
-                                <span className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-                                {content.role}
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass text-[11px] sm:text-sm md:text-base text-primary">
+                                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-primary rounded-full animate-pulse flex-shrink-0" />
+                                <span>{content.role}</span>
                             </span>
                         </div>
 
