@@ -8,7 +8,7 @@ export const Projects = ({ lang }) => {
 
   const content = {
     en: {
-      badge: "Featured Work",
+      badge: "My Projects",
       titleStart: "Projects built at the ",
       titleItalic: "intersection of engineering and human experience.",
       description: "A selection of recent work where engineering rigor meets human-centered design.",
@@ -17,7 +17,7 @@ export const Projects = ({ lang }) => {
       openProject: "Open project page",
     },
     it: {
-      badge: "Progetti in Evidenza",
+      badge: "I Miei Progetti",
       titleStart: "Progetti costruiti all'",
       titleItalic: "incrocio tra ingegneria ed esperienza umana.",
       description: "Una selezione di lavori recenti dove il rigore ingegneristico incontra il design centrato sulle persone.",
@@ -59,12 +59,12 @@ export const Projects = ({ lang }) => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mx-auto max-w-3xl mb-10 md:mb-16">
+        <div className="text-left max-w-5xl mb-10 md:mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             {t.badge}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4 md:mb-6 animate-fade-in animation-delay-100 leading-tight">
-            {t.titleStart}
+            <span className="text-primary">{t.titleStart}</span>
             <span className="font-serif italic font-normal text-white">
               {t.titleItalic}
             </span>

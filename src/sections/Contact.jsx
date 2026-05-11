@@ -125,10 +125,7 @@ export const Contact = ({ lang }) => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Intestazione */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            {t.badge}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             {t.titleStart}
             <span className="font-serif italic font-normal text-white">
               {t.titleItalic}
