@@ -12,7 +12,7 @@ const PARTICLES = Array.from({ length: 30 }, () => ({
 
 const techStack = {
     en: [
-        { group: "iOS Development", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData", "TestFlight"] },
+        { group: "iOS Development", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData"] },
         { group: "Systems & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
         { group: "Game & Interactive", icon: Gamepad2, items: ["Unity", "C#"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
