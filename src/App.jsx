@@ -9,7 +9,7 @@ import { Education } from "@/sections/Education";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "./layout/Footer";
 import BugBusters from "./projects/BugBusters";
-import CowPowRadio from "./projects/CowPowRadio";
+// import CowPowRadio from "./projects/CowPowRadio";
 import AlzheimerClassification from "./projects/AlzheimerClassification";
 
 // ... altri import
@@ -36,7 +36,7 @@ function App() {
             } />
             // In App.jsx
             <Route path="/bug-busters" element={<BugBusters lang={lang} />} />
-            <Route path="/cowpow-radio" element={<CowPowRadio lang={lang} />} />
+            {/* <Route path="/cowpow-radio" element={<CowPowRadio lang={lang} />} /> */}
             <Route path="/alzheimer-classification" element={<AlzheimerClassification lang={lang} />} />
           </Routes>
         </main>
