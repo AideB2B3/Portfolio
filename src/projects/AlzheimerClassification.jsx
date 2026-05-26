@@ -27,7 +27,7 @@ const AlzheimerClassification = ({ lang }) => {
         origin: "University Exam — Artificial Intelligence",
         role: "Solo Developer",
         dataset: "OASIS Longitudinal",
-        timeline: "2024 — 2025",
+        timeline: "2024 / 2025",
       },
 
       challengeTitle: "The Challenge",
@@ -48,24 +48,26 @@ const AlzheimerClassification = ({ lang }) => {
           Three core difficulties shaped the work. First, handling a multi-class problem using the{' '}
           <span className="text-primary font-semibold">one-vs-rest strategy</span>, which requires a separate
           binary classifier for each target class. Second, features on very different scales made{' '}
-          <span className="text-primary font-semibold">normalization essential</span> for KNN and SVM to work
-          correctly. Third, severe{' '}
-          <span className="text-primary font-semibold">class imbalance</span> — especially in the Converted
-          class — made accuracy alone an unreliable evaluation metric.
+          <span className="text-primary font-semibold">normalization essential</span> for algorithms like KNN
+          and SVM to work correctly. Third, significant{' '}
+          <span className="text-primary font-semibold">class imbalance</span> in the Converted class made
+          accuracy alone an unreliable metric for evaluating model performance.
         </>
       ),
 
       roleTitle: "My Role",
       roleText: (
         <>
-          I developed the entire project{' '}
-          <span className="text-primary font-semibold">independently</span>, from data loading and
-          preprocessing to model training, evaluation, and visualization.
-          <br /><br />
-          The main architectural decision was to move from a procedural notebook to a{' '}
-          <span className="text-primary font-semibold">fully object-oriented codebase</span> with clearly
-          separated responsibilities. This made the system easier to extend, reproducible, and maintainable
-          — adding a new classifier requires a single line of code in the config dictionary.
+          I designed and built the entire pipeline{' '}
+          <span className="text-primary font-semibold">independently</span>, covering every stage from data
+          preprocessing and feature engineering to model training, systematic evaluation, and result
+          visualization. A key decision was to refactor the original procedural code into a{' '}
+          <span className="text-primary font-semibold">fully object-oriented architecture</span> with five
+          classes and clearly separated responsibilities, making the system extensible, reproducible, and easy
+          to maintain. The pipeline benchmarks{' '}
+          <span className="text-primary font-semibold">nine classifiers across three target classes</span> using
+          seven evaluation metrics, with cross-validation integrated to ensure reliable results despite the
+          limited dataset size.
         </>
       ),
 
@@ -147,12 +149,12 @@ const AlzheimerClassification = ({ lang }) => {
       },
       quickFactsValue: {
         origin: "Esame Universitario — Intelligenza Artificiale",
-        role: "Sviluppatore Solo",
+        role: "Sviluppo Autonomo",
         dataset: "OASIS Longitudinal",
-        timeline: "2024 — 2025",
+        timeline: "2024 / 2025",
       },
 
-      challengeTitle: "La Sfida",
+      challengeTitle: "Contesto",
       challengeText: (
         <>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
@@ -172,24 +174,27 @@ const AlzheimerClassification = ({ lang }) => {
           <span className="text-primary font-semibold">strategia one-vs-rest</span>, che richiede un
           classificatore binario separato per ogni classe. Seconda, features su scale molto diverse hanno
           reso la{' '}
-          <span className="text-primary font-semibold">normalizzazione essenziale</span> per KNN e SVM.
-          Terza, lo{' '}
-          <span className="text-primary font-semibold">sbilanciamento delle classi</span> — soprattutto
-          Converted — ha reso l'accuracy da sola una metrica inaffidabile.
+          <span className="text-primary font-semibold">normalizzazione essenziale</span> per algoritmi come
+          KNN e SVM. Terza, il significativo{' '}
+          <span className="text-primary font-semibold">sbilanciamento delle classi</span> nella classe
+          Converted ha reso l'accuracy da sola una metrica inaffidabile per valutare le performance dei modelli.
         </>
       ),
 
-      roleTitle: "Il Mio Ruolo",
+      roleTitle: "My Role",
       roleText: (
         <>
-          Ho sviluppato l'intero progetto{' '}
-          <span className="text-primary font-semibold">in autonomia</span>, dal caricamento e preprocessing
-          dei dati fino al training, la valutazione e la visualizzazione dei modelli.
-          <br /><br />
-          La decisione architetturale principale è stata passare da un notebook procedurale a un{' '}
-          <span className="text-primary font-semibold">codebase completamente object-oriented</span> con
-          responsabilità chiaramente separate. Questo ha reso il sistema estendibile, riproducibile e
-          manutenibile: aggiungere un nuovo classificatore richiede una sola riga nel dizionario di config.
+          Ho progettato e sviluppato l'intera pipeline{' '}
+          <span className="text-primary font-semibold">in autonomia</span>, seguendo ogni fase: dal
+          preprocessing dei dati e l'estrazione delle feature fino al training dei modelli, alla valutazione
+          sistematica e alla visualizzazione dei risultati. Una decisione chiave è stata refactorizzare il
+          codice procedurale originale in un'{' '}
+          <span className="text-primary font-semibold">architettura completamente object-oriented</span> con
+          cinque classi a responsabilità separate, rendendo il sistema estendibile, riproducibile e facilmente
+          manutenibile. La pipeline mette a confronto{' '}
+          <span className="text-primary font-semibold">nove classificatori su tre classi target</span> con
+          sette metriche di valutazione, integrando la cross-validation per garantire risultati affidabili
+          nonostante le dimensioni limitate del dataset.
         </>
       ),
 

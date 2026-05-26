@@ -45,8 +45,8 @@ export const Projects = ({ lang }) => {
       title: "Alzheimer Classification",
       path: "/alzheimer-classification",
       description: lang === "en"
-        ? "A machine learning pipeline to classify Alzheimer's dementia status from the OASIS Longitudinal dataset. 9 classifiers compared on 3 target classes with 7 evaluation metrics, built with a fully object-oriented architecture in Python and scikit-learn."
-        : "Una pipeline di machine learning per classificare lo stato di demenza dell'Alzheimer dal dataset OASIS Longitudinal. 9 classificatori confrontati su 3 classi target con 7 metriche di valutazione, sviluppata con architettura object-oriented in Python e scikit-learn.",
+        ? "Built for my Artificial Intelligence university exam, this project classifies Alzheimer's dementia status from longitudinal clinical data using a fully object-oriented Python pipeline. Nine classifiers benchmarked across three target classes with seven evaluation metrics."
+        : "Sviluppato per l'esame universitario di Intelligenza Artificiale, questo progetto classifica lo stato di demenza dell'Alzheimer da dati clinici longitudinali con una pipeline Python completamente object-oriented. Nove classificatori confrontati su tre classi target con sette metriche di valutazione.",
       image: "/Portfolio/Projects/Progetto_ai.png",
       tags: ["Python", "Scikit-learn", "Machine Learning"],
       link: "https://github.com/AideB2B3/AI-Project-for-University-Exams",
@@ -56,8 +56,8 @@ export const Projects = ({ lang }) => {
     //   title: "CowPow! Radio Stories",
     //   path: "/cowpow-radio",
     //   description: lang === "en"
-    //     ? "A Unity app built for CHOC (Childhood Cancer Foundation) that prepares children for radiotherapy through play and honest medical simulation — walking young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can relate to."
-    //     : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che prepara i bambini alla radioterapia attraverso il gioco e una simulazione medica onesta — guidando i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
+    //     ? "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with."
+    //     : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
     //   image: "/Portfolio/Projects/CowPow_cover.png",
     //   tags: ["Unity", "C#", "iOS"],
     //   link: null,
@@ -105,7 +105,7 @@ export const Projects = ({ lang }) => {
               aria-label={`${t.openProject}: ${project.title}`}
               onClick={() => navigate(project.path)}
               onKeyDown={(e) => handleKeyDown(e, project.path)}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in cursor-pointer hover:border-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group glass rounded-2xl overflow-hidden animate-fade-in cursor-pointer hover:border-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex flex-col"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* IMAGE */}
@@ -134,8 +134,8 @@ export const Projects = ({ lang }) => {
               </div>
 
               {/* Content */}
-              <div className="p-5 md:p-6 space-y-4">
-                <div className="flex items-start justify-between gap-3">
+              <div className="p-5 md:p-6 flex flex-col flex-1">
+                <div className="flex items-start justify-between gap-3 mb-3">
                   <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
@@ -148,16 +148,16 @@ export const Projects = ({ lang }) => {
                     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </span>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4">
                   {project.description}
                 </p>
 
-                {/* Tag Container */}
-                <div className="flex flex-wrap gap-2">
+                {/* Tag Container — pinned to bottom */}
+                <div className="flex gap-2 overflow-x-auto scrollbar-none">
                   {project.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground"
+                      className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground whitespace-nowrap flex-shrink-0"
                     >
                       {tag}
                     </span>
@@ -166,7 +166,7 @@ export const Projects = ({ lang }) => {
 
                 {/* Demo button (mobile only, below tags) */}
                 {project.link && (
-                  <div className="flex flex-wrap gap-2 md:hidden pt-2">
+                  <div className="flex flex-wrap gap-2 md:hidden pt-3">
                     <a
                       href={project.link}
                       target="_blank"
