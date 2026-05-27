@@ -43,7 +43,7 @@ export const Footer = ({ lang = "it" }) => {
                             href="#"
                             className="inline-block text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
                         >
-                            DB<span className="text-primary">.</span>
+                            Davide <span className="text-primary"> Bellobuono</span>
                         </a>
 
                         {/* Back to top: visible only on mobile here, on desktop it's centered separately */}

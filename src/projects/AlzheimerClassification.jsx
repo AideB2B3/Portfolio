@@ -27,7 +27,7 @@ const AlzheimerClassification = ({ lang }) => {
         origin: "University Exam — Artificial Intelligence",
         role: "Solo Developer",
         dataset: "OASIS Longitudinal",
-        timeline: "2024 / 2025",
+        timeline: "2023 / 2024",
       },
 
       challengeTitle: "The Challenge",
@@ -149,9 +149,9 @@ const AlzheimerClassification = ({ lang }) => {
       },
       quickFactsValue: {
         origin: "Esame Universitario — Intelligenza Artificiale",
-        role: "Sviluppo Autonomo",
+        role: "Solo Developer",
         dataset: "OASIS Longitudinal",
-        timeline: "2024 / 2025",
+        timeline: "2023 / 2024",
       },
 
       challengeTitle: "Contesto",

@@ -52,16 +52,16 @@ export const Projects = ({ lang }) => {
       link: "https://github.com/AideB2B3/AI-Project-for-University-Exams",
       demoLabel: "GitHub",
     },
-    // {
-    //   title: "CowPow! Radio Stories",
-    //   path: "/cowpow-radio",
-    //   description: lang === "en"
-    //     ? "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with."
-    //     : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
-    //   image: "/Portfolio/Projects/CowPow_cover.png",
-    //   tags: ["Unity", "C#", "iOS"],
-    //   link: null,
-    // },
+    {
+      title: "CowPow! Radio Stories",
+      path: "/cowpow-radio",
+      description: lang === "en"
+        ? "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with."
+        : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
+      image: "/Portfolio/Projects/CowPow_cover.png",
+      tags: ["Unity", "C#", "iOS"],
+      link: null,
+    },
   ];
 
   // Handler tastiera per accessibilità (Enter/Space attivano la card come un bottone)

@@ -23,7 +23,7 @@ const BugBusters = ({ lang }) => {
       quickFactsValue: {
         origin: "Apple Developer Academy @ UniNa · Year 1",
         role: " iOS Developer",
-        team: "4 people",
+        team: "5 people",
         timeline: "4 weeks · 2025",
       },
 
@@ -119,7 +119,7 @@ const BugBusters = ({ lang }) => {
       quickFactsValue: {
         origin: "Apple Developer Academy @ UniNa · Anno 1",
         role: "Sviluppo Autonomo",
-        team: "4 persone",
+        team: "5 persone",
         timeline: "4 settimane · 2025",
       },
 
