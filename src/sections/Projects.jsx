@@ -57,8 +57,8 @@ export const Projects = ({ lang }) => {
       title: "AI Email Agent with Human Approval",
       path: "/n8n/ai-email-agent",
       description: lang === "en"
-        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category — keeping a human in the loop on Discord before any urgent reply is sent."
-        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria — mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
+        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent."
+        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
       image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
       tags: ["n8n", "Claude AI", "Gmail", "Discord"],
       link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",

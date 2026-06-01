@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft, ExternalLink, Bot, Mail, GitBranch,
-  MessageSquare, ShieldCheck, Database
+  MessageSquare, ShieldCheck, Database,
+  Zap, User, Plug, RefreshCw
 } from 'lucide-react';
 
 const GITHUB = "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval";
@@ -17,12 +18,13 @@ const AiEmailAgent = ({ lang }) => {
       back: "Back to all projects",
       viewGithub: "View on GitHub",
       badge: "Project built entirely with n8n",
-      tagline: "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category — with human approval on Discord for urgent ones.",
+      tagline: "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, with human approval on Discord for urgent ones.",
+      contextTitle: "Context",
       quickFacts: [
-        { label: "Type", value: "AI Automation" },
-        { label: "Role", value: "Solo Developer" },
-        { label: "Integrations", value: "Gmail · Claude · Discord · Notion" },
-        { label: "Pattern", value: "Human-in-the-loop" },
+        { icon: Zap, label: "Type", value: "AI Automation - N8N" },
+        { icon: User, label: "Role", value: "Solo Developer" },
+        { icon: Plug, label: "Integrations", value: "Gmail · Claude · Discord · Notion" },
+        { icon: RefreshCw, label: "Pattern", value: "Human-in-the-loop" },
       ],
       screenshotsTitle: "Screenshots",
       images: [
@@ -42,12 +44,13 @@ const AiEmailAgent = ({ lang }) => {
       back: "Torna a tutti i progetti",
       viewGithub: "Vedi su GitHub",
       badge: "Progetto realizzato interamente con n8n",
-      tagline: "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria — con approvazione umana su Discord per quelle urgenti.",
+      tagline: "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, con approvazione umana su Discord per quelle urgenti.",
+      contextTitle: "Contesto",
       quickFacts: [
-        { label: "Tipo", value: "AI Automation" },
-        { label: "Ruolo", value: "Solo Developer" },
-        { label: "Integrazioni", value: "Gmail · Claude · Discord · Notion" },
-        { label: "Pattern", value: "Human-in-the-loop" },
+        { icon: Zap, label: "Tipo", value: "AI Automation - N8N" },
+        { icon: User, label: "Ruolo", value: "Solo Developer" },
+        { icon: Plug, label: "Integrazioni", value: "Gmail · Claude · Discord · Notion" },
+        { icon: RefreshCw, label: "Pattern", value: "Human-in-the-loop" },
       ],
       screenshotsTitle: "Screenshot",
       images: [
@@ -93,17 +96,10 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => 
     <header className="container mx-auto px-4 md:px-6 mb-10 md:mb-16">
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-end justify-between gap-8 md:gap-12">
         <div className="w-full lg:w-2/3 space-y-4 md:space-y-6 text-center lg:text-left">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider animate-fade-in">
-            <img src="/Portfolio/Projects/iconTech/N8n.png" alt="n8n" className="w-4 h-4 object-contain flex-shrink-0" />
-            <span>{t.badge}</span>
-          </span>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1] md:leading-[0.95] text-white animate-fade-in">
             {title}{' '}
             <span className="font-serif italic font-normal">{titleItalic}</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0 animate-fade-in animation-delay-100">
-            {t.tagline}
-          </p>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2 animate-fade-in animation-delay-200">
             <a
               href={github}
@@ -132,45 +128,46 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => 
     <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-300">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {t.quickFacts.map((fact, idx) => (
-            <div key={idx} className="glass rounded-2xl p-4 md:p-5 hover:border-primary/30 transition-all duration-300">
-              <div className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                {fact.label}
+          {t.quickFacts.map((fact, idx) => {
+            const FactIcon = fact.icon;
+            return (
+              <div key={idx} className="glass rounded-2xl p-4 md:p-5 hover:border-primary/30 transition-all duration-300">
+                <div className="flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                  <FactIcon className="w-3 h-3 md:w-3.5 md:h-3.5 text-primary flex-shrink-0" />
+                  <span>{fact.label}</span>
+                </div>
+                <span className="block text-sm md:text-base font-semibold text-foreground leading-snug">
+                  {fact.value}
+                </span>
               </div>
-              <span className="block text-sm md:text-base font-semibold text-foreground leading-snug">
-                {fact.value}
-              </span>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
 
-    {/* SCREENSHOTS — separate, each with its own caption */}
-    <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-400">
+    {/* CONTEXT */}
+    <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-350">
       <div className="max-w-6xl mx-auto">
-        <div className="text-left md:text-center mb-6 md:mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{t.screenshotsTitle}</h2>
-        </div>
-        <div className="space-y-8 md:space-y-12">
-          {t.images.map((img, idx) => (
-            <figure key={idx} className="glass p-3 sm:p-4 md:p-6 rounded-[1.25rem] md:rounded-[2rem] border-primary/10">
-              <img
-                src={img.src}
-                alt={img.caption}
-                className="w-full h-auto rounded-xl md:rounded-2xl object-contain"
-              />
-              <figcaption className="text-xs sm:text-sm text-muted-foreground text-center italic mt-3 md:mt-4 px-2">
-                {img.caption}
-              </figcaption>
-            </figure>
-          ))}
+        <div className="glass p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] border-primary/10 relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-white relative">
+            {t.contextTitle}
+          </h2>
+          <div className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed relative">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
+              <img src="/Portfolio/Projects/iconTech/N8n.png" alt="n8n" className="w-3.5 h-3.5 object-contain flex-shrink-0" />
+              PROJECT BUILT ENTIRELY WITH N8N
+            </span>
+            <br />
+            {t.tagline}
+          </div>
         </div>
       </div>
     </section>
 
     {/* HOW IT WORKS */}
-    <section className="container mx-auto px-4 md:px-6 animate-fade-in animation-delay-500">
+    <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-400">
       <div className="max-w-6xl mx-auto">
         <div className="text-left md:text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{t.howTitle}</h2>
@@ -192,6 +189,29 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => 
               </div>
             );
           })}
+        </div>
+      </div>
+    </section>
+
+    {/* SCREENSHOTS */}
+    <section className="container mx-auto px-4 md:px-6 animate-fade-in animation-delay-500">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-left md:text-center mb-6 md:mb-10">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{t.screenshotsTitle}</h2>
+        </div>
+        <div className="space-y-8 md:space-y-12">
+          {t.images.map((img, idx) => (
+            <figure key={idx} className="glass p-3 sm:p-4 md:p-6 rounded-[1.25rem] md:rounded-[2rem] border-primary/10">
+              <img
+                src={img.src}
+                alt={img.caption}
+                className="w-full h-auto rounded-xl md:rounded-2xl object-contain"
+              />
+              <figcaption className="text-xs sm:text-sm text-muted-foreground text-center italic mt-3 md:mt-4 px-2">
+                {img.caption}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

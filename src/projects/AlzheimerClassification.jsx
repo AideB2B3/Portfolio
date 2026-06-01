@@ -24,7 +24,7 @@ const AlzheimerClassification = ({ lang }) => {
         timeline: "Timeline",
       },
       quickFactsValue: {
-        origin: "University Exam — Artificial Intelligence",
+        origin: "University Exam, Artificial Intelligence",
         role: "Solo Developer",
         dataset: "OASIS Longitudinal",
         timeline: "2023 / 2024",
@@ -35,7 +35,7 @@ const AlzheimerClassification = ({ lang }) => {
         <>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
             <GraduationCap className="w-3.5 h-3.5" />
-            Artificial Intelligence Exam — Prof.ssa Amato Flora
+            Artificial Intelligence Exam, Prof.ssa Amato Flora
           </span>
           <br />
           The goal was to build a system that can{' '}
@@ -148,7 +148,7 @@ const AlzheimerClassification = ({ lang }) => {
         timeline: "Timeline",
       },
       quickFactsValue: {
-        origin: "Esame Universitario — Intelligenza Artificiale",
+        origin: "Esame Universitario, Intelligenza Artificiale",
         role: "Solo Developer",
         dataset: "OASIS Longitudinal",
         timeline: "2023 / 2024",
@@ -159,7 +159,7 @@ const AlzheimerClassification = ({ lang }) => {
         <>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
             <GraduationCap className="w-3.5 h-3.5" />
-            Esame di Intelligenza Artificiale — Prof.ssa Amato Flora
+            Esame di Intelligenza Artificiale, Prof.ssa Amato Flora
           </span>
           <br />
           L'obiettivo era costruire un sistema capace di{' '}

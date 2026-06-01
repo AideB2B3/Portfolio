@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Globe, Clock, Bell } from 'lucide-react';
+import { Globe, Clock, Bell, Zap, User, Plug } from 'lucide-react';
 import { N8nLayout } from './AiEmailAgent';
 
 const GITHUB = "https://github.com/AideB2B3/web_site_monitor_with_n8n";
@@ -15,11 +15,12 @@ const WebsiteMonitor = ({ lang }) => {
       viewGithub: "View on GitHub",
       badge: "Project built entirely with n8n",
       tagline: "An n8n workflow that checks every 5 minutes whether a website is online and immediately sends a Telegram alert in case of downtime. No external dependencies.",
+      contextTitle: "Context",
       quickFacts: [
-        { label: "Type", value: "Monitoring" },
-        { label: "Role", value: "Solo Developer" },
-        { label: "Integrations", value: "HTTP · Telegram" },
-        { label: "Schedule", value: "Every 5 minutes" },
+        { icon: Zap, label: "Type", value: "Monitoring - N8N" },
+        { icon: User, label: "Role", value: "Solo Developer" },
+        { icon: Plug, label: "Integrations", value: "HTTP · Telegram" },
+        { icon: Clock, label: "Schedule", value: "Every 5 minutes" },
       ],
       screenshotsTitle: "Screenshots",
       images: [
@@ -38,11 +39,12 @@ const WebsiteMonitor = ({ lang }) => {
       viewGithub: "Vedi su GitHub",
       badge: "Progetto realizzato interamente con n8n",
       tagline: "Un workflow n8n che controlla ogni 5 minuti se un sito è online e invia subito un alert su Telegram in caso di downtime. Zero dipendenze esterne.",
+      contextTitle: "Contesto",
       quickFacts: [
-        { label: "Tipo", value: "Monitoraggio" },
-        { label: "Ruolo", value: "Solo Developer" },
-        { label: "Integrazioni", value: "HTTP · Telegram" },
-        { label: "Frequenza", value: "Ogni 5 minuti" },
+        { icon: Zap, label: "Tipo", value: "Monitoraggio - N8N" },
+        { icon: User, label: "Ruolo", value: "Solo Developer" },
+        { icon: Plug, label: "Integrazioni", value: "HTTP · Telegram" },
+        { icon: Clock, label: "Frequenza", value: "Ogni 5 minuti" },
       ],
       screenshotsTitle: "Screenshot",
       images: [
