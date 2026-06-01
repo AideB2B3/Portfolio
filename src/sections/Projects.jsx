@@ -1,6 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, LayoutGrid } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 export const Projects = ({ lang }) => {
 
@@ -15,6 +14,7 @@ export const Projects = ({ lang }) => {
       demo: "Demo",
       seeProject: "See project",
       openProject: "Open project page",
+      seeAll: "See all projects",
     },
     it: {
       badge: "I Miei Progetti",
@@ -24,6 +24,7 @@ export const Projects = ({ lang }) => {
       demo: "Demo",
       seeProject: "Vedi progetto",
       openProject: "Apri pagina progetto",
+      seeAll: "Vedi tutti i progetti",
     }
   };
 
@@ -31,16 +32,6 @@ export const Projects = ({ lang }) => {
 
 
   const projects = [
-    {
-      title: "Bug Busters",
-      path: "/bug-busters",
-      description: lang === "en"
-        ? "Bug Busters is a cartoon-style arcade shooter where players face relentless waves of bugs. Building it pushed me to confront the real-world complexities of game logic, from object lifecycle management to gameplay balance tuning, all running natively on iOS."
-        : "Bug Busters è un arcade shooter in stile cartoon dove il giocatore affronta ondate di bug. Svilupparlo mi ha spinto a confrontarmi con le complessità reali della logica di gioco: dalla gestione del ciclo di vita degli oggetti al bilanciamento della difficoltà, tutto in nativo iOS.",
-      image: "/Portfolio/Projects/Bug_busters.png",
-      tags: ["SwiftUI", "SpriteKit", "AVFoundation"],
-      link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
-    },
     {
       title: "Alzheimer Classification",
       path: "/alzheimer-classification",
@@ -61,6 +52,17 @@ export const Projects = ({ lang }) => {
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
       link: null,
+    },
+    {
+      title: "AI Email Agent with Human Approval",
+      path: "/n8n/ai-email-agent",
+      description: lang === "en"
+        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category — keeping a human in the loop on Discord before any urgent reply is sent."
+        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria — mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
+      image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
+      tags: ["n8n", "Claude AI", "Gmail", "Discord"],
+      link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
+      demoLabel: "GitHub",
     },
   ];
 
@@ -182,6 +184,21 @@ export const Projects = ({ lang }) => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* See all projects button */}
+        <div className="flex justify-center mt-10 md:mt-14 animate-fade-in animation-delay-500">
+          <button
+            type="button"
+            onClick={() => navigate("/projects")}
+            className="group relative overflow-hidden rounded-full font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary cursor-pointer px-8 py-4 text-lg hover:scale-105 shadow-lg hover:shadow-primary/40"
+          >
+            <span className="relative flex items-center justify-center gap-2">
+              <LayoutGrid className="w-5 h-5" />
+              {t.seeAll}
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+            </span>
+          </button>
         </div>
       </div>
     </section>

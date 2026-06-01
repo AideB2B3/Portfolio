@@ -17,7 +17,7 @@ const techStack = {
         { group: "Game & Interactive", icon: Gamepad2, items: ["Unity", "C#"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
         { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Tools", icon: Wrench, items: ["Git", "Xcode", "Jira"] },
+        { group: "Tools & Automation", icon: Wrench, items: ["Git", "Xcode", "Jira", "N8N"] },
     ],
     it: [
         { group: "Sviluppo iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData", "TestFlight"] },
@@ -25,7 +25,7 @@ const techStack = {
         { group: "Game & Interattivo", icon: Gamepad2, items: ["Unity", "C#"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
         { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Strumenti", icon: Wrench, items: ["Git", "Xcode", "Jira"] },
+        { group: "Tools & Automation", icon: Wrench, items: ["Git", "Xcode", "Jira", "N8N"] },
     ],
 };
 
