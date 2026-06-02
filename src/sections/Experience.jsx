@@ -24,7 +24,7 @@ export const Experience = ({ lang }) => {
                 ? "Pier Program · Advanced Developer"
                 : "Programma Pier · Advanced Developer",
             company: lang === "en"
-                ? "Apple Developer Academy @ UniNa · Year 2"
+                ? "Apple Developer Academy @ UniNa · 2nd Year"
                 : "Apple Developer Academy @ UniNa · Anno 2",
             description: lang === "en"
                 ? "Second year of the Apple Developer Academy in the Pier program, reserved for first-year graduates. I'm building iOS apps full-time for external stakeholders, NGOs, university research departments, and public-private organizations, working through the full client cycle: requirements gathering, sprint planning, delivery. The skills I'm sharpening here are the ones the first year introduced and this one demands at professional level: stakeholder communication, scoping under real constraints, accountability for what gets shipped, and managing the gap between what a client asks for and what they actually need."
@@ -32,18 +32,6 @@ export const Experience = ({ lang }) => {
             technologies: ["Swift", "SwiftUI", "Unity", "Scrum", "Stakeholder Management"],
             current: true,
         },
-        /* 
-        {
-            period: "2022 - 2024", 
-            role: "Junior Developer",
-            company: "Tech Company Inc.", 
-            description: lang === "en" 
-                ? "Frontend development and maintenance of responsive user interfaces using React and Tailwind CSS."
-                : "Sviluppo frontend e manutenzione di interfacce utente responsive utilizzando React e Tailwind CSS.", 
-            technologies: ["React", "JavaScript", "CSS"], 
-            current: false, 
-        }, 
-        */
     ];
 
     return (

@@ -17,7 +17,7 @@ const WebsiteMonitor = ({ lang }) => {
       tagline: "An n8n workflow that checks every 5 minutes whether a website is online and immediately sends a Telegram alert in case of downtime. No external dependencies.",
       contextTitle: "Context",
       quickFacts: [
-        { icon: Zap, label: "Type", value: "Monitoring - N8N" },
+        { icon: Zap, label: "Type", value: "Monitoring - n8n" },
         { icon: User, label: "Role", value: "Solo Developer" },
         { icon: Plug, label: "Integrations", value: "HTTP · Telegram" },
         { icon: Clock, label: "Schedule", value: "Every 5 minutes" },
@@ -41,7 +41,7 @@ const WebsiteMonitor = ({ lang }) => {
       tagline: "Un workflow n8n che controlla ogni 5 minuti se un sito è online e invia subito un alert su Telegram in caso di downtime. Zero dipendenze esterne.",
       contextTitle: "Contesto",
       quickFacts: [
-        { icon: Zap, label: "Tipo", value: "Monitoraggio - N8N" },
+        { icon: Zap, label: "Tipo", value: "Monitoraggio - n8n" },
         { icon: User, label: "Ruolo", value: "Solo Developer" },
         { icon: Plug, label: "Integrazioni", value: "HTTP · Telegram" },
         { icon: Clock, label: "Frequenza", value: "Ogni 5 minuti" },

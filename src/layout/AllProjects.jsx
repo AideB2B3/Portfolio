@@ -13,7 +13,6 @@ export const AllProjects = ({ lang }) => {
 
   const content = {
     en: {
-      badge: "All Projects",
       titleStart: "The complete ",
       titleItalic: "collection of things I've built.",
       description: "Every project, from native iOS apps and machine-learning pipelines to AI automations built entirely with n8n.",
@@ -23,7 +22,6 @@ export const AllProjects = ({ lang }) => {
       all: "All",
     },
     it: {
-      badge: "Tutti i Progetti",
       titleStart: "La collezione ",
       titleItalic: "completa delle cose che ho costruito.",
       description: "Tutti i progetti, dalle app iOS native e pipeline di machine learning alle automazioni AI realizzate interamente con n8n.",
@@ -227,10 +225,7 @@ export const AllProjects = ({ lang }) => {
 
         {/* Header (same style as Projects) */}
         <div className="text-left max-w-5xl mb-8 md:mb-12">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            {t.badge}
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4 md:mb-6 animate-fade-in animation-delay-100 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 animate-fade-in leading-tight">
             <span className="text-primary">{t.titleStart}</span>
             <span className="font-serif italic font-normal text-white">{t.titleItalic}</span>
           </h2>

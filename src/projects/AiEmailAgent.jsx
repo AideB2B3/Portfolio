@@ -21,7 +21,7 @@ const AiEmailAgent = ({ lang }) => {
       tagline: "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, with human approval on Discord for urgent ones.",
       contextTitle: "Context",
       quickFacts: [
-        { icon: Zap, label: "Type", value: "AI Automation - N8N" },
+        { icon: Zap, label: "Type", value: "AI Automation - n8n" },
         { icon: User, label: "Role", value: "Solo Developer" },
         { icon: Plug, label: "Integrations", value: "Gmail · Claude · Discord · Notion" },
         { icon: RefreshCw, label: "Pattern", value: "Human-in-the-loop" },
@@ -47,7 +47,7 @@ const AiEmailAgent = ({ lang }) => {
       tagline: "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, con approvazione umana su Discord per quelle urgenti.",
       contextTitle: "Contesto",
       quickFacts: [
-        { icon: Zap, label: "Tipo", value: "AI Automation - N8N" },
+        { icon: Zap, label: "Tipo", value: "AI Automation - n8n" },
         { icon: User, label: "Ruolo", value: "Solo Developer" },
         { icon: Plug, label: "Integrazioni", value: "Gmail · Claude · Discord · Notion" },
         { icon: RefreshCw, label: "Pattern", value: "Human-in-the-loop" },
@@ -157,7 +157,7 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => 
           <div className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed relative">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
               <img src="/Portfolio/Projects/iconTech/N8n.png" alt="n8n" className="w-3.5 h-3.5 object-contain flex-shrink-0" />
-              PROJECT BUILT ENTIRELY WITH N8N
+              PROJECT BUILT ENTIRELY WITH n8n
             </span>
             <br />
             {t.tagline}

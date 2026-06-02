@@ -34,7 +34,7 @@ export const Education = ({ lang }) => {
             period: "2024 - 2025",
             title: lang === "en" ? "Student Year" : "Anno da Studente",
             institution: lang === "en"
-                ? "Apple Developer Academy @ UniNa · Year 1"
+                ? "Apple Developer Academy @ UniNa · 1st Year"
                 : "Apple Developer Academy @ UniNa · Anno 1",
             description: lang === "en"
                 ? "First year of the Apple Developer Academy: a 9-month full-time program at the largest Academy outside the US. I learned to build production iOS apps end-to-end with Swift and SwiftUI, applied Human-Centered Design and Apple's Challenge Based Learning methodology working in multidisciplinary teams, and developed business modeling and pitching skills alongside the technical track. The year ended with concrete output: team-built iOS apps shipped to the App Store."

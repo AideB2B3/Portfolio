@@ -55,6 +55,9 @@ const CowPowRadio = ({ lang }) => {
           that{' '}
           <span className="italic text-foreground">no family should face this journey alone</span> shaped every
           design decision we made.
+          <br /><br />
+          The source code is not publicly available out of respect for the client relationship and the sensitivity
+          of the project.
         </>
       ),
 
@@ -160,6 +163,9 @@ const CowPowRadio = ({ lang }) => {
           quotidiano con i giovani pazienti. La loro convinzione che{' '}
           <span className="italic text-foreground">nessuna famiglia debba affrontare questo percorso da sola</span>{' '}
           ha guidato ogni scelta progettuale che abbiamo fatto.
+          <br /><br />
+          Il codice sorgente non è pubblicamente disponibile, per rispetto del rapporto con il cliente e della
+          sensibilità del progetto.
         </>
       ),
 

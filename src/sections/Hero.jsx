@@ -1,5 +1,5 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight, ChevronDown, Github, Linkedin, Download, Smartphone, Cpu, Gamepad2, Wrench, Globe, Palette } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Gamepad2, Wrench, Globe, Palette } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 // Particelle generate UNA sola volta al caricamento del modulo (niente impurità nel render)
@@ -17,15 +17,15 @@ const techStack = {
         { group: "Game & Interactive", icon: Gamepad2, items: ["Unity", "C#"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
         { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Tools & Automation", icon: Wrench, items: ["Git", "Xcode", "Jira", "N8N"] },
+        { group: "Tools & Framework", icon: Wrench, items: ["Git", "Xcode", "Jira", "n8n"] },
     ],
     it: [
-        { group: "Sviluppo iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData", "TestFlight"] },
+        { group: "Sviluppo iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData"] },
         { group: "Sistemi & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
         { group: "Game & Interattivo", icon: Gamepad2, items: ["Unity", "C#"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
         { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Tools & Automation", icon: Wrench, items: ["Git", "Xcode", "Jira", "N8N"] },
+        { group: "Tools & Framework", icon: Wrench, items: ["Git", "Xcode", "Jira", "n8n"] },
     ],
 };
 
@@ -40,7 +40,6 @@ export const Hero = ({ lang }) => {
             contactBtn: "Contact Me",
             downloadBtn: "Download CV",
             follow: "Follow me:",
-            tech: "Technologies I work with:",
         },
         it: {
             role: "Sviluppatore iOS · Studente di Ing. dell'Automazione",
@@ -50,7 +49,6 @@ export const Hero = ({ lang }) => {
             contactBtn: "Contattami",
             downloadBtn: "Scarica CV",
             follow: "Seguimi su:",
-            tech: "Tecnologie che utilizzo:",
         }
     };
 
@@ -198,11 +196,7 @@ export const Hero = ({ lang }) => {
                 </div>
 
                 {/* Technology Stack - Grouped Cards */}
-                <div className="mt-20 animate-fade-in animation-delay-600 w-full">
-                    <p className="text-xs md:text-sm text-muted-foreground mb-8 uppercase tracking-widest text-left">
-                        {content.tech}
-                    </p>
-
+                <div className="mt-12 animate-fade-in animation-delay-600 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {groups.map((category, idx) => {
                             const Icon = category.icon;

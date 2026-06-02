@@ -37,7 +37,7 @@ export const Contact = ({ lang }) => {
       labelLocation: "Location",
       labelEmail: "Email",
       availabilityTitle: "Currently Involved Pier-Program",
-      availabilityDesc: "I'm involved in the Pier Program at the Apple Developer Academy but open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!"
+      availabilityDesc: "I'm involved in the Pier Program at the Apple Developer Academy but open to new opportunities and exciting projects. iOS development, automation engineering, embedded systems. Whether you need a full-time engineer or a freelance consultant, let's talk!"
     },
     it: {
       badge: "Contattami",
@@ -58,7 +58,7 @@ export const Contact = ({ lang }) => {
       labelLocation: "Posizione",
       labelEmail: "Email",
       availabilityTitle: "Attualmente nel Pier-Program",
-      availabilityDesc: "Sono coinvolto nel Pier Program della Apple Developer Academy ma resto aperto a nuove opportunità e progetti stimolanti. Che tu cerchi un ingegnere full-time o un consulente freelance, parliamone!"
+      availabilityDesc: "Sono coinvolto nel Pier Program della Apple Developer Academy ma resto aperto a nuove opportunità e progetti stimolanti. Sviluppo iOS, ingegneria dell'automazione, sistemi embedded. Che tu cerchi un ingegnere full-time o un consulente freelance, parliamone!"
     }
   };
 
@@ -69,7 +69,7 @@ export const Contact = ({ lang }) => {
       icon: Mail,
       label: t.labelEmail,
       value: "davide23bellobuono@gmail.com",
-      href: "mailto:davidebellobuono@gmail.com",
+      href: "mailto:davide23bellobuono@gmail.com",
     },
     {
       icon: Linkedin,

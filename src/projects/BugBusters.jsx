@@ -21,7 +21,7 @@ const BugBusters = ({ lang }) => {
         timeline: "Timeline",
       },
       quickFactsValue: {
-        origin: "Apple Developer Academy @ UniNa · Year 1",
+        origin: "Apple Developer Academy @ UniNa · 1st Year",
         role: " iOS Developer",
         team: "5 people",
         timeline: "4 weeks · 2025",
@@ -31,7 +31,7 @@ const BugBusters = ({ lang }) => {
       challengeTitle: "The Challenge",
       challengeText: (
         <>
-          Build a complete iOS game in <span className="text-primary font-semibold">4 weeks</span> during the <span className="text-primary font-semibold">Apple Developer Academy @ UniNa Year 1</span>. The brief came from a deceptively simple question: <span className="italic text-foreground">"What if debugging was actually fun?"</span> The team had to deliver an end-to-end arcade product, from gameplay design to App Store release.
+          Build a complete iOS game in <span className="text-primary font-semibold">4 weeks</span> during the <span className="text-primary font-semibold">Apple Developer Academy @ UniNa 1st Year</span>. The brief came from a deceptively simple question: <span className="italic text-foreground">"What if debugging was actually fun?"</span> The team had to deliver an end-to-end arcade product, from gameplay design to App Store release.
         </>
       ),
 
@@ -281,7 +281,7 @@ const BugBusters = ({ lang }) => {
         </div>
       </header>
 
-      {/* QUICK FACTS — glass tile cards (replaces plain metadata strip) */}
+      {/* QUICK FACTS */}
       <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-300">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
@@ -380,7 +380,7 @@ const BugBusters = ({ lang }) => {
         </div>
       </section>
 
-      {/* TECHNICAL HIGHLIGHTS — with icons */}
+      {/* TECHNICAL HIGHLIGHTS */}
       <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-600">
         <div className="max-w-6xl mx-auto">
           <div className="text-left md:text-center mb-8 md:mb-12">
@@ -416,7 +416,7 @@ const BugBusters = ({ lang }) => {
         </div>
       </section>
 
-      {/* TECHNICAL METRICS — with icons above values */}
+      {/* TECHNICAL METRICS */}
       <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-700">
         <div className="max-w-6xl mx-auto">
           <div className="text-left md:text-center mb-8 md:mb-12">
@@ -448,7 +448,7 @@ const BugBusters = ({ lang }) => {
         </div>
       </section>
 
-      {/* GALLERY — with captions */}
+      {/* GALLERY */}
       <section className="container mx-auto px-4 md:px-6 animate-fade-in animation-delay-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-left md:text-center mb-8 md:mb-12">

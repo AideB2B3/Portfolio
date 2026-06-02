@@ -33,6 +33,17 @@ export const Projects = ({ lang }) => {
 
   const projects = [
     {
+      title: "AI Email Agent with Human Approval",
+      path: "/n8n/ai-email-agent",
+      description: lang === "en"
+        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent."
+        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
+      image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
+      tags: ["n8n", "Claude AI", "Gmail", "Discord"],
+      link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
+      demoLabel: "GitHub",
+    },
+    {
       title: "Alzheimer Classification",
       path: "/alzheimer-classification",
       description: lang === "en"
@@ -52,17 +63,6 @@ export const Projects = ({ lang }) => {
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
       link: null,
-    },
-    {
-      title: "AI Email Agent with Human Approval",
-      path: "/n8n/ai-email-agent",
-      description: lang === "en"
-        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent."
-        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
-      image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
-      tags: ["n8n", "Claude AI", "Gmail", "Discord"],
-      link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
-      demoLabel: "GitHub",
     },
   ];
 
@@ -141,7 +141,7 @@ export const Projects = ({ lang }) => {
                   <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  {/* "See project" indicator (non-interactive — the whole card is clickable) */}
+                  {/* "See project" indicator (non-interactive, the whole card is clickable) */}
                   <span
                     aria-hidden="true"
                     className="flex items-center gap-2 text-muted-foreground group-hover:text-primary transition-all flex-shrink-0"
@@ -154,7 +154,7 @@ export const Projects = ({ lang }) => {
                   {project.description}
                 </p>
 
-                {/* Tag Container — pinned to bottom */}
+                {/* Tag Container, pinned to bottom */}
                 <div className="flex gap-2 overflow-x-auto scrollbar-none">
                   {project.tags.map((tag, tagIdx) => (
                     <span
@@ -191,7 +191,7 @@ export const Projects = ({ lang }) => {
           <button
             type="button"
             onClick={() => navigate("/projects")}
-            className="group relative overflow-hidden rounded-full font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary cursor-pointer px-8 py-4 text-lg hover:scale-105 shadow-lg hover:shadow-primary/40"
+            className="group relative overflow-hidden rounded-full font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary cursor-pointer px-8 py-4 text-base hover:scale-105 shadow-lg hover:shadow-primary/40"
           >
             <span className="relative flex items-center justify-center gap-2">
               <LayoutGrid className="w-5 h-5" />

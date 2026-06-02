@@ -57,7 +57,7 @@ export const Footer = ({ lang = "it" }) => {
                         </a>
                     </div>
 
-                    {/* Back to top — center column, desktop only */}
+                    {/* Back to top, center column, desktop only */}
                     <div className="hidden md:flex md:justify-center">
                         <a
                             href="#"

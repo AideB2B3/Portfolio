@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // MODIFICA: Import del router
-import { Navbar } from "@/layout/Navbar";
+import { Navbar } from "@/layout/NavBar";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Projects } from "@/sections/Projects";

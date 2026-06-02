@@ -17,7 +17,7 @@ const DailyWeatherReport = ({ lang }) => {
       tagline: "An n8n workflow that every morning at 09:00 fetches the day's weather via the free Open-Meteo API and sends a formatted Telegram message with temperature, conditions and wind speed.",
       contextTitle: "Context",
       quickFacts: [
-        { icon: Zap, label: "Type", value: "Scheduled Automation - N8N" },
+        { icon: Zap, label: "Type", value: "Scheduled Automation - n8n" },
         { icon: User, label: "Role", value: "Solo Developer" },
         { icon: Plug, label: "Integrations", value: "Open-Meteo · Telegram" },
         { icon: Clock, label: "Schedule", value: "Every day at 09:00" },
@@ -42,7 +42,7 @@ const DailyWeatherReport = ({ lang }) => {
       tagline: "Un workflow n8n che ogni mattina alle 09:00 recupera il meteo del giorno tramite la API gratuita Open-Meteo e invia un messaggio Telegram formattato con temperatura, condizioni e velocità del vento.",
       contextTitle: "Contesto",
       quickFacts: [
-        { icon: Zap, label: "Tipo", value: "Automazione Schedulata - N8N" },
+        { icon: Zap, label: "Tipo", value: "Automazione Schedulata - n8n" },
         { icon: User, label: "Ruolo", value: "Solo Developer" },
         { icon: Plug, label: "Integrazioni", value: "Open-Meteo · Telegram" },
         { icon: Clock, label: "Frequenza", value: "Ogni giorno alle 09:00" },

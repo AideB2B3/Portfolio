@@ -59,7 +59,7 @@ export const About = ({ lang }) => {
                         </h2>
                     </div>
 
-                    {/* Bio text — no card */}
+                    {/* Bio text */}
                     <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in animation-delay-200">
                         {paragraphs.map((p, i) => (
                             <div key={i}>{p}</div>
