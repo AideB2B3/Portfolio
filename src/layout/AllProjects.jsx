@@ -96,6 +96,18 @@ export const AllProjects = ({ lang }) => {
       demoLabel: "GitHub",
     },
     {
+      title: "ETL Pipeline → Database",
+      path: "/n8n/etl-pipeline",
+      primary: "n8n",
+      description: isIt
+        ? "Workflow schedulato ogni 30 minuti che recupera i prezzi di Bitcoin ed Ethereum dall'API CoinGecko, li trasforma in JavaScript e li salva in un database PostgreSQL su Supabase. Pattern ETL completo: Extract, Transform, Load."
+        : "A workflow scheduled every 30 minutes that fetches Bitcoin and Ethereum prices from the CoinGecko API, transforms them in JavaScript, and saves them to a PostgreSQL database on Supabase. A complete ETL pattern: Extract, Transform, Load.",
+      image: "/Portfolio/Projects/n8n/workflow_etl->database.png",
+      tags: ["n8n", "CoinGecko", "Supabase", "PostgreSQL"],
+      link: "https://github.com/AideB2B3/PIPELINE-ETL-DATABASE-n8n",
+      demoLabel: "GitHub",
+    },
+    {
       title: "Website Uptime Monitor",
       path: "/n8n/website-monitor",
       primary: "n8n",

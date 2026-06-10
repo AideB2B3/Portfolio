@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowLeft, ExternalLink, Bot, Mail, GitBranch,
   MessageSquare, ShieldCheck, Database,
-  Zap, User, Plug, RefreshCw
+  Zap, User, Plug, RefreshCw, AlertTriangle
 } from 'lucide-react';
 
 const GITHUB = "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval";
@@ -81,7 +81,7 @@ const AiEmailAgent = ({ lang }) => {
 };
 
 // Layout condiviso minimale, ma ogni progetto ha la propria view/file dedicato.
-export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => (
+export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic, note }) => (
   <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 pt-24 md:pt-32 pb-16 md:pb-20">
 
     {/* Back */}
@@ -192,6 +192,31 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic }) => 
         </div>
       </div>
     </section>
+
+    {/* TECHNICAL NOTE (optional) */}
+    {note && (
+      <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-20 animate-fade-in animation-delay-450">
+        <div className="max-w-6xl mx-auto">
+          <div className="glass p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] border-primary/10 relative overflow-hidden">
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="flex items-center gap-3 mb-6 relative">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <AlertTriangle className="w-5 h-5 text-primary" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">{note.title}</h2>
+            </div>
+            <div className="space-y-5 relative">
+              {note.items.map((item, idx) => (
+                <div key={idx}>
+                  <span className="block text-xs uppercase tracking-widest font-semibold text-primary mb-1.5">{item.label}</span>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
 
     {/* SCREENSHOTS */}
     <section className="container mx-auto px-4 md:px-6 animate-fade-in animation-delay-500">

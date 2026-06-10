@@ -2,7 +2,7 @@ import { Button } from "@/Components/Button";
 import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Gamepad2, Wrench, Globe, Palette } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
-// Particelle generate UNA sola volta al caricamento del modulo (niente impurità nel render)
+// Particelle generate UNA sola volta al caricamento del modulo 
 const PARTICLES = Array.from({ length: 30 }, () => ({
     left: Math.random() * 100,
     top: Math.random() * 100,
@@ -139,7 +139,7 @@ export const Hero = ({ lang }) => {
                                     {content.contactBtn} <ArrowRight className="w-5 h-5" />
                                 </Button>
                             </a>
-                            <a href="Davide_Bellobuono_CV.pdf" download="Davide_Bellobuono_CV.pdf">
+                            <a href="Davide Bellobuono - CV.pdf" download="Davide_Bellobuono_CV.pdf">
                                 <AnimatedBorderButton>
                                     <Download className="w-5 h-5" />
                                     {content.downloadBtn}

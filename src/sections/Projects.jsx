@@ -98,7 +98,7 @@ export const Projects = ({ lang }) => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {projects.map((project, idx) => (
             <div
               key={idx}
@@ -184,10 +184,32 @@ export const Projects = ({ lang }) => {
               </div>
             </div>
           ))}
+
+          {/* See all projects card (desktop only) */}
+          <div
+            role="button"
+            tabIndex={0}
+            aria-label={t.seeAll}
+            onClick={() => navigate("/projects")}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navigate("/projects"); } }}
+            className="hidden lg:flex group rounded-2xl overflow-hidden animate-fade-in cursor-pointer border border-primary/40 bg-primary/10 hover:bg-primary/20 hover:border-primary/70 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex-col items-center justify-center min-h-[200px] p-8"
+            style={{ animationDelay: "400ms" }}
+          >
+            <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary/30 transition-colors">
+              <LayoutGrid className="w-7 h-7 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold text-center group-hover:text-primary transition-colors mb-2">
+              {t.seeAll}
+            </h3>
+            <span className="text-sm text-muted-foreground text-center">
+              {lang === "it" ? "Tutti i progetti" : "All projects"}
+            </span>
+            <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all mt-4" />
+          </div>
         </div>
 
-        {/* See all projects button */}
-        <div className="flex justify-center mt-10 md:mt-14 animate-fade-in animation-delay-500">
+        {/* See all projects button (mobile only) */}
+        <div className="flex lg:hidden justify-center mt-10 animate-fade-in animation-delay-500">
           <button
             type="button"
             onClick={() => navigate("/projects")}

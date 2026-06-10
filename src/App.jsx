@@ -15,6 +15,7 @@ import AlzheimerClassification from "./projects/AlzheimerClassification";
 import AiEmailAgent from "./projects/AiEmailAgent";
 import DailyWeatherReport from "./projects/DailyWeatherReport";
 import WebsiteMonitor from "./projects/WebsiteMonitor";
+import EtlPipeline from "./projects/EtlPipeline";
 
 // ... altri import
 
@@ -46,6 +47,7 @@ function App() {
             <Route path="/n8n/ai-email-agent" element={<AiEmailAgent lang={lang} />} />
             <Route path="/n8n/daily-weather-report" element={<DailyWeatherReport lang={lang} />} />
             <Route path="/n8n/website-monitor" element={<WebsiteMonitor lang={lang} />} />
+            <Route path="/n8n/etl-pipeline" element={<EtlPipeline lang={lang} />} />
           </Routes>
         </main>
         <Footer lang={lang} />
