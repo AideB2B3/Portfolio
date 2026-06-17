@@ -19,7 +19,7 @@ export const Experience = ({ lang }) => {
 
     const experience = [
         {
-            period: lang === "en" ? "2025 - Present" : "2025 - In corso",
+            period: lang === "en" ? "Sep 2025 - Jun 2026" : "Set 2025 - Giu 2026",
             role: lang === "en"
                 ? "Pier Program · Advanced Developer"
                 : "Programma Pier · Advanced Developer",
@@ -30,7 +30,7 @@ export const Experience = ({ lang }) => {
                 ? "Second year of the Apple Developer Academy in the Pier program, reserved for first-year graduates. I'm building iOS apps full-time for external stakeholders, NGOs, university research departments, and public-private organizations, working through the full client cycle: requirements gathering, sprint planning, delivery. The skills I'm sharpening here are the ones the first year introduced and this one demands at professional level: stakeholder communication, scoping under real constraints, accountability for what gets shipped, and managing the gap between what a client asks for and what they actually need."
                 : "Secondo anno dell'Apple Developer Academy nel programma Pier, riservato ai diplomati del primo anno. Costruisco app iOS full-time per stakeholder esterni, ONG, dipartimenti di ricerca universitari e organizzazioni pubblico-private, gestendo l'intero ciclo cliente: raccolta requisiti, sprint planning, rilascio. Le competenze che sto affinando qui sono quelle che il primo anno ha introdotto e che questo richiede a livello professionale: comunicazione con gli stakeholder, scoping con vincoli reali, responsabilità su ciò che viene rilasciato, e la capacità di gestire la differenza tra quello che un cliente chiede e quello di cui ha effettivamente bisogno.",
             technologies: ["Swift", "SwiftUI", "Unity", "Scrum", "Stakeholder Management"],
-            current: true,
+            current: false,
         },
     ];
 

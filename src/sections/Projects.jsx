@@ -62,7 +62,8 @@ export const Projects = ({ lang }) => {
         : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
-      link: null,
+      link: "https://apps.apple.com/it/app/cowpow-radio-stories/id6779679122",
+      demoLabel: "App Store",
     },
   ];
 

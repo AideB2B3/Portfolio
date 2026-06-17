@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft, Calendar, User, Code2, GitBranch,
-  Paintbrush, FileText, Database, Globe, Heart, Users
+  Paintbrush, FileText, Database, Globe, Heart, Users, ExternalLink
 } from 'lucide-react';
 
 
@@ -15,6 +15,7 @@ const CowPowRadio = ({ lang }) => {
     en: {
       back: "Back to Projects",
       tagline: "A Unity app that helps children face radiotherapy through play, story, and honest medical simulation.",
+      viewDemo: "View on App Store",
 
       quickFactsLabel: {
         origin: "Context",
@@ -55,9 +56,6 @@ const CowPowRadio = ({ lang }) => {
           that{' '}
           <span className="italic text-foreground">no family should face this journey alone</span> shaped every
           design decision we made.
-          <br /><br />
-          The source code is not publicly available out of respect for the client relationship and the sensitivity
-          of the project.
         </>
       ),
 
@@ -123,6 +121,7 @@ const CowPowRadio = ({ lang }) => {
     it: {
       back: "Torna ai Progetti",
       tagline: "Un'app Unity che aiuta i bambini ad affrontare la radioterapia attraverso il gioco, la narrazione e una simulazione medica onesta.",
+      viewDemo: "Vedi su App Store",
 
       quickFactsLabel: {
         origin: "Contesto",
@@ -163,9 +162,6 @@ const CowPowRadio = ({ lang }) => {
           quotidiano con i giovani pazienti. La loro convinzione che{' '}
           <span className="italic text-foreground">nessuna famiglia debba affrontare questo percorso da sola</span>{' '}
           ha guidato ogni scelta progettuale che abbiamo fatto.
-          <br /><br />
-          Il codice sorgente non è pubblicamente disponibile, per rispetto del rapporto con il cliente e della
-          sensibilità del progetto.
         </>
       ),
 
@@ -261,6 +257,19 @@ const CowPowRadio = ({ lang }) => {
             <p className="text-base md:text-xl lg:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0 animate-fade-in animation-delay-100">
               {t.tagline}
             </p>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2 animate-fade-in animation-delay-200">
+              <a
+                href="https://apps.apple.com/it/app/cowpow-radio-stories/id6779679122"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 px-5 md:px-6 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50 text-sm md:text-base"
+              >
+                <ExternalLink className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
+                {t.viewDemo}
+              </a>
+            </div>
           </div>
 
           {/* Icon / Visual */}

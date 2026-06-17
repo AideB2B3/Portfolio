@@ -41,8 +41,8 @@ export const AllProjects = ({ lang }) => {
       path: "/n8n/ai-email-agent",
       primary: "n8n",
       description: isIt
-        ? "Automazione email che classifica i messaggi con Claude, li smista con un nodo Switch e mantiene l'uomo nel loop su Discord prima di inviare ogni risposta urgente."
-        : "Email automation that classifies messages with Claude, routes them via a Switch node, and keeps a human in the loop on Discord before any urgent reply is sent.",
+        ? "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente."
+        : "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent.",
       image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
       tags: ["n8n", "Claude AI", "Gmail", "Discord"],
       link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
@@ -53,8 +53,8 @@ export const AllProjects = ({ lang }) => {
       path: "/alzheimer-classification",
       primary: "Python",
       description: isIt
-        ? "Una pipeline Python completamente object-oriented che classifica lo stato di demenza dell'Alzheimer da dati clinici longitudinali."
-        : "A fully object-oriented Python pipeline that classifies Alzheimer's dementia status from longitudinal clinical data.",
+        ? "Sviluppato per l'esame universitario di Intelligenza Artificiale, questo progetto classifica lo stato di demenza dell'Alzheimer da dati clinici longitudinali con una pipeline Python completamente object-oriented. Nove classificatori confrontati su tre classi target con sette metriche di valutazione."
+        : "Built for my Artificial Intelligence university exam, this project classifies Alzheimer's dementia status from longitudinal clinical data using a fully object-oriented Python pipeline. Nine classifiers benchmarked across three target classes with seven evaluation metrics.",
       image: "/Portfolio/Projects/Progetto_ai.png",
       tags: ["Python", "Scikit-learn", "Machine Learning"],
       link: "https://github.com/AideB2B3/AI-Project-for-University-Exams",
@@ -65,8 +65,8 @@ export const AllProjects = ({ lang }) => {
       path: "/bug-busters",
       primary: "Swift",
       description: isIt
-        ? "Un arcade shooter in stile cartoon sviluppato in nativo iOS, dove il giocatore affronta ondate di bug."
-        : "A cartoon-style arcade shooter built natively on iOS, where players face relentless waves of bugs.",
+        ? "Uno sparatutto arcade sviluppato nativamente per iOS in 4 settimane all'Apple Developer Academy. SpriteKit per il motore di gioco, object pooling per le performance e algoritmi di difficoltà dinamica. Pubblicato sull'App Store."
+        : "A native iOS arcade shooter built in 4 weeks at the Apple Developer Academy. SpriteKit game engine, object pooling for performance, and dynamic difficulty algorithms. Shipped to the App Store.",
       image: "/Portfolio/Projects/Bug_busters.png",
       tags: ["SwiftUI", "SpriteKit", "AVFoundation"],
       link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
@@ -77,11 +77,12 @@ export const AllProjects = ({ lang }) => {
       path: "/cowpow-radio",
       primary: "C#",
       description: isIt
-        ? "Un'app Unity sviluppata per CHOC che aiuta i bambini a capire la radioterapia tramite simulazione medica onesta e storie."
-        : "A Unity app built for CHOC that helps children understand radiotherapy through honest medical simulation and stories.",
+        ? "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi."
+        : "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with.",
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
-      link: null,
+      link: "https://apps.apple.com/it/app/cowpow-radio-stories/id6779679122",
+      demoLabel: "App Store",
     },
     {
       title: "Daily Weather Report",
