@@ -12,20 +12,20 @@ const PARTICLES = Array.from({ length: 30 }, () => ({
 
 const techStack = {
     en: [
-        { group: "iOS Development", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData"] },
-        { group: "Systems & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
-        { group: "Game & Interactive", icon: Gamepad2, items: ["Unity", "C#"] },
+        { group: "iOS Development", icon: Smartphone, items: ["AVFoundation", "SpriteKit", "Swift", "SwiftData", "SwiftUI"] },
+        { group: "Systems & Embedded", icon: Cpu, items: ["C (Arduino)", "C++", "Python"] },
+        { group: "Game & Interactive", icon: Gamepad2, items: ["C#", "Unity"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
-        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Tools & Framework", icon: Wrench, items: ["Git", "Xcode", "Jira", "n8n", "Docker"] },
+        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Miro", "Sketch"] },
+        { group: "Tools & Framework", icon: Wrench, items: ["Confluence", "Docker", "Git", "Jira", "n8n", "Xcode"] },
     ],
     it: [
-        { group: "Sviluppo iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "SpriteKit", "AVFoundation", "SwiftData"] },
-        { group: "Sistemi & Embedded", icon: Cpu, items: ["C++", "C (Arduino)", "Python"] },
-        { group: "Game & Interattivo", icon: Gamepad2, items: ["Unity", "C#"] },
+        { group: "Sviluppo iOS", icon: Smartphone, items: ["AVFoundation", "SpriteKit", "Swift", "SwiftData", "SwiftUI"] },
+        { group: "Sistemi & Embedded", icon: Cpu, items: ["C (Arduino)", "C++", "Python"] },
+        { group: "Game & Interattivo", icon: Gamepad2, items: ["C#", "Unity"] },
         { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
-        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Sketch", "Miro"] },
-        { group: "Tools & Framework", icon: Wrench, items: ["Git", "Xcode", "Jira", "n8n", "Docker"] },
+        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Miro", "Sketch"] },
+        { group: "Tools & Framework", icon: Wrench, items: ["Confluence", "Docker", "Git", "Jira", "n8n", "Xcode"] },
     ],
 };
 
