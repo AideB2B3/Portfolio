@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const AllProjects = ({ lang }) => {
   const navigate = useNavigate();
@@ -97,6 +97,17 @@ export const AllProjects = ({ lang }) => {
       demoLabel: "GitHub",
     },
     {
+      title: "LISionario",
+      path: "/lisionario",
+      primary: "Swift",
+      description: isIt
+        ? "Un dizionario video per la Lingua dei Segni Italiana in iOS nativo. Gli utenti cercano parole, guardano il segno corrispondente e possono contribuire tramite una pipeline di moderazione basata su Airtable e Cloudinary."
+        : "A native iOS video dictionary for Italian Sign Language. Users look up words, watch the matching sign, and can contribute new signs through a community moderation pipeline built on Airtable and Cloudinary.",
+      image: "/Portfolio/Projects/Lisionario_workflow.png",
+      tags: ["SwiftUI", "Airtable", "Cloudinary", "AVKit"],
+      link: null,
+    },
+    {
       title: "ETL Pipeline → Database",
       path: "/n8n/etl-pipeline",
       primary: "n8n",
@@ -132,7 +143,7 @@ export const AllProjects = ({ lang }) => {
   const handleKeyDown = (e, path) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      navigate(path);
+      navigate(path, { state: { from: 'all' } });
     }
   };
 
@@ -147,7 +158,7 @@ export const AllProjects = ({ lang }) => {
       role="button"
       tabIndex={0}
       aria-label={`${t.openProject}: ${project.title}`}
-      onClick={() => navigate(project.path)}
+      onClick={() => navigate(project.path, { state: { from: 'all' } })}
       onKeyDown={(e) => handleKeyDown(e, project.path)}
       className="group glass rounded-2xl overflow-hidden animate-fade-in cursor-pointer hover:border-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex flex-col"
       style={{ animationDelay: `${(idx + 1) * 80}ms` }}
@@ -230,10 +241,13 @@ export const AllProjects = ({ lang }) => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Back link */}
         <div className="mb-6 md:mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
+          <button
+            onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group"
+          >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs md:text-sm uppercase tracking-widest font-medium">{t.back}</span>
-          </Link>
+          </button>
         </div>
 
         {/* Header (same style as Projects) */}

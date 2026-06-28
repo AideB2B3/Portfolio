@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   ArrowLeft, Calendar, User, Code2, GitBranch,
   Paintbrush, FileText, Database, Globe, Heart, Users, ExternalLink
@@ -7,6 +7,16 @@ import {
 
 
 const CowPowRadio = ({ lang }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleBack = () => {
+    if (location.state?.from === 'home') {
+      navigate(-1);
+    } else {
+      navigate('/projects');
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -239,10 +249,10 @@ const CowPowRadio = ({ lang }) => {
 
       {/* Navigation Back */}
       <div className="container mx-auto px-4 md:px-6 mb-6 md:mb-8">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
+        <button onClick={handleBack} className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           <span className="text-xs md:text-sm uppercase tracking-widest font-medium">{t.back}</span>
-        </Link>
+        </button>
       </div>
 
       {/* HERO SECTION */}

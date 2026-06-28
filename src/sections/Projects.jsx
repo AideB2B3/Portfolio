@@ -71,7 +71,7 @@ export const Projects = ({ lang }) => {
   const handleKeyDown = (e, path) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      navigate(path);
+      navigate(path, { state: { from: 'home' } });
     }
   };
 
@@ -106,7 +106,7 @@ export const Projects = ({ lang }) => {
               role="button"
               tabIndex={0}
               aria-label={`${t.openProject}: ${project.title}`}
-              onClick={() => navigate(project.path)}
+              onClick={() => navigate(project.path, { state: { from: 'home' } })}
               onKeyDown={(e) => handleKeyDown(e, project.path)}
               className="group glass rounded-2xl overflow-hidden animate-fade-in cursor-pointer hover:border-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex flex-col"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}

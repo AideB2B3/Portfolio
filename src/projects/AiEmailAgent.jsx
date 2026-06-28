@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   ArrowLeft, ExternalLink, Bot, Mail, GitBranch,
   MessageSquare, ShieldCheck, Database,
@@ -81,15 +81,26 @@ const AiEmailAgent = ({ lang }) => {
 };
 
 // Layout condiviso minimale, ma ogni progetto ha la propria view/file dedicato.
-export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic, note }) => (
+export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic, note }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleBack = () => {
+    if (location.state?.from === 'home') {
+      navigate(-1);
+    } else {
+      navigate('/projects');
+    }
+  };
+
+  return (
   <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 pt-24 md:pt-32 pb-16 md:pb-20">
 
     {/* Back */}
     <div className="container mx-auto px-4 md:px-6 mb-6 md:mb-8">
-      <Link to="/projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
+      <button onClick={handleBack} className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
         <span className="text-xs md:text-sm uppercase tracking-widest font-medium">{t.back}</span>
-      </Link>
+      </button>
     </div>
 
     {/* HERO */}
@@ -242,6 +253,7 @@ export const N8nLayout = ({ lang, t, github, HeroIcon, title, titleItalic, note 
     </section>
 
   </div>
-);
+  );
+};
 
 export default AiEmailAgent;
