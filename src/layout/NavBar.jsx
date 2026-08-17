@@ -1,6 +1,8 @@
 import { Button } from "@/Components/Button";
-import { Menu, X, Languages } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+
+const FLAGS = { en: "🇬🇧", it: "🇮🇹" };
 
 export const Navbar = ({ lang, setLang }) => {
 
@@ -63,9 +65,10 @@ export const Navbar = ({ lang, setLang }) => {
                     {/* Tasto Cambio Lingua */}
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={lang === "en" ? "Switch language to Italian" : "Cambia lingua in Inglese"}
+                        className="flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
                     >
-                        <Languages size={18} />
+                        <span className="text-base leading-none" aria-hidden="true">{FLAGS[lang]}</span>
                         <span className="uppercase">{lang}</span>
                     </button>
 
@@ -76,7 +79,12 @@ export const Navbar = ({ lang, setLang }) => {
 
                 {/* Mobile Menu Button e Language Mobile */}
                 <div className="flex md:hidden items-center gap-4 z-20">
-                    <button onClick={toggleLanguage} className="text-muted-foreground hover:text-primary">
+                    <button
+                        onClick={toggleLanguage}
+                        aria-label={lang === "en" ? "Switch language to Italian" : "Cambia lingua in Inglese"}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full glass text-muted-foreground hover:text-primary hover:border-primary/40 active:scale-95 transition-all duration-300"
+                    >
+                        <span className="text-base leading-none" aria-hidden="true">{FLAGS[lang]}</span>
                         <span className="font-bold uppercase text-sm">{lang}</span>
                     </button>
 

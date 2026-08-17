@@ -1,5 +1,5 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Wrench, Globe, Code2 } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Wrench, Globe, Code2, Palette } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 // Particelle generate UNA sola volta al caricamento del modulo 
@@ -12,18 +12,20 @@ const PARTICLES = Array.from({ length: 30 }, () => ({
 
 const techStack = {
     en: [
-        { group: "iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "UIKit", "Xcode", "SwiftData", "SpriteKit", "AVFoundation", "Combine", "MVVM"] },
-        { group: "Web / Full-Stack", icon: Globe, items: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "REST API"] },
-        { group: "Automation & Data", icon: Cpu, items: ["Python", "n8n", "PostgreSQL", "Docker", "REST API Integration"] },
-        { group: "DevOps & Tooling", icon: Wrench, items: ["Git", "CI/CD", "Agile", "Scrum", "Jira", "Confluence", "Figma"] },
-        { group: "Additional Languages", icon: Code2, items: ["C", "C++", "C#", "Java (basics)"] },
+        { group: "Additional Languages", icon: Code2, items: ["C", "C#", "C++", "Java (basics)"] },
+        { group: "Automation & Data", icon: Cpu, items: ["Docker", "n8n", "PostgreSQL", "Python", "REST API Integration"] },
+        { group: "Design Tools", icon: Palette, items: ["Figma"] },
+        { group: "Dev Tools", icon: Wrench, items: ["Agile", "CI/CD", "Confluence", "Git", "Jira", "Scrum", "Unity"] },
+        { group: "iOS", icon: Smartphone, items: ["AVFoundation", "Combine", "MVVM", "SpriteKit", "Swift", "SwiftData", "SwiftUI", "UIKit", "Xcode"] },
+        { group: "Web / Full-Stack", icon: Globe, items: ["CSS3", "HTML5", "JavaScript", "React", "REST API", "Tailwind CSS", "TypeScript"] },
     ],
     it: [
-        { group: "iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "UIKit", "Xcode", "SwiftData", "SpriteKit", "AVFoundation", "Combine", "MVVM"] },
-        { group: "Web / Full-Stack", icon: Globe, items: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "REST API"] },
-        { group: "Automazione & Data", icon: Cpu, items: ["Python", "n8n", "PostgreSQL", "Docker", "Integrazione REST API"] },
-        { group: "DevOps & Tooling", icon: Wrench, items: ["Git", "CI/CD", "Agile", "Scrum", "Jira", "Confluence", "Figma"] },
-        { group: "Linguaggi aggiuntivi", icon: Code2, items: ["C", "C++", "C#", "Java (basi)"] },
+        { group: "Automazione & Data", icon: Cpu, items: ["Docker", "Integrazione REST API", "n8n", "PostgreSQL", "Python"] },
+        { group: "iOS", icon: Smartphone, items: ["AVFoundation", "Combine", "MVVM", "SpriteKit", "Swift", "SwiftData", "SwiftUI", "UIKit", "Xcode"] },
+        { group: "Linguaggi aggiuntivi", icon: Code2, items: ["C", "C#", "C++", "Java (basi)"] },
+        { group: "Strumenti di Design", icon: Palette, items: ["Figma"] },
+        { group: "Strumenti di Sviluppo", icon: Wrench, items: ["Agile", "CI/CD", "Confluence", "Git", "Jira", "Scrum", "Unity"] },
+        { group: "Web / Full-Stack", icon: Globe, items: ["CSS3", "HTML5", "JavaScript", "React", "REST API", "Tailwind CSS", "TypeScript"] },
     ],
 };
 
@@ -39,6 +41,8 @@ export const Hero = ({ lang }) => {
             downloadBtn: "Download CV",
             follow: "Follow me:",
             availability: "Open to New Opportunities",
+            cvFile: "/Portfolio/Davide Bellobuono_CV.pdf",
+            cvDownloadName: "Davide_Bellobuono_CV_EN.pdf",
         },
         it: {
             role: "Sviluppatore iOS · Background in Ing. dell'Automazione",
@@ -49,6 +53,8 @@ export const Hero = ({ lang }) => {
             downloadBtn: "Scarica CV",
             follow: "Seguimi su:",
             availability: "Disponibile per nuovi progetti",
+            cvFile: "/Portfolio/Davide Bellobuono_CV_ita.pdf",
+            cvDownloadName: "Davide_Bellobuono_CV_ITA.pdf",
         }
     };
 
@@ -139,7 +145,7 @@ export const Hero = ({ lang }) => {
                                     {content.contactBtn} <ArrowRight className="w-5 h-5" />
                                 </Button>
                             </a>
-                            <a href="Davide Bellobuono - CV.pdf" download="Davide_Bellobuono_CV.pdf">
+                            <a href={content.cvFile} download={content.cvDownloadName}>
                                 <AnimatedBorderButton>
                                     <Download className="w-5 h-5" />
                                     {content.downloadBtn}
