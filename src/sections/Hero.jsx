@@ -13,7 +13,7 @@ const PARTICLES = Array.from({ length: 30 }, () => ({
 const techStack = {
     en: [
         { group: "Automation & Data", icon: Cpu, items: ["Docker", "n8n", "PostgreSQL", "Python", "REST API Integration"] },
-        { group: "Design Tools", icon: Palette, items: ["Figma"] },
+        { group: "Design Tools", icon: Palette, items: ["Figma", "Sketch", "Inkscape"] },
         { group: "Dev Tools", icon: Wrench, items: ["Agile", "CI/CD", "Confluence", "Git", "Jira", "Scrum", "Unity"] },
         { group: "iOS", icon: Smartphone, items: ["AVFoundation", "Combine", "MVVM", "SpriteKit", "Swift", "SwiftData", "SwiftUI", "UIKit", "Xcode"] },
         { group: "Web / Full-Stack", icon: Globe, items: ["CSS3", "HTML5", "JavaScript", "React", "REST API", "Tailwind CSS", "TypeScript"] },
@@ -22,7 +22,7 @@ const techStack = {
     it: [
         { group: "Automazione & Data", icon: Cpu, items: ["Docker", "Integrazione REST API", "n8n", "PostgreSQL", "Python"] },
         { group: "iOS", icon: Smartphone, items: ["AVFoundation", "Combine", "MVVM", "SpriteKit", "Swift", "SwiftData", "SwiftUI", "UIKit", "Xcode"] },
-        { group: "Strumenti di Design", icon: Palette, items: ["Figma"] },
+        { group: "Strumenti di Design", icon: Palette, items: ["Figma", "Sketch", "Inkscape"] },
         { group: "Strumenti di Sviluppo", icon: Wrench, items: ["Agile", "CI/CD", "Confluence", "Git", "Jira", "Scrum", "Unity"] },
         { group: "Web / Full-Stack", icon: Globe, items: ["CSS3", "HTML5", "JavaScript", "React", "REST API", "Tailwind CSS", "TypeScript"] },
         { group: "Linguaggi aggiuntivi", icon: Code2, items: ["C", "C#", "C++", "Java (basi)"] },
