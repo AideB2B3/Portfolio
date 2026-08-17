@@ -1,5 +1,5 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Gamepad2, Wrench, Globe, Palette } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Download, Smartphone, Cpu, Wrench, Globe, Code2 } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 // Particelle generate UNA sola volta al caricamento del modulo 
@@ -12,20 +12,18 @@ const PARTICLES = Array.from({ length: 30 }, () => ({
 
 const techStack = {
     en: [
-        { group: "iOS Development", icon: Smartphone, items: ["AVFoundation", "SpriteKit", "Swift", "SwiftData", "SwiftUI"] },
-        { group: "Systems & Embedded", icon: Cpu, items: ["C (Arduino)", "C++", "Python"] },
-        { group: "Game & Interactive", icon: Gamepad2, items: ["C#", "Unity"] },
-        { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
-        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Miro", "Sketch"] },
-        { group: "Tools & Framework", icon: Wrench, items: ["Confluence", "Docker", "Git", "Jira", "n8n", "Xcode"] },
+        { group: "iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "UIKit", "Xcode", "SwiftData", "SpriteKit", "AVFoundation", "Combine", "MVVM"] },
+        { group: "Web / Full-Stack", icon: Globe, items: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "REST API"] },
+        { group: "Automation & Data", icon: Cpu, items: ["Python", "n8n", "PostgreSQL", "Docker", "REST API Integration"] },
+        { group: "DevOps & Tooling", icon: Wrench, items: ["Git", "CI/CD", "Agile", "Scrum", "Jira", "Confluence", "Figma"] },
+        { group: "Additional Languages", icon: Code2, items: ["C", "C++", "C#", "Java (basics)"] },
     ],
     it: [
-        { group: "Sviluppo iOS", icon: Smartphone, items: ["AVFoundation", "SpriteKit", "Swift", "SwiftData", "SwiftUI"] },
-        { group: "Sistemi & Embedded", icon: Cpu, items: ["C (Arduino)", "C++", "Python"] },
-        { group: "Game & Interattivo", icon: Gamepad2, items: ["C#", "Unity"] },
-        { group: "Web", icon: Globe, items: ["React", "Tailwind"] },
-        { group: "Design & Workflow", icon: Palette, items: ["Figma", "Miro", "Sketch"] },
-        { group: "Tools & Framework", icon: Wrench, items: ["Confluence", "Docker", "Git", "Jira", "n8n", "Xcode"] },
+        { group: "iOS", icon: Smartphone, items: ["Swift", "SwiftUI", "UIKit", "Xcode", "SwiftData", "SpriteKit", "AVFoundation", "Combine", "MVVM"] },
+        { group: "Web / Full-Stack", icon: Globe, items: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "REST API"] },
+        { group: "Automazione & Data", icon: Cpu, items: ["Python", "n8n", "PostgreSQL", "Docker", "Integrazione REST API"] },
+        { group: "DevOps & Tooling", icon: Wrench, items: ["Git", "CI/CD", "Agile", "Scrum", "Jira", "Confluence", "Figma"] },
+        { group: "Linguaggi aggiuntivi", icon: Code2, items: ["C", "C++", "C#", "Java (basi)"] },
     ],
 };
 
@@ -33,22 +31,24 @@ export const Hero = ({ lang }) => {
 
     const t = {
         en: {
-            role: "iOS Developer · Automation Engineering Student",
-            headlineStart: "From microcontrollers to ",
-            headlineEnd: "multitouch.",
-            description: "Hi, I'm Davide Bellobuono, an iOS Developer with an engineering background. I build apps for real human problems, from accessibility tools to embedded systems. I'm currently completing my Automation Engineering degree at Federico II while developing iOS at the Apple Developer Academy.",
+            role: "iOS Developer · Automation Engineering Background",
+            headlineStart: "iOS Developer with an Automation Engineering background,",
+            headlineEnd: " building toward full-stack.",
+            description: "Hi, I'm Davide Bellobuono, an iOS Developer with an engineering background. I build apps for real human problems, from accessibility tools to embedded systems. I'm currently completing my Automation Engineering degree at Federico II while developing iOS app.",
             contactBtn: "Contact Me",
             downloadBtn: "Download CV",
             follow: "Follow me:",
+            availability: "Open to New Opportunities",
         },
         it: {
-            role: "Sviluppatore iOS · Studente di Ing. dell'Automazione",
-            headlineStart: "Dai microcontrollori al ",
-            headlineEnd: "multitouch.",
-            description: "Ciao, sono Davide Bellobuono, Sviluppatore iOS con un background da ingegnere. Costruisco app per problemi umani concreti, da strumenti di accessibilità a sistemi embedded. Sto concludendo Ingegneria dell'Automazione alla Federico II mentre sviluppo iOS all'Apple Developer Academy.",
+            role: "Sviluppatore iOS · Background in Ing. dell'Automazione",
+            headlineStart: "Sviluppatore iOS con un background in Ingegneria dell'Automazione,",
+            headlineEnd: " in cammino verso il full-stack.",
+            description: "Ciao, sono Davide Bellobuono, Sviluppatore iOS con un background da ingegnere. Costruisco app per problemi umani concreti, da strumenti di accessibilità a sistemi embedded. Sto concludendo Ingegneria dell'Automazione alla Federico II mentre sviluppo app iOS.",
             contactBtn: "Contattami",
             downloadBtn: "Scarica CV",
             follow: "Seguimi su:",
+            availability: "Disponibile per nuovi progetti",
         }
     };
 
@@ -117,9 +117,9 @@ export const Hero = ({ lang }) => {
                                         {/* Floating Badge */}
                                         <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" />
+                                                <div className="w-3 h-3 bg-[#66BB6A] rounded-full animate-pulse" />
                                                 <span className="text-sm font-medium">
-                                                    Pier Program Apple Developer Academy
+                                                    {content.availability}
                                                 </span>
                                             </div>
                                         </div>
@@ -184,9 +184,9 @@ export const Hero = ({ lang }) => {
                                 {/* Floating Badge */}
                                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" />
+                                        <div className="w-3 h-3 bg-[#66BB6A] rounded-full animate-pulse" />
                                         <span className="text-sm font-medium">
-                                            Pier Program Apple Developer Academy
+                                            {content.availability}
                                         </span>
                                     </div>
                                 </div>

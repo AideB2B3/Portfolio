@@ -41,8 +41,8 @@ export const AllProjects = ({ lang }) => {
       path: "/n8n/ai-email-agent",
       primary: "n8n",
       description: isIt
-        ? "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente."
-        : "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent.",
+        ? "Workflow n8n con un passaggio human-in-the-loop: classifica i messaggi Gmail in arrivo con l'AI, li instrada per categoria e richiede l'approvazione su Discord prima che l'azione automatica venga eseguita (con logging su Notion)."
+        : "n8n workflow with a human-in-the-loop step: classifies incoming Gmail messages with AI, routes them by category, and requires Discord approval before the automated action runs (Notion logging).",
       image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
       tags: ["n8n", "Claude AI", "Gmail", "Discord"],
       link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
@@ -53,8 +53,8 @@ export const AllProjects = ({ lang }) => {
       path: "/alzheimer-classification",
       primary: "Python",
       description: isIt
-        ? "Sviluppato per l'esame universitario di Intelligenza Artificiale, questo progetto classifica lo stato di demenza dell'Alzheimer da dati clinici longitudinali con una pipeline Python completamente object-oriented. Nove classificatori confrontati su tre classi target con sette metriche di valutazione."
-        : "Built for my Artificial Intelligence university exam, this project classifies Alzheimer's dementia status from longitudinal clinical data using a fully object-oriented Python pipeline. Nine classifiers benchmarked across three target classes with seven evaluation metrics.",
+        ? "Pipeline ML object-oriented (Python, scikit-learn) che confronta 9 classificatori su dati clinici longitudinali; miglior ROC-AUC ~0.95."
+        : "Object-oriented ML pipeline (Python, scikit-learn) benchmarking 9 classifiers on longitudinal clinical data; best ROC-AUC ~0.95.",
       image: "/Portfolio/Projects/Progetto_ai.png",
       tags: ["Python", "Scikit-learn", "Machine Learning"],
       link: "https://github.com/AideB2B3/AI-Project-for-University-Exams",
@@ -65,8 +65,8 @@ export const AllProjects = ({ lang }) => {
       path: "/bug-busters",
       primary: "Swift",
       description: isIt
-        ? "Uno sparatutto arcade sviluppato nativamente per iOS in 4 settimane all'Apple Developer Academy. SpriteKit per il motore di gioco, object pooling per le performance e algoritmi di difficoltà dinamica. Pubblicato sull'App Store."
-        : "A native iOS arcade shooter built in 4 weeks at the Apple Developer Academy. SpriteKit game engine, object pooling for performance, and dynamic difficulty algorithms. Shipped to the App Store.",
+        ? "Sparatutto arcade nativo per iOS (SwiftUI, SpriteKit, AVFoundation) con object pooling e scalatura dinamica della difficoltà."
+        : "Native iOS arcade shooter (SwiftUI, SpriteKit, AVFoundation) with object pooling and dynamic difficulty scaling.",
       image: "/Portfolio/Projects/Bug_busters.png",
       tags: ["SwiftUI", "SpriteKit", "AVFoundation"],
       link: "https://apps.apple.com/it/app/bug-busters/id6747584160",
@@ -77,8 +77,8 @@ export const AllProjects = ({ lang }) => {
       path: "/cowpow-radio",
       primary: "C#",
       description: isIt
-        ? "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi."
-        : "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with.",
+        ? "App di simulazione medica Unity/C#/SwiftUI per bambini in trattamento di radioterapia, sviluppata per CHOC (Sudafrica); pubblicata sull'App Store e testata sul campo con bambini, medici e assistenti sociali."
+        : "Unity/C#/SwiftUI medical simulation app for children undergoing radiotherapy, built for CHOC (South Africa); shipped to the App Store and tested on-site with children, doctors and social workers.",
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
       link: "https://apps.apple.com/it/app/cowpow-radio-stories/id6779679122",
@@ -89,8 +89,8 @@ export const AllProjects = ({ lang }) => {
       path: "/n8n/daily-weather-report",
       primary: "n8n",
       description: isIt
-        ? "Automazione schedulata che chiama l'API Open-Meteo, traduce il weather code in testo leggibile e recapita ogni giorno le previsioni direttamente su Telegram."
-        : "A scheduled automation that calls the Open-Meteo API, decodes the weather code into readable text, and delivers a clean daily forecast straight to Telegram.",
+        ? "Automazione n8n schedulata che recupera i dati meteo e recapita un riepilogo giornaliero su Telegram."
+        : "Scheduled n8n automation that fetches forecast data and delivers a daily summary to Telegram.",
       image: "/Portfolio/Projects/n8n/weather_workflow.png",
       tags: ["n8n", "Open-Meteo", "Telegram"],
       link: "https://github.com/AideB2B3/Daily_Weather_Report_with_n8n",
@@ -101,8 +101,8 @@ export const AllProjects = ({ lang }) => {
       path: "/lisionario",
       primary: "Swift",
       description: isIt
-        ? "Un dizionario video per la Lingua dei Segni Italiana in iOS nativo. Gli utenti cercano parole, guardano il segno corrispondente e possono contribuire tramite una pipeline di moderazione basata su Airtable e Cloudinary."
-        : "A native iOS video dictionary for Italian Sign Language. Users look up words, watch the matching sign, and can contribute new signs through a community moderation pipeline built on Airtable and Cloudinary.",
+        ? "Dizionario nativo iOS di Lingua dei Segni Italiana su un'architettura a servizi remoti (SwiftUI, Airtable REST API, Cloudinary CDN), con una pipeline di upload asincrona e una coda di moderazione a due fasi."
+        : "Native iOS Italian Sign Language dictionary on a remote-services architecture (SwiftUI, Airtable REST API, Cloudinary CDN), with an async upload pipeline and a two-stage moderation queue.",
       image: "/Portfolio/Projects/Lisionario_workflow.png",
       tags: ["SwiftUI", "Airtable", "Cloudinary", "AVKit"],
       link: null,
@@ -112,8 +112,8 @@ export const AllProjects = ({ lang }) => {
       path: "/n8n/etl-pipeline",
       primary: "n8n",
       description: isIt
-        ? "Workflow schedulato ogni 30 minuti che recupera i prezzi di Bitcoin ed Ethereum dall'API CoinGecko, li trasforma in JavaScript e li salva in un database PostgreSQL su Supabase. Pattern ETL completo: Extract, Transform, Load."
-        : "A workflow scheduled every 30 minutes that fetches Bitcoin and Ethereum prices from the CoinGecko API, transforms them in JavaScript, and saves them to a PostgreSQL database on Supabase. A complete ETL pattern: Extract, Transform, Load.",
+        ? "Workflow n8n schedulato che estrae dati live da un'API pubblica, li trasforma e li carica in un database PostgreSQL (Supabase)."
+        : "Scheduled n8n workflow that extracts live data from a public API, transforms it and loads it into a PostgreSQL database (Supabase).",
       image: "/Portfolio/Projects/n8n/workflow_etl->database.png",
       tags: ["n8n", "CoinGecko", "Supabase", "PostgreSQL"],
       link: "https://github.com/AideB2B3/PIPELINE-ETL-DATABASE-n8n",
@@ -124,8 +124,8 @@ export const AllProjects = ({ lang }) => {
       path: "/n8n/website-monitor",
       primary: "n8n",
       description: isIt
-        ? "Un monitor di uptime self-contained: un ping HTTP schedulato via cron con Continue-On-Fail che invia un alert Telegram istantaneo appena il sito va offline."
-        : "A self-contained uptime monitor: a cron-scheduled HTTP ping with Continue-On-Fail that fires an instant Telegram alert the moment a site goes down.",
+        ? "Monitor n8n self-contained che esegue controlli di salute HTTP schedulati via cron, con alert su Telegram."
+        : "Self-contained n8n monitor running cron-scheduled HTTP health checks, with Telegram alerting.",
       image: "/Portfolio/Projects/n8n/website_workflow.png",
       tags: ["n8n", "HTTP", "Telegram"],
       link: "https://github.com/AideB2B3/web_site_monitor_with_n8n",

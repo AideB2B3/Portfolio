@@ -36,8 +36,8 @@ export const Contact = ({ lang }) => {
       contactInfoTitle: "Contact Information",
       labelLocation: "Location",
       labelEmail: "Email",
-      availabilityTitle: "Currently Involved Pier-Program",
-      availabilityDesc: "I'm involved in the Pier Program at the Apple Developer Academy but open to new opportunities and exciting projects. iOS development, automation engineering, embedded systems. Whether you need a full-time engineer or a freelance consultant, let's talk!"
+      availabilityTitle: "Open to New Opportunities",
+      availabilityDesc: "Having completed the Pier Program at the Apple Developer Academy, I'm now actively looking for new opportunities and exciting projects. iOS development, automation engineering, embedded systems. Whether you need a full-time engineer or a freelance consultant, let's talk!"
     },
     it: {
       badge: "Contattami",
@@ -57,8 +57,8 @@ export const Contact = ({ lang }) => {
       contactInfoTitle: "Informazioni di Contatto",
       labelLocation: "Posizione",
       labelEmail: "Email",
-      availabilityTitle: "Attualmente nel Pier-Program",
-      availabilityDesc: "Sono coinvolto nel Pier Program della Apple Developer Academy ma resto aperto a nuove opportunità e progetti stimolanti. Sviluppo iOS, ingegneria dell'automazione, sistemi embedded. Che tu cerchi un ingegnere full-time o un consulente freelance, parliamone!"
+      availabilityTitle: "Aperto a Nuove Opportunità",
+      availabilityDesc: "Concluso il Pier Program alla Apple Developer Academy, sono ora alla ricerca attiva di nuove opportunità e progetti stimolanti. Sviluppo iOS, ingegneria dell'automazione, sistemi embedded. Che tu cerchi un ingegnere full-time o un consulente freelance, parliamone!"
     }
   };
 
@@ -213,7 +213,7 @@ export const Contact = ({ lang }) => {
             {/* Box Availability (Quello giallo in basso) */}
             <div className="glass rounded-3xl p-5 md:p-8 border border-primary/30">
                 <div className="flex items-center gap-3 mb-2">
-                    <span className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"/> 
+                    <span className="w-3 h-3 bg-[#66BB6A] rounded-full animate-pulse"/>
                     <span className="font-medium">{t.availabilityTitle}</span> 
                 </div>
                 <p className="text-muted-foreground text-sm">

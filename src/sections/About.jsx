@@ -5,33 +5,33 @@ export const About = ({ lang }) => {
             badge: "About Me",
             titlePart1: "Two technical paths,",
             titlePart2: " one craft.",
-            p1: "I'm walking two technical paths in parallel: completing my Automation Engineering degree at Federico II while developing iOS apps at the Apple Developer Academy. The combination is intentional. I want to build software that understands the hardware it runs on.",
-            p2: "On the engineering side, I work with C and C++ on embedded systems and microcontrollers, where every byte of memory and every clock cycle matters.",
-            p3: "On the iOS side, I build for real human problems. The interfaces I care about have to do more than look good. They have to actually work for the people relying on them.",
-            p4: "I bring engineering rigor to design and design empathy to engineering. The two disciplines aren't separate languages for me. They're two halves of building something that actually works for someone.",
+            p1: "I'm an iOS Developer (Swift/SwiftUI) with a background in Automation Engineering, a foundation that shapes how I build software: precise, thoroughly tested, and conscious of real-world constraints.",
+            p2: "Selected for the Pier Program alongside the top students of my Apple Developer Academy cohort, I deliver end-to-end iOS apps for external clients, from initial requirements to App Store release.",
+            p3: "My shipped projects include CowPow!, a medical simulation app used by children and medical staff in South Africa, and LISionario, an Italian Sign Language dictionary powered by a remote-services architecture.",
+            p4: "Beyond native mobile, I'm expanding into full-stack development and workflow automation, building data pipelines with Python, n8n, PostgreSQL, and Docker, alongside frontend interfaces in React. I care about building software that genuinely works for the person using it, not just software that looks good in a demo.",
         },
         it: {
             badge: "Chi Sono",
             titlePart1: "Due percorsi tecnici,",
             titlePart2: " un solo mestiere.",
-            p1: "Sto portando avanti due percorsi tecnici in parallelo: concludo Ingegneria dell'Automazione alla Federico II mentre sviluppo app iOS all'Apple Developer Academy. La combinazione è voluta. Voglio costruire software che capisce l'hardware su cui gira.",
-            p2: "Sul lato ingegneria lavoro con C e C++ su sistemi embedded e microcontrollori, dove ogni byte di memoria e ogni ciclo di clock contano.",
-            p3: "Sul lato iOS costruisco per problemi umani concreti. Le interfacce che mi interessano devono fare più che essere belle. Devono davvero funzionare per le persone che le usano.",
-            p4: "Porto rigore ingegneristico al design e empatia da designer all'ingegneria. Per me non sono due linguaggi separati. Sono le due metà di qualcosa che funziona davvero per qualcuno.",
+            p1: "Sono uno Sviluppatore iOS (Swift/SwiftUI) con un background in Ingegneria dell'Automazione, una base che influenza il modo in cui costruisco software: preciso, testato a fondo e consapevole dei vincoli del mondo reale.",
+            p2: "Selezionato per il Pier Program insieme ai migliori studenti della mia coorte all'Apple Developer Academy, realizzo app iOS end-to-end per clienti esterni, dai requisiti iniziali al rilascio sull'App Store.",
+            p3: "Tra i miei progetti rilasciati ci sono CowPow!, un'app di simulazione medica usata da bambini e personale medico in Sudafrica, e LISionario, un dizionario di Lingua dei Segni Italiana basato su un'architettura a servizi remoti.",
+            p4: "Oltre al mobile nativo, mi sto espandendo verso lo sviluppo full-stack e l'automazione dei workflow, costruendo pipeline dati con Python, n8n, PostgreSQL e Docker, insieme a interfacce frontend in React. Mi interessa costruire software che funzioni davvero per chi lo usa, non solo software che sembra bello in una demo.",
         }
     };
 
     const t = translations[lang] || translations.en;
 
-    const p1En = <p>I'm walking <strong className="text-white">two technical paths</strong> in parallel: completing my <strong className="text-white">Automation Engineering degree at Federico II</strong> while developing <strong className="text-white">iOS apps at the Apple Developer Academy</strong>. The combination is intentional. I want to build <strong className="text-white">software that understands the hardware it runs on</strong>.</p>;
-    const p2En = <p>On the engineering side, I work with <strong className="text-white">C and C++</strong> on <strong className="text-white">embedded systems and microcontrollers</strong>, where every byte of memory and every clock cycle matters.</p>;
-    const p3En = <p>On the iOS side, I build for <strong className="text-white">real human problems</strong>. The interfaces I care about have to do more than look good. They have to <strong className="text-white">actually work</strong> for the people relying on them.</p>;
-    const p4En = <p>I bring <strong className="text-white">engineering rigor to design</strong> and <strong className="text-white">design empathy to engineering</strong>. The two disciplines aren't separate languages for me. They're two halves of building something that actually works for someone.</p>;
+    const p1En = <p>I'm an <strong className="text-white">iOS Developer (Swift/SwiftUI)</strong> with a background in <strong className="text-white">Automation Engineering</strong>, a foundation that shapes how I build software: <strong className="text-white">precise, thoroughly tested, and conscious of real-world constraints</strong>.</p>;
+    const p2En = <p>Selected for the <strong className="text-white">Pier Program</strong> alongside the top students of my Apple Developer Academy cohort, I deliver <strong className="text-white">end-to-end iOS apps for external clients</strong>, from initial requirements to App Store release.</p>;
+    const p3En = <p>My shipped projects include <strong className="text-white">CowPow!</strong>, a medical simulation app used by children and medical staff in South Africa, and <strong className="text-white">LISionario</strong>, an Italian Sign Language dictionary powered by a remote-services architecture.</p>;
+    const p4En = <p>Beyond native mobile, I'm expanding into <strong className="text-white">full-stack development and workflow automation</strong>, building data pipelines with Python, n8n, PostgreSQL, and Docker, alongside frontend interfaces in React. I care about building software that <strong className="text-white">genuinely works for the person using it</strong>, not just software that looks good in a demo.</p>;
 
-    const p1It = <p>Sto portando avanti <strong className="text-white">due percorsi tecnici</strong> in parallelo: concludo <strong className="text-white">Ingegneria dell'Automazione alla Federico II</strong> mentre sviluppo <strong className="text-white">app iOS all'Apple Developer Academy</strong>. La combinazione è voluta. Voglio costruire <strong className="text-white">software che capisce l'hardware su cui gira</strong>.</p>;
-    const p2It = <p>Sul lato ingegneria lavoro con <strong className="text-white">C e C++</strong> su <strong className="text-white">sistemi embedded e microcontrollori</strong>, dove ogni byte di memoria e ogni ciclo di clock contano.</p>;
-    const p3It = <p>Sul lato iOS costruisco per <strong className="text-white">problemi umani concreti</strong>. Le interfacce che mi interessano devono fare più che essere belle. Devono <strong className="text-white">davvero funzionare</strong> per le persone che le usano.</p>;
-    const p4It = <p>Porto <strong className="text-white">rigore ingegneristico al design</strong> ed <strong className="text-white">empatia da designer all'ingegneria</strong>. Per me non sono due linguaggi separati. Sono le due metà di qualcosa che funziona davvero per qualcuno.</p>;
+    const p1It = <p>Sono uno <strong className="text-white">Sviluppatore iOS (Swift/SwiftUI)</strong> con un background in <strong className="text-white">Ingegneria dell'Automazione</strong>, una base che influenza il modo in cui costruisco software: <strong className="text-white">preciso, testato a fondo e consapevole dei vincoli del mondo reale</strong>.</p>;
+    const p2It = <p>Selezionato per il <strong className="text-white">Pier Program</strong> insieme ai migliori studenti della mia coorte all'Apple Developer Academy, realizzo <strong className="text-white">app iOS end-to-end per clienti esterni</strong>, dai requisiti iniziali al rilascio sull'App Store.</p>;
+    const p3It = <p>Tra i miei progetti rilasciati ci sono <strong className="text-white">CowPow!</strong>, un'app di simulazione medica usata da bambini e personale medico in Sudafrica, e <strong className="text-white">LISionario</strong>, un dizionario di Lingua dei Segni Italiana basato su un'architettura a servizi remoti.</p>;
+    const p4It = <p>Oltre al mobile nativo, mi sto espandendo verso lo <strong className="text-white">sviluppo full-stack e l'automazione dei workflow</strong>, costruendo pipeline dati con Python, n8n, PostgreSQL e Docker, insieme a interfacce frontend in React. Mi interessa costruire software che <strong className="text-white">funzioni davvero per chi lo usa</strong>, non solo software che sembra bello in una demo.</p>;
 
     const paragraphs = lang === 'it'
         ? [p1It, p2It, p3It, p4It]

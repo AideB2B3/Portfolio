@@ -36,8 +36,8 @@ export const Projects = ({ lang }) => {
       title: "AI Email Agent with Human Approval",
       path: "/n8n/ai-email-agent",
       description: lang === "en"
-        ? "An n8n workflow that reads incoming emails, classifies them with Claude AI and handles them automatically by category, keeping a human in the loop on Discord before any urgent reply is sent."
-        : "Un workflow n8n che legge le email in arrivo, le classifica con Claude AI e le gestisce automaticamente per categoria, mantenendo l'uomo nel loop su Discord prima di inviare ogni risposta urgente.",
+        ? "n8n workflow with a human-in-the-loop step: classifies incoming Gmail messages with AI, routes them by category, and requires Discord approval before the automated action runs (Notion logging)."
+        : "Workflow n8n con un passaggio human-in-the-loop: classifica i messaggi Gmail in arrivo con l'AI, li instrada per categoria e richiede l'approvazione su Discord prima che l'azione automatica venga eseguita (con logging su Notion).",
       image: "/Portfolio/Projects/n8n/ai_email_workflow.png",
       tags: ["n8n", "Claude AI", "Gmail", "Discord"],
       link: "https://github.com/AideB2B3/AI-Powered-Email-Agent-with-Human-Approval",
@@ -47,8 +47,8 @@ export const Projects = ({ lang }) => {
       title: "Alzheimer Classification",
       path: "/alzheimer-classification",
       description: lang === "en"
-        ? "Built for my Artificial Intelligence university exam, this project classifies Alzheimer's dementia status from longitudinal clinical data using a fully object-oriented Python pipeline. Nine classifiers benchmarked across three target classes with seven evaluation metrics."
-        : "Sviluppato per l'esame universitario di Intelligenza Artificiale, questo progetto classifica lo stato di demenza dell'Alzheimer da dati clinici longitudinali con una pipeline Python completamente object-oriented. Nove classificatori confrontati su tre classi target con sette metriche di valutazione.",
+        ? "Object-oriented ML pipeline (Python, scikit-learn) benchmarking 9 classifiers on longitudinal clinical data; best ROC-AUC ~0.95."
+        : "Pipeline ML object-oriented (Python, scikit-learn) che confronta 9 classificatori su dati clinici longitudinali; miglior ROC-AUC ~0.95.",
       image: "/Portfolio/Projects/Progetto_ai.png",
       tags: ["Python", "Scikit-learn", "Machine Learning"],
       link: "https://github.com/AideB2B3/AI-Project-for-University-Exams",
@@ -58,8 +58,8 @@ export const Projects = ({ lang }) => {
       title: "CowPow! Radio Stories",
       path: "/cowpow-radio",
       description: lang === "en"
-        ? "A Unity app built for CHOC (Childhood Cancer Foundation) that helps children understand radiotherapy before it happens. Built around honest medical simulation, it walks young patients through mask fitting, laser alignment, and marker tracing using characters and stories they can connect with."
-        : "Un'app Unity sviluppata per CHOC (Childhood Cancer Foundation) che aiuta i bambini a capire la radioterapia prima che avvenga. Costruita su una simulazione medica onesta, guida i giovani pazienti attraverso mask fitting, laser alignment e marker tracing con personaggi e storie con cui possono identificarsi.",
+        ? "Unity/C#/SwiftUI medical simulation app for children undergoing radiotherapy, built for CHOC (South Africa); shipped to the App Store and tested on-site with children, doctors and social workers."
+        : "App di simulazione medica Unity/C#/SwiftUI per bambini in trattamento di radioterapia, sviluppata per CHOC (Sudafrica); pubblicata sull'App Store e testata sul campo con bambini, medici e assistenti sociali.",
       image: "/Portfolio/Projects/CowPow_cover.png",
       tags: ["Unity", "C#", "iOS"],
       link: "https://apps.apple.com/it/app/cowpow-radio-stories/id6779679122",
