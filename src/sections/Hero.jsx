@@ -41,7 +41,7 @@ export const Hero = ({ lang }) => {
             downloadBtn: "Download CV",
             follow: "Follow me:",
             availability: "Open to New Opportunities",
-            cvFile: "/Portfolio/Davide Bellobuono_CV.pdf",
+            cvFile: "/Portfolio/Davide_Bellobuono_CV.pdf",
             cvDownloadName: "Davide_Bellobuono_CV_EN.pdf",
         },
         it: {
@@ -53,7 +53,7 @@ export const Hero = ({ lang }) => {
             downloadBtn: "Scarica CV",
             follow: "Seguimi su:",
             availability: "Disponibile per nuovi progetti",
-            cvFile: "/Portfolio/Davide Bellobuono_CV_ita.pdf",
+            cvFile: "/Portfolio/Davide_Bellobuono_CV_.pdf",
             cvDownloadName: "Davide_Bellobuono_CV_ITA.pdf",
         }
     };
